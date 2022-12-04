@@ -16,18 +16,28 @@
   }
 
   .nav-item {
-    display: flex;
-    flex-direction: column;
-    color: var(--selective-yellow);
-
-    font-size: 0.8rem;
-    font-weight: 600;
-    align-items: center;
-    justify-content: flex-end;
     width: 100%;
 
+    a {
+      display: flex;
+      flex-direction: column;
+      color: var(--selective-yellow);
+
+      font-size: 0.8rem;
+      font-weight: 600;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+
+      &.active {
+        color: var(--kappel);
+      }
+    }
+
     &.active {
-      color: var(--kappel);
+      a {
+        color: var(--kappel);
+      }
     }
   }
 }

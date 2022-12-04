@@ -7,10 +7,12 @@ import Layout from '../layouts';
 
 import {
   Courses,
+  Credentials,
   Dashboard,
   Examinations,
   Login,
   Payments,
+  Profile,
   Register,
   TimeTable,
 } from '../pages';
@@ -26,6 +28,8 @@ const router = createBrowserRouter(
         <Route path="payments" element={<Payments />} />
         <Route path="timetable" element={<TimeTable />} />
         <Route path="examinations" element={<Examinations />} />
+        <Route path="credentials" element={<Credentials />} />
+        <Route path="profile" element={<Profile />} />
       </Route>
     </Route>
   )

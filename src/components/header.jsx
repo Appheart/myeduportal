@@ -12,7 +12,7 @@ const Header = () => {
 
         <div className="flex gap-5 items-center ">
           <div className="notification rounded-full w-5 h-5 p-1 border-cyan-400">
-            <FontAwesomeIcon icon={faBell} className="" size="12" />
+            <FontAwesomeIcon icon={faBell} className="" />
             <span>3</span>
           </div>
 
