@@ -1,13 +1,12 @@
-import { useState } from 'react';
+import { RouterProvider } from 'react-router-dom';
+
 import './App.css';
-import { Dashboard } from './pages';
+import router from './router';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <Dashboard />
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
