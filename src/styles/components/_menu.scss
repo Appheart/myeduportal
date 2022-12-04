@@ -21,7 +21,8 @@
     a {
       display: flex;
       flex-direction: column;
-      color: var(--selective-yellow);
+
+      color: var(--kappel);
 
       font-size: 0.8rem;
       font-weight: 600;
@@ -30,7 +31,7 @@
       width: 100%;
 
       &.active {
-        color: var(--kappel);
+        color: var(--selective-yellow);
       }
     }
 
