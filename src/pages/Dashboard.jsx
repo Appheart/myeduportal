@@ -65,21 +65,23 @@ const Dashboard = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
                 molestiae laboriosam eius eum necessitatibus autem.
               </p>
-              <div className="img-container">
-                <img src="/images/img-1.jpg" alt="" height={60} width={60} />
-              </div>
             </div>
-            <div className="flex update border p-3 rounded gap-4">
-              <div className="">
-                <h3>opkn</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Beatae molestiae laboriosam eius eum necessitatibus autem.
-                </p>
-              </div>
-              <div className="img-container">
-                <img src="/images/img-1.jpg" alt="" height={60} width={60} />
-              </div>
+
+            <div className="img-container">
+              <img src="/images/img-1.jpg" alt="" height={60} width={60} />
+            </div>
+          </div>
+
+          <div className="flex update border p-3 rounded gap-4">
+            <div className="">
+              <h3>opkn</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+                molestiae laboriosam eius eum necessitatibus autem.
+              </p>
+            </div>
+            <div className="img-container">
+              <img src="/images/img-1.jpg" alt="" height={60} width={60} />
             </div>
           </div>
         </div>
