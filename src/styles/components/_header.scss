@@ -52,5 +52,15 @@ header {
     align-items: center;
     gap: 0.3rem;
     font-size: 0.9rem;
+
+    border: 1px solid var(--kappel);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.8rem;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      background-color: var(--kappel);
+      color: var(--white);
+    }
   }
 }
