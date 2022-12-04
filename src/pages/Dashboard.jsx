@@ -43,7 +43,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="img-container">
-              <img src="" alt="" height={60} width={60} />
+              <img src="/images/img-1.jpg" alt="" height={60} width={60} />
             </div>
           </div>
           <div className="flex update border p-3 rounded gap-4">
@@ -55,7 +55,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="img-container">
-              <img src="" alt="" height={60} width={60} />
+              <img src="/images/img-1.jpg" alt="" height={60} width={60} />
             </div>
           </div>
           <div className="flex update border p-3 rounded gap-4">
@@ -67,7 +67,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="img-container">
-              <img src="" alt="" height={60} width={60} />
+              <img src="/images/img-1.jpg" alt="" height={60} width={60} />
             </div>
           </div>
           <div className="flex update border p-3 rounded gap-4">
@@ -79,7 +79,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="img-container">
-              <img src="" alt="" height={60} width={60} />
+              <img src="/images/img-1.jpg" alt="" height={60} width={60} />
             </div>
           </div>
         </div>
