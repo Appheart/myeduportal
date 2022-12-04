@@ -1,0 +1,17 @@
+.menu-navigation {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5rem 5%;
+  box-shadow: var(--shadow-2);
+  background-color: var(--white);
+  width: 100%;
+  z-index: 5;
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

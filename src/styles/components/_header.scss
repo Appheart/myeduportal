@@ -1,0 +1,15 @@
+header {
+  padding: 0.5rem 5%;
+  box-shadow: var(--shadow-1);
+  background-color: var(--white);
+  width: 100%;
+  z-index: 5;
+
+  .logo {
+    a {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--kappel);
+    }
+  }
+}
