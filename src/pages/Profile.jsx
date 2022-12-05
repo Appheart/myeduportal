@@ -10,7 +10,10 @@ const Profile = () => {
         <UserError message={'Profile not setup'} cta={'Setup profile'} />
       ) : (
         <section className="container mx-auto">
-          <div>Profile</div>
+          <div>
+            <h2>Profile</h2>
+            <p>{userName}</p>
+          </div>
         </section>
       )}
     </main>

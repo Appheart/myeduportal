@@ -5,7 +5,7 @@ import NotificationDrawer from './notificationDrawer';
 import { useState } from 'react';
 
 const Header = () => {
-  const [notifyOpen, setNotifyOpen] = useState(true);
+  const [notifyOpen, setNotifyOpen] = useState(false);
 
   const toggleNotification = () => {
     setNotifyOpen(!notifyOpen);

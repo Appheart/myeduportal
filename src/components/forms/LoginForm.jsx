@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { login } from '../../app/features/auth/AuthSlice';
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [form, setForm] = useState({
     username: '',
@@ -24,6 +27,8 @@ const LoginForm = () => {
       alert('Error signing in!');
       return false;
     }
+
+    dispatch(login());
 
     navigate('/');
   };
