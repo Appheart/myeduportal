@@ -1,16 +1,16 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { UserError } from '../components';
 
 const Profile = () => {
-  const [data, setData] = useState('');
+  const { userName } = useSelector((state) => state.auth);
 
   return (
     <main>
-      {!data ? (
+      {!userName ? (
         <UserError message={'Profile not setup'} cta={'Setup profile'} />
       ) : (
         <section className="container mx-auto">
-          <div>Credentials</div>
+          <div>Profile</div>
         </section>
       )}
     </main>
