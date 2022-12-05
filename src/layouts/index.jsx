@@ -18,8 +18,6 @@ const Layout = () => {
     setToken(() => userName);
   }, [userName]);
 
-  console.log(userName);
-
   return (
     <>
       <Header />
