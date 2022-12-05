@@ -34,14 +34,18 @@ const Profile = () => {
           </fieldset>
 
           <fieldset className="fieldset cc">
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="fieldset-title">Courses</h2>
+            <h2 className="fieldset-title">Courses</h2>
 
-              <div className="selection flex items-center gap-3">
+            <div className="selection flex items-center justify-around gap-3 py-4">
+              <div className="input-container">
+                <label htmlFor="session">Session</label>
                 <select name="session" id="session">
                   <option value="2020-2021">2020-2021</option>
                 </select>
+              </div>
 
+              <div className="input-container">
+                <label htmlFor="semester">Session</label>
                 <select name="semester" id="semester">
                   <option value="1">First</option>
                   <option value="1">Second</option>
@@ -49,18 +53,18 @@ const Profile = () => {
               </div>
             </div>
 
-            <div className="grid grid-flow-col courses">
+            {/* <div className="grid grid-flow-col courses">
               <div className="">Cos 101 </div>
               <div className="">Intro. to Computer</div>
               <div className="justify-self-end">2</div>
-            </div>
+            </div> */}
 
             <button>
               <FontAwesomeIcon icon={faPrint} /> <span>Print</span>
             </button>
           </fieldset>
 
-          <fieldset className="fieldset cc">
+          <fieldset className="fieldset">
             <h2 className="fieldset-title">Examinations</h2>
             <div className="">
               <UserErrorMessage

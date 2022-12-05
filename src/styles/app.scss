@@ -191,14 +191,13 @@ button:focus-visible {
     }
   }
 
+  label,
   select,
   option {
     font-family: var(--ff-league_spartan);
   }
 
-  .courses {
-    font-family: var(--ff-league_spartan);
-
+  .selection {
     margin-bottom: 1rem;
 
     & + button {
@@ -213,6 +212,11 @@ button:focus-visible {
         margin-top: 0.2rem;
       }
     }
+  }
+
+  button {
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
   }
 }
 @media (prefers-color-scheme: light) {
