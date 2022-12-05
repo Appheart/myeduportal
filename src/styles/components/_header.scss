@@ -36,6 +36,12 @@ header {
       line-height: 0;
       font-weight: bold;
     }
+
+    &.open {
+      span {
+        display: none;
+      }
+    }
   }
 
   .btn {
