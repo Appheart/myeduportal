@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <main>
-      <section className="section container mx-auto">
+      <section className="section">
         <fieldset>
           <div className="cards grid grid-cols-2 py-5 gap-4 ">
             <div className="card p-4 bg-blue-100  rounded-lg">
@@ -30,7 +30,7 @@ const Dashboard = () => {
         </fieldset>
       </section>
 
-      <section className="section container mx-auto">
+      <section className="section">
         <h3 className="section__title">Latest Information</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

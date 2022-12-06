@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faBell,
+  faRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
 import NotificationDrawer from './notificationDrawer';
 import { useState } from 'react';
 
@@ -13,7 +17,11 @@ const Header = () => {
 
   return (
     <header>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="flex justify-between items-center w-full">
+        <div className="menuToggler">
+          <FontAwesomeIcon icon={faBars} size="lg" color="green" />
+        </div>
+
         <div className="logo">
           <Link to="/">MyEduPortal</Link>
         </div>
