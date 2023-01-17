@@ -29,7 +29,7 @@ const Header = () => {
 
         <Link to="/">
           <div className="logo flex gap-2 items-center justify-center">
-            <Logo /> Edupora
+            <img src="../assets/logo.png" /> Edupora
           </div>
         </Link>
 
