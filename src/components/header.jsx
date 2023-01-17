@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import NotificationDrawer from "./notificationDrawer";
 import { useState } from "react";
-import Logo from "./Logo";
+import Logo from "../assets/logo.png";
 
 const Header = () => {
   const [notifyOpen, setNotifyOpen] = useState(false);
@@ -23,15 +23,17 @@ const Header = () => {
   return (
     <header>
       <div className="flex justify-between items-center w-full">
-        <div className="menuToggler">
-          <FontAwesomeIcon icon={faBars} size="lg" color="green" />
-        </div>
-
-        <Link to="/">
-          <div className="logo flex gap-2 items-center justify-center">
-            <img src="../assets/logo.png" /> Edupora
+        <div className="flex gap-5 items-center">
+          <div className="menuToggler">
+            <FontAwesomeIcon icon={faBars} size="lg" color="green" />
           </div>
-        </Link>
+
+          <Link to="/">
+            <div className="logo flex gap-2 items-center justify-center font-bold text-[#589685]">
+              <img src={Logo} height="30" width={"30"} /> Edupora
+            </div>
+          </Link>
+        </div>
 
         <div className="flex gap-5 items-center ">
           <div
