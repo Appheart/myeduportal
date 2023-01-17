@@ -36,15 +36,18 @@ const Dashboard = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {newsData.map((item) => (
-            <div className="flex update border p-3 rounded gap-4">
+            <Link
+              target={"_blank"}
+              to={item.link}
+              className="flex update border p-3 rounded gap-4"
+            >
               <div className="">
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
               </div>
               <div className="img-container">
                 <img src="/images/img-1.jpg" alt="" height={60} width={60} />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
