@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import NotificationDrawer from "./notificationDrawer";
 import { useState } from "react";
+import Logo from "./Logo";
 
 const Header = () => {
   const [notifyOpen, setNotifyOpen] = useState(false);
@@ -27,7 +28,9 @@ const Header = () => {
         </div>
 
         <div className="logo">
-          <Link to="/">MyEduPortal</Link>
+          <Link to="/">
+            <Logo /> Edupora
+          </Link>
         </div>
 
         <div className="flex gap-5 items-center ">
