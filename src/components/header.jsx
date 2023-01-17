@@ -24,9 +24,7 @@ const Header = () => {
     <header>
       <div className="flex justify-between items-center w-full">
         <div className="flex gap-5 items-center">
-          <div className="menuToggler">
-            <FontAwesomeIcon icon={faBars} size="lg" color="green" />
-          </div>
+          
 
           <Link to="/">
             <div className="logo flex gap-2 items-center justify-center font-bold text-[#589685]">
