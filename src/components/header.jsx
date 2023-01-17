@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faBell,
   faRightFromBracket,
-} from '@fortawesome/free-solid-svg-icons';
-import NotificationDrawer from './notificationDrawer';
-import { useState } from 'react';
+} from "@fortawesome/free-solid-svg-icons";
+import NotificationDrawer from "./notificationDrawer";
+import { useState } from "react";
 
 const Header = () => {
   const [notifyOpen, setNotifyOpen] = useState(false);
@@ -15,6 +15,10 @@ const Header = () => {
     setNotifyOpen(!notifyOpen);
   };
 
+  const Logout = (e) => {
+    e.preventDefault();
+    navigate("/login");
+  };
   return (
     <header>
       <div className="flex justify-between items-center w-full">
@@ -30,8 +34,8 @@ const Header = () => {
           <div
             className={
               notifyOpen
-                ? 'notification open rounded-full w-5 h-5 p-1 border-cyan-400'
-                : 'notification rounded-full w-5 h-5 p-1 border-cyan-400'
+                ? "notification open rounded-full w-5 h-5 p-1 border-cyan-400"
+                : "notification rounded-full w-5 h-5 p-1 border-cyan-400"
             }
             onClick={toggleNotification}
           >
@@ -44,10 +48,10 @@ const Header = () => {
             />
           </div>
 
-          <a href="/login" className="btn">
+          <div className="btn" onClick={Logout}>
             <FontAwesomeIcon icon={faRightFromBracket} />
             Logout
-          </a>
+          </div>
         </div>
       </div>
     </header>
