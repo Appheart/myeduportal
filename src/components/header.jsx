@@ -27,11 +27,11 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} size="lg" color="green" />
         </div>
 
-        <div className="logo">
-          <Link to="/">
+        <Link to="/">
+          <div className="logo flex gap-2 items-center justify-center">
             <Logo /> Edupora
-          </Link>
-        </div>
+          </div>
+        </Link>
 
         <div className="flex gap-5 items-center ">
           <div
