@@ -1,4 +1,4 @@
-import LoginForm from '../components/forms/LoginForm';
+import LoginForm from "../components/forms/LoginForm";
 
 const Login = () => {
   return (
@@ -26,7 +26,7 @@ const Login = () => {
 
           {/* <!-- Register link --> */}
           <div class="text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account yet?{' '}
+            Don't have an account yet?{" "}
             <a href="register.html" class="text-blue-600 hover:underline">
               Register
             </a>
@@ -42,8 +42,6 @@ const Login = () => {
   <a
     href="../index.html"
     class="inline-block mb-6 text-3xl font-bold tracking-wider uppercase text-primary-dark dark:text-light"
-  >
-    K-WD
-  </a>
+  ></a>
 </div>;
 export default Login;
