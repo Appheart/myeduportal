@@ -27,8 +27,6 @@ const Profile = () => {
       return 0;
     });
 
-  console.log(courses);
-
   return (
     <main>
       {!userName ? (

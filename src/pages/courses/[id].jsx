@@ -19,6 +19,18 @@ const RandomCourse = () => {
       </section>
 
       <section>
+        <h3 className="text-xl py-1 text-yellow-500 font-bold">
+          Course description
+        </h3>
+
+        <p className="text-sm leading-normal">
+          {course.desc.map((d) => (
+            <p>{d}</p>
+          ))}
+        </p>
+      </section>
+
+      <section>
         <h3 className="text-xl py-1 text-yellow-500 font-bold">Topics</h3>
 
         <p className="text-sm leading-normal">
