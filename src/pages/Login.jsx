@@ -1,3 +1,4 @@
+import { LinkBtn } from '../components';
 import LoginForm from '../components/forms/LoginForm';
 import Logo from '../components/Logo';
 
@@ -30,9 +31,9 @@ const Login = () => {
           {/* <!-- Register link --> */}
           <div class="text-sm text-gray-600 dark:text-gray-400">
             Don't have an account yet?{' '}
-            <Link href="register.html" class="text-blue-600 hover:underline">
+            <LinkBtn link="/register" class="text-blue-600 hover:underline">
               Register
-            </Link>
+            </LinkBtn>
           </div>
         </div>
       </main>
