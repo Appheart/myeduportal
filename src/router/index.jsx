@@ -11,6 +11,7 @@ import {
   Dashboard,
   Examinations,
   Login,
+  NYSC,
   Payments,
   Profile,
   Register,
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
         <Route path="examinations" element={<Examinations />} />
         <Route path="credentials" element={<Credentials />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="/NYSC" element={<NYSC />}></Route>
       </Route>
     </Route>
   )

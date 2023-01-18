@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { CarouselCards } from '../components';
+import { servicesData } from '../data';
 import newsData from '../data/news';
 
 const Dashboard = () => {
@@ -8,8 +10,8 @@ const Dashboard = () => {
         <CarouselCards />
       </section>
 
-      <section className="section">
-        <h3 className="text-lg font-bold text-yellow-600 pb-2">
+      <section className="section p-3 rounded-lg">
+        <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
           Latest Information
         </h3>
 
@@ -18,13 +20,13 @@ const Dashboard = () => {
             <a
               target={'_blank'}
               href={item.link}
-              className="flex update flex-col border  p-3 rounded gap-1 text-gray-700"
+              className="flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700"
             >
               <small className="text-green-800">
                 <span className="font-bold">Monday</span>, January 4 2022
               </small>
 
-              <div className="flex items-center">
+              <div className="flex items-center justify-between gap-2">
                 <p className="font-bold">{item.title}</p>
 
                 <div className="img-container">
@@ -34,6 +36,39 @@ const Dashboard = () => {
 
               <small className="text-red-800">{item.source}</small>
             </a>
+          ))}
+        </div>
+
+        <Link
+          to={'/'}
+          className="mt-5  text-sm flex w-full justify-center text-center text-red-400 font-bold underline"
+        >
+          View all
+        </Link>
+      </section>
+
+      {/* Services */}
+      <section className="section bg-gray-50 p-3 rounded-lg">
+        <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Services</h3>
+
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4">
+          {servicesData.map((item) => (
+            <Link
+              to={item.link}
+              className="flex update flex-col items-center  justify-between text-center border  p-3 rounded gap-1 text-gray-700"
+            >
+              <div className=" h-[3rem] w-[3rem] overflow-hidden">
+                <img
+                  src={item.img}
+                  alt=""
+                  height={40}
+                  width={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              <small className="text-red-800">{item.name}</small>
+            </Link>
           ))}
         </div>
       </section>
