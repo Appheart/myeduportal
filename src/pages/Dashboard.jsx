@@ -28,11 +28,11 @@ const Dashboard = () => {
                 <p className="font-bold">{item.title}</p>
 
                 <div className="img-container">
-                  <img src="/images/img-1.jpg" alt="" height={60} width={60} />
+                  <img src={item.imgSrc} alt="" height={80} width={80} />
                 </div>
               </div>
 
-              <small className="text-red-800">MySchool News</small>
+              <small className="text-red-800">{item.source}</small>
             </a>
           ))}
         </div>
