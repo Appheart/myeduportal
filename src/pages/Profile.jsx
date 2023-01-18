@@ -3,8 +3,10 @@ import { faPen, faPenAlt, faPrint } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../App';
 import { LinkBtn, UserError, UserErrorMessage } from '../components';
+import { coursesData } from '../data';
 
 const Profile = () => {
   const { userName, instituteSync } = useSelector((state) => state.auth);
@@ -49,17 +51,20 @@ const Profile = () => {
           </fieldset>
 
           <fieldset className="fieldset flex flex-col justify-between gap-5 ">
-            <table class="table-fixed">
+            <table class="table-auto gap-2">
               <thead className="text-left text-sm mb-2">
-                <th>Courses</th>
-                <th>Examination Date</th>
+                <th>Course</th>
+                <th>Title</th>
               </thead>
               <tbody>
-                {user.courses.map((course) => (
+                {coursesData.map((course) => (
                   <tr className="text-sm mb-2">
-                    <td>{course.code}</td>
+                    <td>{course.name}</td>
+                    <td>{course.title}</td>
                     <td>
-                      {course.examDate ? course.examDate : 'Not assigned'}
+                      <LinkBtn link={`/courses/${course.short}`}>
+                        View Details
+                      </LinkBtn>
                     </td>
                   </tr>
                 ))}

@@ -15,6 +15,7 @@ import {
   NYSC,
   Payments,
   Profile,
+  RandomCourse,
   Register,
   TimeTable,
 } from '../pages';
@@ -26,7 +27,9 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
-        <Route path="courses" element={<Courses />} />
+        <Route path="courses" element={<Courses />}>
+          <Route path=":courseId" element={<RandomCourse />} />
+        </Route>
         <Route path="payments" element={<Payments />} />
         <Route path="timetable" element={<TimeTable />} />
         <Route path="examinations" element={<Examinations />} />
@@ -34,7 +37,7 @@ const router = createBrowserRouter(
         <Route path="profile" element={<Profile />} />
         <Route path="/NYSC" element={<NYSC />} />
       </Route>
-      <Route path="/*" element=<Error404 /> />
+      <Route path="/*" element={<Error404 />} />
     </Route>
   )
 );
