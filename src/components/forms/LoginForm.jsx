@@ -31,7 +31,8 @@ const LoginForm = () => {
 
     const checkUser = usersData.find(
       (user) =>
-        user.userName == form.username && user.password === form.password
+        user.userName == form.username.toLowerCase() &&
+        user.password === form.password
     );
 
     if (!checkUser) {

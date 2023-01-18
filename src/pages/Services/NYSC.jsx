@@ -1,4 +1,5 @@
 import React from 'react';
+import { LinkBtn } from '../../components';
 import { servicesData } from '../../data';
 
 const NYSC = () => {
@@ -12,14 +13,9 @@ const NYSC = () => {
 
       <div className="grid grid-col-2 lg:grid-cols-3">
         {service?.services.map((item) => (
-          <a
-            className="flex"
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <LinkBtn className="flex" link={item.link}>
             {item.name}
-          </a>
+          </LinkBtn>
         ))}
       </div>
     </section>

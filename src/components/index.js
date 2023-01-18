@@ -5,3 +5,4 @@ export { default as UserErrorMessage } from './userErrorMessage';
 export { default as NotificationDrawer } from './notificationDrawer';
 export { default as CarouselCards } from './CarouselCards';
 export { default as Logo } from './Logo';
+export { default as LinkBtn } from './Link';

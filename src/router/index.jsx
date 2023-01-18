@@ -9,6 +9,7 @@ import {
   Courses,
   Credentials,
   Dashboard,
+  Error404,
   Examinations,
   Login,
   NYSC,
@@ -31,8 +32,9 @@ const router = createBrowserRouter(
         <Route path="examinations" element={<Examinations />} />
         <Route path="credentials" element={<Credentials />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="/NYSC" element={<NYSC />}></Route>
+        <Route path="/NYSC" element={<NYSC />} />
       </Route>
+      <Route path="/*" element=<Error404 /> />
     </Route>
   )
 );

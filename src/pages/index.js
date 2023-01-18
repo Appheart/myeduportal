@@ -8,3 +8,4 @@ export { default as Examinations } from './Examinations.jsx';
 export { default as Credentials } from './Credentials.jsx';
 export { default as Profile } from './Profile.jsx';
 export { default as NYSC } from './Services/NYSC.jsx';
+export { default as Error404 } from './404.jsx';
