@@ -27,7 +27,8 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
-        <Route path="courses" element={<Courses />}>
+        <Route path="courses">
+          <Route index element={<Courses />} />
           <Route path=":courseId" element={<RandomCourse />} />
         </Route>
         <Route path="payments" element={<Payments />} />

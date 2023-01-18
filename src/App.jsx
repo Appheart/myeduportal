@@ -14,24 +14,7 @@ const App = () => {
     session: '2021 - 2022',
     semester: '1st',
 
-    courses: [
-      {
-        code: 'CHM 101',
-        title: '',
-        unit: '',
-        examDate: '',
-        lectureNotes: [],
-        textBooks: [],
-      },
-      {
-        code: 'CHM 111',
-        title: '',
-        unit: '',
-        examDate: '',
-        lectureNotes: [],
-        textBooks: [],
-      },
-    ],
+    courses: ['CHM101'],
   });
 
   return (

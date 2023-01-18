@@ -21,8 +21,14 @@ const Profile = () => {
         <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           <fieldset className="fieldset flex  flex-col gap-5 py-5">
             <div className="flex items-center gap-5">
-              <div className="profile__image--container h-[8rem] w-[8rem] shadow-md rounded-full overflow-hidden">
-                <img src="" alt="Profile image" height={100} width={100} />
+              <div className="profile__image--container  h-[8rem] w-[8rem] shadow-md rounded-full overflow-hidden">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfsTQFb0kp8I5e3JYPbVszsdPRsHBp3MM0snd7GltdQQ&s"
+                  alt="Profile image"
+                  height={100}
+                  width={100}
+                  className={'w-full h-full object-cover'}
+                />
               </div>
               <div className="flex flex-col">
                 <h3 className="font-bold text-xl">{user?.name}</h3>
@@ -51,12 +57,12 @@ const Profile = () => {
           </fieldset>
 
           <fieldset className="fieldset flex flex-col justify-between gap-5 ">
-            <table class="table-auto gap-2">
+            <table class="table-auto gap-2 min-h-[10rem] justify-self-start">
               <thead className="text-left text-sm mb-2">
                 <th>Course</th>
                 <th>Title</th>
               </thead>
-              <tbody>
+              <tbody className="overflow-y-scroll ">
                 {coursesData.map((course) => (
                   <tr className="text-sm mb-2">
                     <td>{course.name}</td>
