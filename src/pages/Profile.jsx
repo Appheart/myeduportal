@@ -13,6 +13,22 @@ const Profile = () => {
 
   const user = useContext(UserContext);
 
+  const courses = coursesData
+    .filter((item) => user.courses.includes(item.short))
+    .sort(function (a, b) {
+      if (a.short < b.short) {
+        return -1;
+      }
+
+      if (a.short > b.short) {
+        return 1;
+      }
+
+      return 0;
+    });
+
+  console.log(courses);
+
   return (
     <main>
       {!userName ? (
@@ -63,14 +79,12 @@ const Profile = () => {
                 <th>Title</th>
               </thead>
               <tbody className="overflow-y-scroll ">
-                {coursesData.map((course) => (
+                {courses.map((course) => (
                   <tr className="text-sm mb-2">
+                    <td>{course.code}</td>
                     <td>{course.name}</td>
-                    <td>{course.title}</td>
                     <td>
-                      <LinkBtn link={`/courses/${course.short}`}>
-                        View Details
-                      </LinkBtn>
+                      <LinkBtn link={`/courses/${course.short}`}>View</LinkBtn>
                     </td>
                   </tr>
                 ))}

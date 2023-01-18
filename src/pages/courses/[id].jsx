@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { coursesData } from '../../data';
 
@@ -11,7 +11,7 @@ const RandomCourse = () => {
       <section className="">
         {course ? (
           <h3 className="text-lg font-bold">
-            {course.name}: <span className="font-normal">{course.title}</span>
+            {course.code}: <span className="font-normal">{course.name}</span>
           </h3>
         ) : (
           `No record found for ${courseId}`

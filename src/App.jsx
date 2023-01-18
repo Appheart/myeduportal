@@ -14,7 +14,7 @@ const App = () => {
     session: '2021 - 2022',
     semester: '1st',
 
-    courses: ['CHM101'],
+    courses: ['CHM101', 'GSP101', 'BIO151'],
   });
 
   return (
