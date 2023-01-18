@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UserError } from '../components';
+import { UserError } from '../../components';
 
 const Courses = () => {
   const [data, setData] = useState('');

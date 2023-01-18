@@ -1,12 +1,19 @@
 import { Link } from 'react-router-dom';
 
-const LinkBtn = ({ link, children }) => {
+const LinkBtn = ({ link, children, className }) => {
   return (
     <>
       {!link.includes('https') ? (
-        <Link to={link}> {children}</Link>
+        <Link to={link} className={className ? className : ''}>
+          {children}
+        </Link>
       ) : (
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <a
+          href={link}
+          className={className ? className : ''}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {children}
         </a>
       )}
