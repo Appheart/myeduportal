@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../app/features/auth/AuthSlice';
+import { usersData } from '../../data';
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -25,6 +26,16 @@ const LoginForm = () => {
 
     if (!form.username || !form.password) {
       alert('Error signing in!');
+      return false;
+    }
+
+    const checkUser = usersData.find(
+      (user) =>
+        user.userName == form.username && user.password === form.password
+    );
+
+    if (!checkUser) {
+      alert('Invalid credentials');
       return false;
     }
 
