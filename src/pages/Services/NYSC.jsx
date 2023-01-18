@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { servicesData } from '../../data';
 
 const NYSC = () => {
-  //   const [service, setService] = useState('');
   const service = servicesData.find(
     (service) => service.name.toLowerCase() == 'nysc'
   );
