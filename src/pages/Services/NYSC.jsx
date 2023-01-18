@@ -6,11 +6,6 @@ const NYSC = () => {
   const service = servicesData.find(
     (service) => service.name.toLowerCase() == 'nysc'
   );
-  //   useEffect(() => {
-  //     setService(() =>
-  //       servicesData.find((service) => service.name.toLowerCase() == 'nysc')
-  //     );
-  //   }, [service]);
 
   return (
     <section className="section p-2">
