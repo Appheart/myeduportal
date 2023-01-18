@@ -1,3 +1,5 @@
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { CarouselCards } from '../components';
 import { servicesData } from '../data';
@@ -39,12 +41,16 @@ const Dashboard = () => {
           ))}
         </div>
 
-        <Link
-          to={'/'}
-          className="mt-5  text-sm flex w-full justify-center text-center text-red-400 font-bold underline"
-        >
-          View all
-        </Link>
+        <div className="mt-5 flex justify-center items-center gap-4">
+          <FontAwesomeIcon icon={faArrowLeft} />
+          <Link
+            to={'/'}
+            className=" text-sm flex  justify-center text-center text-red-400 font-bold underline"
+          >
+            1
+          </Link>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </div>
       </section>
 
       {/* Services */}
