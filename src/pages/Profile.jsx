@@ -1,10 +1,14 @@
 import { faPrint } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useContext } from 'react';
 import { useSelector } from 'react-redux';
+import { UserContext } from '../App';
 import { UserError, UserErrorMessage } from '../components';
 
 const Profile = () => {
   const { userName, instituteSync } = useSelector((state) => state.auth);
+
+  const user = useContext(UserContext);
 
   return (
     <main>
@@ -12,66 +16,39 @@ const Profile = () => {
         <UserError message={'Profile not setup'} cta={'Setup profile'} />
       ) : (
         <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-          <fieldset className="fieldset">
-            <h2 className="fieldset-title">Profile</h2>
-            <div className="flex item-center justify-center">
-              <button>Show data</button>
+          <fieldset className="fieldset flex items-center gap-5 py-5">
+            <div className="profile__image--container h-[8rem] w-[8rem] shadow-md rounded-full overflow-hidden">
+              <img src="" alt="Profile image" height={100} width={100} />
+            </div>
+            <div className="flex flex-col">
+              <h3 className="font-bold text-xl">{user.name}</h3>
+              <p className="text-sm">100 Level</p>
+              <p className="text-sm">Robotics Engineering</p>
+              <p className="text-sm">University of Nigeria, Nsukka</p>
             </div>
           </fieldset>
 
-          <fieldset className="fieldset">
-            <h2 className="fieldset-title">Institution</h2>
-            <div className="">
-              {!instituteSync ? (
-                <UserErrorMessage
-                  message={'You are yet to sync with institution portal'}
-                  cta="Sync now"
-                />
-              ) : (
-                ''
-              )}
-            </div>
-          </fieldset>
+          <fieldset className="fieldset flex flex-col ">
+            <table class="table-fixed">
+              <thead className="text-left text-sm mb-2">
+                <th>Courses</th>
+                <th>Examination Date</th>
+              </thead>
+              <tbody>
+                {user.courses.map((course) => (
+                  <tr className="text-sm mb-2">
+                    <td>{course.code}</td>
+                    <td>
+                      {course.examDate ? course.examDate : 'Not assigned'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
 
-          <fieldset className="fieldset cc">
-            <h2 className="fieldset-title">Courses</h2>
-
-            <div className="selection flex items-center justify-around gap-3 py-4">
-              <div className="input-container">
-                <label htmlFor="session">Session</label>
-                <select name="session" id="session">
-                  <option value="2020-2021">2020-2021</option>
-                </select>
-              </div>
-
-              <div className="input-container">
-                <label htmlFor="semester">Session</label>
-                <select name="semester" id="semester">
-                  <option value="1">First</option>
-                  <option value="1">Second</option>
-                </select>
-              </div>
-            </div>
-
-            {/* <div className="grid grid-flow-col courses">
-              <div className="">Cos 101 </div>
-              <div className="">Intro. to Computer</div>
-              <div className="justify-self-end">2</div>
-            </div> */}
-
-            <button>
+            <button className="items-end mt-5">
               <FontAwesomeIcon icon={faPrint} /> <span>Print</span>
             </button>
-          </fieldset>
-
-          <fieldset className="fieldset">
-            <h2 className="fieldset-title">Examinations</h2>
-            <div className="">
-              <UserErrorMessage
-                message={'No examinations yet'}
-                cta="Sync now"
-              />
-            </div>
           </fieldset>
         </section>
       )}

@@ -1,4 +1,5 @@
-import LoginForm from "../components/forms/LoginForm";
+import LoginForm from '../components/forms/LoginForm';
+import Logo from '../components/Logo';
 
 const Login = () => {
   return (
@@ -7,7 +8,9 @@ const Login = () => {
       class="flex flex-col items-center justify-center p-4 space-y-4 antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light"
     >
       <div className="logo">
-        <a href="/">My EduPortal</a>
+        <a href="/">
+          <Logo />
+        </a>
       </div>
       <main>
         <div class="w-full max-w-sm px-4 py-6 space-y-6 bg-white rounded-md dark:bg-darker">
@@ -26,7 +29,7 @@ const Login = () => {
 
           {/* <!-- Register link --> */}
           <div class="text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account yet?{" "}
+            Don't have an account yet?{' '}
             <a href="register.html" class="text-blue-600 hover:underline">
               Register
             </a>

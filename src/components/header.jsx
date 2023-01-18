@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
   faBell,
   faRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons";
-import NotificationDrawer from "./notificationDrawer";
-import { useState } from "react";
-import Logo from "../assets/logo.png";
+} from '@fortawesome/free-solid-svg-icons';
+import NotificationDrawer from './notificationDrawer';
+import { useState } from 'react';
+import Logo from './Logo';
 
 const Header = () => {
   const [notifyOpen, setNotifyOpen] = useState(false);
@@ -18,18 +18,14 @@ const Header = () => {
 
   const Logout = (e) => {
     e.preventDefault();
-    navigate("/login");
+    navigate('/login');
   };
   return (
     <header>
       <div className="flex justify-between items-center w-full">
         <div className="flex gap-5 items-center">
-          
-
           <Link to="/">
-            <div className="logo flex gap-2 items-center justify-center font-bold text-[#589685]">
-              <img src={Logo} height="30" width={"30"} /> Edupora
-            </div>
+            <Logo />
           </Link>
         </div>
 
@@ -37,8 +33,8 @@ const Header = () => {
           <div
             className={
               notifyOpen
-                ? "notification open rounded-full w-5 h-5 p-1 border-cyan-400"
-                : "notification rounded-full w-5 h-5 p-1 border-cyan-400"
+                ? 'notification open rounded-full w-5 h-5 p-1 border-cyan-400'
+                : 'notification rounded-full w-5 h-5 p-1 border-cyan-400'
             }
             onClick={toggleNotification}
           >
