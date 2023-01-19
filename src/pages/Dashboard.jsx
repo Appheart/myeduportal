@@ -31,8 +31,7 @@ const Dashboard = () => {
               return 0;
             })
             .map((item) => (
-              <LinkBtn
-                link={item.link}
+              <div
                 className={
                   'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
                 }
@@ -47,10 +46,13 @@ const Dashboard = () => {
                   </div>
                 </div>
 
-                <small className="text-red-800 text-xs font-bold">
-                  {item.source}
-                </small>
-              </LinkBtn>
+                <LinkBtn
+                  link={item.link}
+                  className="text-red-800 text-xs font-bold"
+                >
+                  Read more
+                </LinkBtn>
+              </div>
             ))}
         </div>
 
