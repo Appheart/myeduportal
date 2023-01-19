@@ -37,9 +37,9 @@ const NYSC = () => {
               className="flex bg-white  text-gray-800 shadow-md p-3 justify-between gap-5 rounded-lg"
               link={item.link}
             >
-              <div className="flex flex-col gap-3 pb-3">
-                <h3 className="font-bold">{item.name}</h3>
-                <p className="text-sm h-[4rem] overflow-hidden text-ellipsis ">
+              <div className="flex flex-col gap-3 pb-2">
+                <h3 className="font-bold text-sm">{item.name}</h3>
+                <p className="text-xs h-[3.7rem] leading-normal overflow-hidden text-ellipsis ">
                   {item.desc}
                 </p>
               </div>
