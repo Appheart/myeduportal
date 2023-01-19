@@ -39,6 +39,25 @@ const services = [
   {
     name: 'JAMB',
     img: 'https://efacility.jamb.gov.ng/assets/admin/img/logo_big.png',
+    services: [
+      {
+        name: 'JAMB result',
+        desc: '',
+        price: 2000,
+        link: '',
+      },
+      {
+        name: 'JAMB admission letter',
+        desc: '',
+        price: 2000,
+        link: '',
+      },
+      {
+        name: 'Check JAMB admission status',
+        desc: '',
+        link: '',
+      },
+    ],
   },
 
   {

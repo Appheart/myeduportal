@@ -3,6 +3,7 @@ import {
   createRoutesFromElements,
   Route,
 } from 'react-router-dom';
+import UseScrollTo from '../app/hooks/useScrollTo';
 import Layout from '../layouts';
 
 import {

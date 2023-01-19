@@ -8,14 +8,9 @@ const Login = () => {
       id="LoginPage"
       class="flex flex-col items-center justify-center p-4 space-y-4 antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light"
     >
-      <div className="logo">
-        <a href="/">
-          <Logo />
-        </a>
-      </div>
       <main>
-        <div class="w-full max-w-sm px-4 py-6 space-y-6 bg-white rounded-md dark:bg-darker">
-          <h1 class="text-xl font-semibold text-center">Login</h1>
+        <div class="w-full max-w-sm px-4 py-6 space-y-5 bg-white rounded-md dark:bg-darker">
+          <Logo />
 
           <LoginForm />
 
@@ -29,12 +24,12 @@ const Login = () => {
           {/* <!-- Social login links --> */}
 
           {/* <!-- Register link --> */}
-          <div class="text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account yet?{' '}
-            <LinkBtn link="/register" class="text-blue-600 hover:underline">
-              Register
-            </LinkBtn>
-          </div>
+          <LinkBtn
+            link={'/'}
+            className="text-sm text-center flex underline justify-center text-gray-600 dark:text-gray-400"
+          >
+            Get onboard
+          </LinkBtn>
         </div>
       </main>
     </div>
