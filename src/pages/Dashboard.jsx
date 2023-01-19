@@ -1,7 +1,7 @@
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { CarouselCards } from '../components';
+import { CarouselCards, LinkBtn } from '../components';
 import { servicesData } from '../data';
 import newsData from '../data/news';
 
@@ -12,33 +12,44 @@ const Dashboard = () => {
         <CarouselCards />
       </section>
 
-      <section className="section p-3 rounded-lg">
-        <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
+      <section className="section  rounded-lg">
+        <h3 className="text-lg font-bold text-yellow-600 pb-2 pl-3">
           Latest Information
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {newsData.map((item) => (
-            <a
-              target={'_blank'}
-              href={item.link}
-              className="flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700"
-            >
-              <small className="text-green-800">
-                <span className="font-bold">Monday</span>, January 4 2022
-              </small>
+          {newsData
+            .sort(function (a, b) {
+              if (a.date > b.date) {
+                return -1;
+              }
 
-              <div className="flex items-center justify-between gap-2">
-                <p className="font-bold">{item.title}</p>
+              if (a.date < b.date) {
+                return 1;
+              }
 
-                <div className="img-container">
-                  <img src={item.imgSrc} alt="" height={80} width={80} />
+              return 0;
+            })
+            .map((item) => (
+              <LinkBtn
+                link={item.link}
+                className={
+                  'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
+                }
+              >
+                <small className="text-green-800 font-bold">{item.date}</small>
+
+                <div className="flex items-center justify-between gap-2">
+                  <p className="font-bold">{item.title}</p>
+
+                  <div className="img-container">
+                    <img src={item.imgSrc} alt="" height={80} width={80} />
+                  </div>
                 </div>
-              </div>
 
-              <small className="text-red-800">{item.source}</small>
-            </a>
-          ))}
+                <small className="text-red-800">{item.source}</small>
+              </LinkBtn>
+            ))}
         </div>
 
         <div className="mt-5 flex justify-center items-center gap-4">
@@ -61,7 +72,7 @@ const Dashboard = () => {
           {servicesData.map((item) => (
             <Link
               to={item.link}
-              className="flex update flex-col items-center  justify-between text-center border  p-3 rounded gap-1 text-gray-700"
+              className="flex update flex-col items-center bg-white justify-between text-center border  p-3 rounded-md gap-1 text-gray-700"
             >
               <div className=" h-[3rem] w-[3rem] overflow-hidden">
                 <img

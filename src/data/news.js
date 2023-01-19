@@ -7,6 +7,17 @@ const newsData = [
     imgSrc:
       'https://myschool.ng/storage/blog/3NHfn3kSPlYAHLk86dhjTQIoMPYqxCsitCTzLQzQ.png',
     tags: [''],
+    date: '12th January, 2023',
+  },
+  {
+    title:
+      'List of schools that have released UTME/DE admission lists for 2022/2023 session',
+    link: 'https://myschool.ng/news/list-of-schools-that-have-released-utme-de-admission-lists-for-2022-2023-session',
+    source: 'MySchool News',
+    imgSrc:
+      'https://myschool.ng/storage/blog/GAIjfQ8todFSiIHszID8Ru6Zi7YsIB6t75KKgQV3.jpeg',
+    tags: ['admission'],
+    date: '17th January, 2023',
   },
   {
     title:
@@ -16,6 +27,7 @@ const newsData = [
     imgSrc:
       'https://myschool.ng/storage/blog/c1QHoMSsmlPa7XBqFKli5MmKtqiUuOLGfelJojCW.jpeg',
     tags: ['JAMB'],
+    date: '14th January, 2023',
   },
   {
     title: 'NYSC Registration 2023 Batch A > Guidelines & Requirements',
@@ -24,6 +36,7 @@ const newsData = [
     imgSrc:
       'https://www.myschoolgist.com/wp-content/uploads/2022/06/NYSC-Senate-List-1536x806.jpeg',
     tags: ['NYSC'],
+    date: '13th January, 2023',
   },
 ];
 
