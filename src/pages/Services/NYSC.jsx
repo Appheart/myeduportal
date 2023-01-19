@@ -18,18 +18,31 @@ const NYSC = () => {
             className="justify-self-start text-xl"
           />
         </LinkBtn>
-        <span className="m-auto text-green-500 font-bold">
-          NYSC Related Services
-        </span>
+        <div className="m-auto text-green-500 font-bold flex gap-2 items-center">
+          <div className="h-5 w-5 flex items-center justify-center rounded-full overflow-hidden">
+            <img
+              src="https://www.nysccbo.org.ng/nyscbo/public/web/resources/images/nysclogo.png"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <span>NYSC Related Services</span>
+        </div>
       </div>
       <section className="section p-2">
         <div className="grid grid-col-2 lg:grid-cols-3 gap-5 py-5">
           {service?.services.map((item) => (
             <LinkBtn
-              className="flex bg-white text-sm font-bold text-gray-800 shadow-md p-3 justify-between gap-5 rounded-lg"
+              className="flex bg-white  text-gray-800 shadow-md p-3 justify-between gap-5 rounded-lg"
               link={item.link}
             >
-              {item.name}
+              <div className="flex flex-col gap-3 pb-3">
+                <h3 className="font-bold">{item.name}</h3>
+                <p className="text-sm h-[4rem] overflow-hidden text-ellipsis ">
+                  {item.desc}
+                </p>
+              </div>
               <FontAwesomeIcon icon={faArrowRight} />
             </LinkBtn>
           ))}

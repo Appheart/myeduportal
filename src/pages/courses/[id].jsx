@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { coursesData } from '../../data';
+import de from '../../data/faculties';
 
 const RandomCourse = () => {
   let { courseId } = useParams();
 
   const course = coursesData.find((c) => c.short == courseId);
+  console.log(de);
+
   return (
     <main className="max-w-5xl m-auto flex flex-col gap-3 pt-5">
       <section className="">
@@ -23,11 +26,11 @@ const RandomCourse = () => {
           Course description
         </h3>
 
-        <p className="text-sm leading-normal">
+        <div className="flex flex-col gap-2 text-sm leading-normal">
           {course.desc.map((d) => (
             <p>{d}</p>
           ))}
-        </p>
+        </div>
       </section>
 
       <section>

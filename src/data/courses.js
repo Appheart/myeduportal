@@ -72,7 +72,14 @@ const courses = [
     unit: 2,
     title: 'Mechanics and Properties of Matter',
     desc: [],
-    institute: [{ name: 'unn', lecturers: [''] }],
+    offeredIn: 1,
+    institute: [
+      {
+        name: 'unn',
+        lecturers: [''],
+        faculties: [],
+      },
+    ],
     topics: [
       'Mechanics',
       'matter',
