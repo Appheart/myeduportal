@@ -38,8 +38,10 @@ const NYSC = () => {
               link={item.link}
             >
               <div className="flex flex-col gap-3 pb-2">
-                <h3 className="font-bold text-sm">{item.name}</h3>
-                <p className="text-xs h-[3.7rem] leading-normal overflow-hidden text-ellipsis ">
+                <h3 className="font-bold text-sm text-green-800">
+                  {item.name}
+                </h3>
+                <p className="text-xs h-[3.7rem] text-gray-700 leading-normal overflow-hidden text-ellipsis ">
                   {item.desc}
                 </p>
               </div>
