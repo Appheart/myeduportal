@@ -40,14 +40,16 @@ const Dashboard = () => {
                 <small className="text-green-800 font-bold">{item.date}</small>
 
                 <div className="flex items-center justify-between gap-2">
-                  <p className="font-bold">{item.title}</p>
+                  <p className="">{item.title}</p>
 
                   <div className="img-container">
                     <img src={item.imgSrc} alt="" height={80} width={80} />
                   </div>
                 </div>
 
-                <small className="text-red-800">{item.source}</small>
+                <small className="text-red-800 text-xs font-bold">
+                  {item.source}
+                </small>
               </LinkBtn>
             ))}
         </div>
