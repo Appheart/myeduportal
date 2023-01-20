@@ -3,7 +3,6 @@ import {
   createRoutesFromElements,
   Route,
 } from 'react-router-dom';
-import UseScrollTo from '../app/hooks/useScrollTo';
 import Layout from '../layouts';
 
 import {
@@ -12,6 +11,7 @@ import {
   Dashboard,
   Error404,
   Examinations,
+  Forum,
   Login,
   NYSC,
   Payments,
@@ -38,6 +38,7 @@ const router = createBrowserRouter(
         <Route path="credentials" element={<Credentials />} />
         <Route path="profile" element={<Profile />} />
         <Route path="/NYSC" element={<NYSC />} />
+        <Route path="/Forum" element={<Forum />} />
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>

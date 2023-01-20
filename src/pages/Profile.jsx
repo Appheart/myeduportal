@@ -105,6 +105,29 @@ const Profile = () => {
               </LinkBtn>
             </div>
           </fieldset>
+          <h3>My Credentials</h3>
+
+          <UserError
+            message={"You haven't uploaded any files"}
+            cta={'Get started now'}
+          />
+          <fieldset className="fieldset flex flex-col justify-between gap-5 ">
+            <div className="flex gap-2 justify-between">
+              <LinkBtn
+                link={'/'}
+                className="bg-green-300 text-gray-900 w-full flex px-2 py-1 text-sm text-center rounded-md gap-5 items-center justify-center"
+              >
+                <FontAwesomeIcon icon={faPenAlt} />
+                Edit
+              </LinkBtn>
+              <LinkBtn
+                link={'/'}
+                className="w-full bg-green-500 text-white flex  px-2 py-1 text-sm text-center rounded-md items-center gap-5 justify-center"
+              >
+                <FontAwesomeIcon icon={faPrint} /> <span>Print</span>
+              </LinkBtn>
+            </div>
+          </fieldset>
         </section>
       )}
     </main>

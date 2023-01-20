@@ -4,7 +4,7 @@ const LinkBtn = ({ link, children, className }) => {
   return (
     <>
       {!link.includes('https') ? (
-        <Link to={link} className={className ? className : ''}>
+        <Link to={link} className={className ? className : 'flex'}>
           {children}
         </Link>
       ) : (
