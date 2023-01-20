@@ -4,10 +4,12 @@ import {
   faBars,
   faBell,
   faRightFromBracket,
+  faShop,
 } from '@fortawesome/free-solid-svg-icons';
 import NotificationDrawer from './notificationDrawer';
 import { useState } from 'react';
 import Logo from './Logo';
+import LinkBtn from './Link';
 
 const Header = () => {
   const [notifyOpen, setNotifyOpen] = useState(false);
@@ -30,11 +32,15 @@ const Header = () => {
         </div>
 
         <div className="flex gap-5 items-center ">
+          <LinkBtn link={'/payment'}>
+            <FontAwesomeIcon icon={faShop} />
+          </LinkBtn>
+
           <div
             className={
               notifyOpen
-                ? 'notification open rounded-full w-5 h-5 p-1 border-cyan-400'
-                : 'notification rounded-full w-5 h-5 p-1 border-cyan-400'
+                ? 'notification open rounded-full w-3 h-3  border-cyan-400'
+                : 'notification rounded-full w-3 h-3  border-cyan-400'
             }
             onClick={toggleNotification}
           >

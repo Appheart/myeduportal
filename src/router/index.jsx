@@ -14,7 +14,7 @@ import {
   Forum,
   Login,
   NYSC,
-  Payments,
+  Payment,
   Profile,
   RandomCourse,
   Register,
@@ -32,13 +32,13 @@ const router = createBrowserRouter(
           <Route index element={<Courses />} />
           <Route path=":courseId" element={<RandomCourse />} />
         </Route>
-        <Route path="payments" element={<Payments />} />
         <Route path="timetable" element={<TimeTable />} />
         <Route path="examinations" element={<Examinations />} />
         <Route path="credentials" element={<Credentials />} />
         <Route path="profile" element={<Profile />} />
         <Route path="/NYSC" element={<NYSC />} />
         <Route path="/Forum" element={<Forum />} />
+        <Route path="/payment" element={<Payment />} />
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>

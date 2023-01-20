@@ -55,7 +55,7 @@ const ForumCard = () => {
 
       <div className="flex gap-2 text-xs">
         <LinkBtn
-          link={'/'}
+          link={'/forum'}
           className={
             'py-1 px-3 border-green-600 border-2 text-gray-700 rounded-md'
           }
@@ -63,9 +63,9 @@ const ForumCard = () => {
           Read reponses
         </LinkBtn>
         <LinkBtn
-          link={'/'}
+          link={'/forum/'}
           className={
-            'py-1 px-3 border-2 border-green-600  bg-green-600 text-white rounded-md'
+            'py-1 px-3 border-2 border-yellow-600 text-gray-800 rounded-md'
           }
         >
           Reply
