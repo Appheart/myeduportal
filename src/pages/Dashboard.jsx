@@ -1,11 +1,23 @@
+import axios from 'axios';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { CarouselCards, LinkBtn } from '../components';
 import { servicesData } from '../data';
-import newsData from '../data/news';
+import { useEffect, useState } from 'react';
 
 const Dashboard = () => {
+  const [newsData, setNewsData] = useState([]);
+
+  const fetchNewsData = () =>
+    axios.get('https://eduportal.onrender.com/news').then((response) => {
+      setNewsData(response.data);
+    });
+
+  useEffect(() => {
+    fetchNewsData(), [];
+  });
+
   return (
     <main>
       <section className="mt-2 mb-3">
@@ -19,41 +31,50 @@ const Dashboard = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {newsData
-            .sort(function (a, b) {
-              if (a.date > b.date) {
-                return -1;
-              }
+            ? newsData
+                .sort(function (a, b) {
+                  if (a.date > b.date) {
+                    return -1;
+                  }
 
-              if (a.date < b.date) {
-                return 1;
-              }
+                  if (a.date < b.date) {
+                    return 1;
+                  }
 
-              return 0;
-            })
-            .map((item) => (
-              <div
-                className={
-                  'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-                }
-              >
-                <small className="text-green-800 font-bold">{item.date}</small>
+                  return 0;
+                })
+                .map((item) => (
+                  <div
+                    className={
+                      'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
+                    }
+                  >
+                    <small className="text-green-800 font-bold">
+                      {item.publishedOn}
+                    </small>
 
-                <div className="flex items-center justify-between gap-2">
-                  <p className="">{item.title}</p>
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="">{item.title}</p>
 
-                  <div className="img-container">
-                    <img src={item.imgSrc} alt="" height={80} width={80} />
+                      <div className="img-container">
+                        <img
+                          src={item.illustration}
+                          alt=""
+                          height={80}
+                          width={80}
+                        />
+                      </div>
+                    </div>
+
+                    <LinkBtn
+                      link={item.link}
+                      className="text-red-800 text-xs font-bold"
+                    >
+                      Read more
+                    </LinkBtn>
                   </div>
-                </div>
-
-                <LinkBtn
-                  link={item.link}
-                  className="text-red-800 text-xs font-bold"
-                >
-                  Read more
-                </LinkBtn>
-              </div>
-            ))}
+                ))
+            : 'Error loading News Data'}
         </div>
 
         <div className="mt-5 flex justify-center items-center gap-4">
