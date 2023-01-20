@@ -30,51 +30,59 @@ const Dashboard = () => {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {newsData
-            ? newsData
-                .sort(function (a, b) {
-                  if (a.date > b.date) {
-                    return -1;
+          {newsData.length > 0 ? (
+            newsData
+              .sort(function (a, b) {
+                if (a.date > b.date) {
+                  return -1;
+                }
+
+                if (a.date < b.date) {
+                  return 1;
+                }
+
+                return 0;
+              })
+              .map((item) => (
+                <div
+                  className={
+                    'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
                   }
+                >
+                  <small className="text-green-800 font-bold">
+                    {item.publishedOn}
+                  </small>
 
-                  if (a.date < b.date) {
-                    return 1;
-                  }
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="">{item.title}</p>
 
-                  return 0;
-                })
-                .map((item) => (
-                  <div
-                    className={
-                      'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-                    }
-                  >
-                    <small className="text-green-800 font-bold">
-                      {item.publishedOn}
-                    </small>
-
-                    <div className="flex items-center justify-between gap-2">
-                      <p className="">{item.title}</p>
-
-                      <div className="img-container">
-                        <img
-                          src={item.illustration}
-                          alt=""
-                          height={80}
-                          width={80}
-                        />
-                      </div>
+                    <div className="img-container">
+                      <img
+                        src={item.illustration}
+                        alt=""
+                        height={80}
+                        width={80}
+                      />
                     </div>
-
-                    <LinkBtn
-                      link={item.link}
-                      className="text-red-800 text-xs font-bold"
-                    >
-                      Read more
-                    </LinkBtn>
                   </div>
-                ))
-            : 'Error loading News Data'}
+
+                  <LinkBtn
+                    link={item.link}
+                    className="text-red-800 text-xs font-bold"
+                  >
+                    Read more
+                  </LinkBtn>
+                </div>
+              ))
+          ) : (
+            <div
+              className={
+                'flex py-7 text-center bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
+              }
+            >
+              <p className="text-sm text-gray-900">Reload to get News</p>
+            </div>
+          )}
         </div>
 
         <div className="mt-5 flex justify-center items-center gap-4">

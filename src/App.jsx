@@ -3,6 +3,7 @@ import { createContext, useState } from 'react';
 
 import router from './router';
 import UseScrollTo from './app/hooks/useScrollTo';
+import Logo from './components/Logo';
 
 export const UserContext = createContext();
 
