@@ -15,6 +15,7 @@ import {
   Login,
   NYSC,
   Payment,
+  PDF,
   Profile,
   RandomCourse,
   Register,
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
         <Route path="/NYSC" element={<NYSC />} />
         <Route path="/Forum" element={<Forum />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/pdf" element={<PDF />} />
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>

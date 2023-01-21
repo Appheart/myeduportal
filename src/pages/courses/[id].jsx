@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { LinkBtn } from '../../components';
 import { coursesData } from '../../data';
-import de from '../../data/faculties';
 
 const RandomCourse = () => {
   let { courseId } = useParams();
 
   const course = coursesData.find((c) => c.short == courseId);
-  console.log(de);
 
   return (
     <main className="max-w-5xl m-auto flex flex-col gap-3 pt-5">
@@ -53,6 +52,8 @@ const RandomCourse = () => {
         </h3>
 
         <p className="text-sm">None yet</p>
+
+        <LinkBtn link={'/pdf'}>PDF</LinkBtn>
       </section>
     </main>
   );
