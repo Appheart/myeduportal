@@ -1,13 +1,18 @@
 import { RouterProvider } from 'react-router-dom';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 import router from './router';
 import UseScrollTo from './app/hooks/useScrollTo';
-import Logo from './components/Logo';
 
 export const UserContext = createContext();
 
-const App = () => {
+const tele = window.Telegram.WebApp;
+
+function App() {
+  useEffect(() => {
+    tele.ready();
+  });
+
   const [user, setUser] = useState({
     name: 'Paul Ishaili',
     username: 'mrpaulishaili',
@@ -19,6 +24,7 @@ const App = () => {
 
     courses: ['CHM101', 'GSP101', 'BIO151', 'GSP111', 'BIO111'],
   });
+
   return (
     <UserContext.Provider value={user}>
       <div className="App bg-[#fff]">
@@ -28,6 +34,6 @@ const App = () => {
       </div>
     </UserContext.Provider>
   );
-};
+}
 
 export default App;
