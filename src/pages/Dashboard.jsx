@@ -33,11 +33,11 @@ const Dashboard = () => {
           {newsData.length > 0 ? (
             newsData
               .sort(function (a, b) {
-                if (a.date > b.date) {
+                if (a.publishedOn > b.publishedOn) {
                   return -1;
                 }
 
-                if (a.date < b.date) {
+                if (a.publishedOn < b.publishedOn) {
                   return 1;
                 }
 
