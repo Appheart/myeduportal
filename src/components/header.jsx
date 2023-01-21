@@ -26,9 +26,7 @@ const Header = () => {
     <header>
       <div className="flex justify-between items-center w-full">
         <div className="flex gap-5 items-center">
-          <Link to="/">
-            <Logo />
-          </Link>
+          <Logo />
         </div>
 
         <div className="flex gap-5 items-center ">

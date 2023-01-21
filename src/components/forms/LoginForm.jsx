@@ -46,9 +46,9 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleLogin} class="space-y-6">
+    <form onSubmit={handleLogin} className="space-y-6">
       <input
-        class="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
+        className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
         type="text"
         name="username"
         placeholder="Username"
@@ -56,31 +56,34 @@ const LoginForm = () => {
         onChange={onUpdateField}
       />
       <input
-        class="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
+        className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
         type="password"
         name="password"
         placeholder="Password"
         required
         onChange={onUpdateField}
       />
-      <div class="flex items-center justify-between">
+      <div className="flex items-center justify-between">
         {/* <!-- Remember me toggle --> */}
-        <label class="flex items-center">
-          <div class="relative inline-flex items-center">
+        <label className="flex items-center">
+          <div className="relative inline-flex items-center">
             <input
               type="checkbox"
               name="remembr_me"
-              class="w-10 h-4 transition bg-gray-200 border-none rounded-full shadow-inner outline-none appearance-none toggle checked:bg-primary-light disabled:bg-gray-200 focus:outline-none text-sm"
+              className="w-10 h-4 transition bg-gray-200 border-none rounded-full shadow-inner outline-none appearance-none toggle checked:bg-primary-light disabled:bg-gray-200 focus:outline-none text-sm"
             />
-            <span class="absolute top-0 left-0 w-4 h-4 transition-all transform scale-150 bg-white rounded-full shadow-sm"></span>
+            <span className="absolute top-0 left-0 w-4 h-4 transition-all transform scale-150 bg-white rounded-full shadow-sm"></span>
           </div>
-          <span class="ml-3 text-sm font-normal text-gray-500 dark:text-gray-400">
+          <span className="ml-3 text-sm font-normal text-gray-500 dark:text-gray-400">
             Remember me
           </span>
         </label>
 
         {/* Forgot password */}
-        <a href="#" class="text-xs text-green-600 font-bold hover:underline">
+        <a
+          href="#"
+          className="text-xs text-green-600 font-bold hover:underline"
+        >
           Forgot Password?
         </a>
       </div>
@@ -89,7 +92,7 @@ const LoginForm = () => {
       <div>
         <button
           type="submit"
-          class="w-full px-4 py-2 font-medium text-center text-white transition-colors duration-200 rounded-md bg-green-700 hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-darker"
+          className="w-full px-4 py-2 font-medium text-center text-white transition-colors duration-200 rounded-md bg-green-700 hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-darker"
         >
           Login
         </button>

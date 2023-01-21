@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Students' Essentials",
+    "labels": [
+      {
+        "name": "Text-books",
+        "img": ""
+      },
+      {
+        "name": "Course materials",
+        "img": ""
+      },
+      {
+        "name": "CA Fillers",
+        "img": ""
+      },
+      {
+        "name": "Writing materials",
+        "img": ""
+      }
+    ]
+  },
+  {
+    "name": "Tech Lovers",
+    "labels": [
+      {
+        "name": "Text-books",
+        "img": ""
+      },
+      {
+        "name": "Course materials",
+        "img": ""
+      },
+      {
+        "name": "CA Fillers",
+        "img": ""
+      },
+      {
+        "name": "Writing materials",
+        "img": ""
+      }
+    ]
+  }
+]

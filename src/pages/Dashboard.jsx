@@ -43,8 +43,9 @@ const Dashboard = () => {
 
                 return 0;
               })
-              .map((item) => (
+              .map((item, index) => (
                 <div
+                  key={index}
                   className={
                     'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
                   }
@@ -102,8 +103,9 @@ const Dashboard = () => {
         <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Services</h3>
 
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4">
-          {servicesData.map((item) => (
+          {servicesData.map((item, index) => (
             <Link
+              key={index}
               to={item.link}
               className="flex update flex-col items-center bg-white justify-between text-center border  p-3 rounded-md gap-1 text-gray-700"
             >
