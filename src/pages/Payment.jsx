@@ -7,7 +7,7 @@ const Payment = () => {
   const [productData, setProductData] = useState({
     name: 'Orange Product',
     img: '',
-    price: 30000 * 100,
+    price: 30000 * 100 + 1.5 / 100,
   });
   const [userData, setUserData] = useState({
     name: user.name,
