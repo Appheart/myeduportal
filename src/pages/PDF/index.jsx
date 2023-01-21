@@ -24,13 +24,8 @@ export default function Sample() {
   }
 
   return (
-    <div className="Example">
-      <header>
-        <h1 className="font-bold text-lg w-full text-gray-700 text-center">
-          PDF Reader
-        </h1>
-      </header>
-      <div className="w-full h-full overflow-x-scroll">
+    <main>
+      <div className="w-full h-full overflow-x-auto">
         <Document
           file={file}
           onLoadSuccess={onDocumentLoadSuccess}
@@ -42,6 +37,6 @@ export default function Sample() {
           ))}
         </Document>
       </div>
-    </div>
+    </main>
   );
 }
