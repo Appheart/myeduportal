@@ -1,5 +1,5 @@
 import { Telegraf } from 'telegraf';
-const TOKEN = import.meta.env.VITE_REACT_APP_TELEGRAM_KEY;
+const TOKEN = '5959409322:AAF4D2MgUwo9zvM53ZD3ID1VOd0ET3m7t0E';
 const bot = new Telegraf(TOKEN);
 
 const web_link = 'https://edupora.netlify.app/';
