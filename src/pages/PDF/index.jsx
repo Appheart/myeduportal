@@ -30,18 +30,17 @@ export default function Sample() {
           PDF Reader
         </h1>
       </header>
-      <div className="Example__container">
-        <div className="Example__container__document">
-          <Document
-            file={file}
-            onLoadSuccess={onDocumentLoadSuccess}
-            options={options}
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
-        </div>
+      <div className="w-full h-full overflow-x-scroll">
+        <Document
+          file={file}
+          onLoadSuccess={onDocumentLoadSuccess}
+          options={options}
+          className="w-full h-full"
+        >
+          {Array.from(new Array(numPages), (el, index) => (
+            <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+          ))}
+        </Document>
       </div>
     </div>
   );
