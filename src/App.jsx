@@ -10,8 +10,9 @@ export const UserContext = createContext();
 const App = () => {
   const [user, setUser] = useState({
     name: 'Paul Ishaili',
-    userName: 'mrpaulishaili',
+    username: 'mrpaulishaili',
     email: 'paulishaili@gmail.com',
+    tel: '+2349161464483',
 
     session: '2021 - 2022',
     semester: 1,

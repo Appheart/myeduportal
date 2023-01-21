@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { PaystackButton } from 'react-paystack';
+import { UserContext } from '../App';
 
 const Payment = () => {
+  const user = useContext(UserContext);
   const [productData, setProductData] = useState({
     name: 'Orange Product',
     img: '',
-    price: '30000',
+    price: 30000 * 100,
   });
   const [userData, setUserData] = useState({
-    name: 'Paul Ishili',
-    email: 'paulishaili@gmail.com',
-    phoneNumber: '09161464483',
+    name: user.name,
+    email: user.email,
+    phoneNumber: user.tel,
   });
 
   const paystackPublicKey = import.meta.env.VITE_REACT_APP_PAYSTACK_PUBLIC_KEY;
@@ -30,8 +32,26 @@ const Payment = () => {
       );
       //   Send info to backend api to record transactions
       resetForm();
+      sendToServer({
+        transactionId: reference,
+        user: {
+          name: userData.name,
+          email: userData.email,
+          tel: userData.phoneNumber,
+        },
+        product: {
+          name: '',
+          img: '',
+          price: '',
+          status: true,
+        },
+      });
     },
     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+  };
+
+  const sendToServer = (data) => {
+    console.log(data);
   };
 
   return (
