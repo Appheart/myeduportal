@@ -20,15 +20,17 @@ const Dashboard = () => {
 
   return (
     <main>
-      <div className="flex flex-col md:flex-row md:gap-5 items-start">
+      <div className="flex flex-col md:flex-row md:gap-3 items-start">
         <section className="bg-yellow-100 p-5 shadow-md mb-5 mt-3 rounded-md flex flex-col gap-1 flex-shrink-0 w-full md:w-[50%] max-h-min">
-          <h3 className="text-2xl text-gray-500 ">
-            Hello, <span className=" font-semibold">Paul</span>
-          </h3>
-          <p className="text-gray-800">Welcome back</p>
+          <div className="flex justify-between gap-2 items-center">
+            <p className="text-gray-800">
+              Welcome back, <span className=" font-semibold">Paul</span>
+            </p>
+            <img src="/images/gif/waving-hi.gif" alt="" className="h-10 w-10" />
+          </div>
         </section>
 
-        <section className="mt-2 mb-3  w-full md:w-[50%]">
+        <section className="mb-3  w-full md:w-[50%]">
           <CarouselCards />
         </section>
       </div>

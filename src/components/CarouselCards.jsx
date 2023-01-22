@@ -6,17 +6,17 @@ const CarouselCards = () => {
   return (
     <div className="flex flex-col gap-3 ">
       {/* Carousels */}
-      <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 px-4 gap-5 w-full flex-nowrap overflow-x-auto h-[12rem]">
+      <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 pt-3 px-4 gap-5 w-full flex-nowrap overflow-x-auto h-[12rem]">
         {adsData.map((ad, index) => (
           <LinkBtn
             key={index}
             link={ad.link}
-            className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-green-100 h-full w-full overflow-hidden max-w-[5] "
+            className="snap-start p-2 relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0 rounded-lg bg-white shadow-md h-full w-full overflow-hidden max-w-[420px] "
           >
             <img
               src={ad.adImg}
               alt={ad.title}
-              className="h-full w-full object-cover"
+              className="h-full rounded-lg w-full object-cover"
             />
           </LinkBtn>
         ))}
