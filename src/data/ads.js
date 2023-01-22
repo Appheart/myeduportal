@@ -19,7 +19,7 @@ const ads = [
     title: 'KMO Telecoms',
     adImg: '/images/ads/KMO_ad.jpg',
     BusinessID: 109902,
-    link: 'https://wa.me/2347061885385',
+    link: 'https://wa.link/klac3k',
   },
 ];
 
