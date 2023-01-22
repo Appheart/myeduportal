@@ -20,10 +20,18 @@ const Dashboard = () => {
 
   return (
     <main>
-      <section className="mt-2 mb-3">
-        <CarouselCards />
-      </section>
+      <div className="flex flex-col md:flex-row md:gap-5 items-start">
+        <section className="bg-yellow-100 p-5 shadow-md mb-5 mt-3 rounded-md flex flex-col gap-1 flex-shrink-0 w-full md:w-[50%] max-h-min">
+          <h3 className="text-2xl text-gray-500 ">
+            Hello, <span className=" font-semibold">Paul</span>
+          </h3>
+          <p className="text-gray-800">Welcome back</p>
+        </section>
 
+        <section className="mt-2 mb-3  w-full md:w-[50%]">
+          <CarouselCards />
+        </section>
+      </div>
       <section className="section  rounded-lg">
         <h3 className="text-lg font-bold text-yellow-600 pb-2 pl-3">
           Latest Information
