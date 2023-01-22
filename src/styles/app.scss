@@ -187,10 +187,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.fieldset {
-  padding: 1rem 0;
+section fieldset {
   margin-top: 1rem;
   background-color: var(--white);
+}
+
+.fieldset {
+  padding: 1rem 0;
   box-shadow: var(--shadow-2);
   padding: 1rem;
   border-radius: 0.5rem;
