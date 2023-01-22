@@ -6,7 +6,7 @@ const CarouselCards = () => {
   return (
     <div className="flex flex-col gap-3 ">
       {/* Carousels */}
-      <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 px-4 gap-2 w-full flex-nowrap overflow-x-auto h-[12rem]">
+      <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 px-4 gap-5 w-full flex-nowrap overflow-x-auto h-[12rem]">
         {adsData.map((ad, index) => (
           <LinkBtn
             key={index}

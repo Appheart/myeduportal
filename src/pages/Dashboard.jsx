@@ -32,6 +32,7 @@ const Dashboard = () => {
           <CarouselCards />
         </section>
       </div>
+
       <section className="section  rounded-lg">
         <h3 className="text-lg font-bold text-yellow-600 pb-2 pl-3">
           Latest Information
@@ -94,7 +95,7 @@ const Dashboard = () => {
           )}
         </div>
 
-        <div className="mt-5 flex justify-center items-center gap-4">
+        <div className="mt-5 flex justify-center items-center  gap-4">
           <FontAwesomeIcon icon={faArrowLeft} />
           <Link
             to={'/'}
@@ -106,10 +107,10 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {/* Services */}
       <section className="section bg-gray-50 p-3 rounded-lg">
         <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Services</h3>
 
+        {/* Services */}
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4">
           {servicesData.map((item, index) => (
             <Link
@@ -132,6 +133,47 @@ const Dashboard = () => {
           ))}
         </div>
       </section>
+
+      <div className="flex flex-col md:flex-row gap-3 md:gap-4 ">
+        {/* Announcement */}
+        <section className="section bg-yellow-50 p-3 rounded-lg w-full md:w-[50%]">
+          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
+            Announcements
+          </h3>
+
+          <div className="flex flex-col gap-3 ">
+            {/* Carousels */}
+            <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 px-4 gap-5 w-full flex-nowrap overflow-x-auto h-[8rem]">
+              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-yellow-700 text-gray-100 h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
+                🎉 UNN Matriculation is now holding on the 14th of February this
+                year, 2023
+              </p>
+              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-yellow-700 text-gray-100 h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
+                🎉 UNN Convocation is scheduled to hold in March 21st, 2023
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Todos */}
+        <section className="mb-3  w-full md:w-[50%]">
+          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Todos</h3>
+          <div className="grid md:flex grid-cols-2 gap-4">
+            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+              <h3 className="text-lg md:text-md">Tuition Fees</h3>
+            </div>
+            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+              <h3 className="text-lg md:text-md">Course Reg</h3>
+            </div>
+            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+              <h3 className="text-lg md:text-md">Course Materials</h3>
+            </div>
+            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+              <h3 className="text-lg md:text-md">Time-table</h3>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 };
