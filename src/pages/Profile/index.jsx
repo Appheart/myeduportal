@@ -1,12 +1,10 @@
-import { faMoon } from '@fortawesome/free-regular-svg-icons';
-import { faPen, faPenAlt, faPrint } from '@fortawesome/free-solid-svg-icons';
+import { faPenAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { UserContext } from '../App';
-import { LinkBtn, UserError, UserErrorMessage } from '../components';
-import { coursesData } from '../data';
+import { UserContext } from '../../App';
+import { LinkBtn, UserError } from '../../components';
+import { coursesData } from '../../data';
 
 const Profile = () => {
   const { userName, instituteSync } = useSelector((state) => state.auth);
@@ -40,6 +38,7 @@ const Profile = () => {
             <div className="flex items-center gap-3">
               <div className="profile__image--container h-[8rem] w-[8rem] shadow-md rounded-full overflow-hidden">
                 <img
+                  loading="lazy"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfsTQFb0kp8I5e3JYPbVszsdPRsHBp3MM0snd7GltdQQ&s"
                   alt="Profile image"
                   height={100}

@@ -41,7 +41,7 @@ const ForumCard = () => {
       <div className="flex justify-between items-center">
         <div className="flex gap-1 items-center">
           <div className="avatar">
-            <img src="" alt="" />
+            <img src="" alt="" loading="lazy" />
           </div>
           <small>
             Posted by <span>amportr</span>

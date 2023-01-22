@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { PaystackButton } from 'react-paystack';
-import { UserContext } from '../App';
+import { UserContext } from '../../App';
 
 const Payment = () => {
   const user = useContext(UserContext);
@@ -84,6 +84,7 @@ const Payment = () => {
         <div className="container h-full max-h-80vh flex flex-col md:flex-row mx-auto my-[5%] w-full max-w-xl bg-white shadow-md">
           <div className="relative h-full  w-full md:w-[50%] ">
             <img
+              loading="lazy"
               className="h-full w-full md:min-h-[380px]  object-cover"
               src={productData.img}
               alt={productData.name}

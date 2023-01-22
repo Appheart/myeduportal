@@ -32,6 +32,7 @@ const Header = () => {
         <LinkBtn link={'/profile'} className="flex gap-4 items-center ">
           <div className="notification rounded-full overflow-hidden">
             <img
+              loading="lazy"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfsTQFb0kp8I5e3JYPbVszsdPRsHBp3MM0snd7GltdQQ&s "
               alt=""
             />

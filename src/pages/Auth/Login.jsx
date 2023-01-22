@@ -1,6 +1,6 @@
-import { LinkBtn } from '../components';
-import LoginForm from '../components/forms/LoginForm';
-import Logo from '../components/Logo';
+import { LinkBtn } from '../../components';
+import LoginForm from '../../components/forms/LoginForm';
+import Logo from '../../components/Logo';
 
 const Login = () => {
   return (

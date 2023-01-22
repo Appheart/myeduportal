@@ -5,7 +5,7 @@ const userErrorMessage = ({ illustration, message, cta }) => {
         ''
       ) : (
         <div className="img-container">
-          <img src={`/images/${illustration}`} alt="userError" />
+          <img loading="lazy" src={`/images/${illustration}`} alt="userError" />
         </div>
       )}
       <p>{message}</p>

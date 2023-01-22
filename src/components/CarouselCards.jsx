@@ -14,6 +14,7 @@ const CarouselCards = () => {
             className="snap-start p-2 relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0 rounded-lg bg-white shadow-md h-full w-full overflow-hidden max-w-[420px] "
           >
             <img
+              loading="lazy"
               src={ad.adImg}
               alt={ad.title}
               className="h-full rounded-lg w-full object-cover"
