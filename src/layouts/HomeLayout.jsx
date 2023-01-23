@@ -11,3 +11,5 @@ export const HomeLayout = () => {
 
   return { outlet };
 };
+
+export default HomeLayout;

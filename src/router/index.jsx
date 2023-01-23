@@ -4,10 +4,8 @@ import {
   defer,
   Route,
 } from 'react-router-dom';
-import Layout from '../layouts';
-import { AuthLayout } from '../layouts/AuthLayout';
-import { HomeLayout } from '../layouts/HomeLayout';
-import ProtectedLayout from '../layouts/ProtectedLayout';
+import UseScrollTo from '../app/hooks/useScrollTo';
+import { AuthLayout, ProtectedLayout } from '../layouts';
 
 const getUserData = () =>
   new Promise((resolve) =>
@@ -31,6 +29,7 @@ import {
   Register,
   TimeTable,
 } from '../pages';
+import { newsDataLoader } from '../pages/Home';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,7 +41,7 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register />} />
 
       <Route path="/" element={<ProtectedLayout />}>
-        <Route index element={<Dashboard />} />
+        <Route index element={<Dashboard />} loader={newsDataLoader} />
         <Route path="courses">
           <Route index element={<Courses />} />
           <Route path=":courseId" element={<RandomCourse />} />

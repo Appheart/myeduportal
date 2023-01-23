@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
-const UseScrollTo = (x, y, props) => {
-  const { pathname } = useLocation();
+const UseScrollTo = ({ children }) => {
+  const location = useLocation();
   useEffect(() => {
-    window.scrollTo(x, y);
-  }, [pathname]);
+    window.scrollTo(0, 0);
+  }, [location]);
 
-  return <>{props.children}</>;
+  return children;
 };
 
 export default UseScrollTo;

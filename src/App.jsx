@@ -1,4 +1,4 @@
-import { RouterProvider } from 'react-router-dom';
+import { RouterProvider, ScrollRestoration } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import router from './router';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App bg-[#fff]">
       <RouterProvider router={router}>
-        <UseScrollTo x={0} y={0} />
+        <ScrollRestoration />
       </RouterProvider>
     </div>
   );

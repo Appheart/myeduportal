@@ -1,23 +1,17 @@
-import { useEffect, useState } from 'react';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { CarouselCards, LinkBtn } from '../../components';
 import { servicesData } from '../../data';
 import { api } from '../../app/api';
 
-const Dashboard = () => {
-  const [newsData, setNewsData] = useState([]);
-
-  const fetchNewsData = () =>
-    api.get(`/news`).then((response) => {
-      setNewsData(response.data);
-    });
-
-  useEffect(() => {
-    fetchNewsData(), [];
+export const newsDataLoader = () =>
+  api.get(`/news`).then((response) => {
+    return response.data;
   });
 
+const Dashboard = () => {
+  const newsData = useLoaderData();
   return (
     <main>
       <div className="flex flex-col md:flex-row md:gap-3 items-start">

@@ -4,7 +4,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Alert from '@mui/material/Alert';
 import { AuthProvider } from '../app/hooks/useAuth';
 
-export const AuthLayout = () => {
+const AuthLayout = () => {
   const outlet = useOutlet();
 
   const { userPromise } = useLoaderData();
@@ -21,3 +21,5 @@ export const AuthLayout = () => {
     </Suspense>
   );
 };
+
+export default AuthLayout;
