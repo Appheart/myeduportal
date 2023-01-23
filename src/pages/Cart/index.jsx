@@ -1,10 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { PaystackButton } from 'react-paystack';
-import { UserContext } from '../../App';
 
 const Payment = () => {
-  const user = useContext(UserContext);
-
   const [productData, setProductData] = useState({
     name: 'Orange Product',
     img: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',

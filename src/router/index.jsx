@@ -1,13 +1,24 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  defer,
   Route,
 } from 'react-router-dom';
 import Layout from '../layouts';
+import { AuthLayout } from '../layouts/AuthLayout';
+import { HomeLayout } from '../layouts/HomeLayout';
+import ProtectedLayout from '../layouts/ProtectedLayout';
+
+const getUserData = () =>
+  new Promise((resolve) =>
+    setTimeout(() => {
+      const user = window.localStorage.getItem('user');
+      resolve(user);
+    }, 3000)
+  );
 
 import {
   Courses,
-  Credentials,
   Dashboard,
   Error404,
   Examinations,
@@ -23,10 +34,14 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route
+      element={<AuthLayout />}
+      loader={() => defer({ userPromise: getUserData() })}
+    >
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/" element={<Layout />}>
+
+      <Route path="/" element={<ProtectedLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="courses">
           <Route index element={<Courses />} />
@@ -34,7 +49,6 @@ const router = createBrowserRouter(
         </Route>
         <Route path="timetable" element={<TimeTable />} />
         <Route path="examinations" element={<Examinations />} />
-        <Route path="credentials" element={<Credentials />} />
         <Route path="profile" element={<Profile />} />
         <Route path="/NYSC" element={<NYSC />} />
         <Route path="/Forum" element={<Forum />} />

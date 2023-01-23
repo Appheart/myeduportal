@@ -1,38 +1,25 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { login } from '../../app/features/auth/AuthSlice';
+import { useAuth } from '../../app/hooks/useAuth';
 import { usersData } from '../../data';
 
 const LoginForm = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const { login } = useAuth();
 
-  const [form, setForm] = useState({
-    username: '',
-    password: '',
-  });
-
-  const onUpdateField = (e) => {
-    const nextFormState = {
-      ...form,
-      [e.target.name]: e.target.value,
-    };
-    setForm(nextFormState);
-  };
-
-  const handleLogin = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.username || !form.password) {
+    const data = new FormData(e.currentTarget);
+
+    let username = data.get('username');
+    let password = data.get('password');
+
+    if (!username || !password) {
       alert('Error signing in!');
       return false;
     }
 
     const checkUser = usersData.find(
       (user) =>
-        user.userName == form.username.toLowerCase() &&
-        user.password === form.password
+        user.userName == username.toLowerCase() && user.password === password
     );
 
     if (!checkUser) {
@@ -40,19 +27,16 @@ const LoginForm = () => {
       return false;
     }
 
-    dispatch(login());
-
-    navigate('/');
+    login({ username, password });
   };
 
   return (
-    <form onSubmit={handleLogin} className="space-y-6" autoComplete={false}>
+    <form onSubmit={handleSubmit} className="space-y-6">
       <input
         type="text"
         id=""
         name="hidden"
         className="appearance-none hidden"
-        autocomplete={false}
       />
       <input
         className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
@@ -60,8 +44,6 @@ const LoginForm = () => {
         name="username"
         placeholder="Username"
         required
-        onChange={onUpdateField}
-        autoComplete="false"
       />
       <input
         className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
@@ -69,7 +51,6 @@ const LoginForm = () => {
         name="password"
         placeholder="Password"
         required
-        onChange={onUpdateField}
       />
       <div className="flex items-center justify-between">
         {/* <!-- Remember me toggle --> */}

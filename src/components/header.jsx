@@ -29,14 +29,17 @@ const Header = () => {
           <Logo />
         </div>
 
-        <LinkBtn link={'/profile'} className="flex gap-4 items-center ">
-          <div className="notification rounded-full overflow-hidden">
+        <div className="flex gap-4 items-center ">
+          <LinkBtn
+            link={'/profile'}
+            className="notification rounded-full overflow-hidden"
+          >
             <img
               loading="lazy"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfsTQFb0kp8I5e3JYPbVszsdPRsHBp3MM0snd7GltdQQ&s "
               alt=""
             />
-          </div>
+          </LinkBtn>
           <div
             className={
               notifyOpen
@@ -65,7 +68,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faBell} className="" />
             <span>3</span>
           </div>
-        </LinkBtn>
+        </div>
       </div>
     </header>
   );

@@ -2,12 +2,12 @@ import { Navigate, useOutlet } from 'react-router-dom';
 import { useAuth } from '../app/hooks/useAuth';
 import { Header, Menu } from '../components';
 
-const Layout = () => {
+const ProtectedLayout = () => {
   const { user } = useAuth();
   const outlet = useOutlet();
 
   if (!user) {
-    return <Navigate to="/" />;
+    return <Navigate to="/login" />;
   }
 
   return (
@@ -18,4 +18,4 @@ const Layout = () => {
     </>
   );
 };
-export default Layout;
+export default ProtectedLayout;
