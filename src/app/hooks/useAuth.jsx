@@ -33,7 +33,6 @@ export const AuthProvider = ({ children, userData }) => {
     }),
     [user]
   );
-
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 

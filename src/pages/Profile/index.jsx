@@ -51,12 +51,12 @@ const Profile = () => {
                 <p className="font-bold"> Institution:</p>
               </div>
               <div className="w-full flex justify-start">
-                <p className="font-mono">UNN</p>
+                <p className="font-mono">University of Nigeria, Nsukka</p>
               </div>
             </div>
             <div className="flex flex-col justify-between ">
               <div className="">
-                <p className="font-bold"> Course of Study:</p>
+                <p className="font-bold"> Department / Course of Study:</p>
               </div>
               <div className="w-full flex justify-start">
                 <p className="font-mono">Robotics Engineering</p>
@@ -72,7 +72,7 @@ const Profile = () => {
             </div>
             <div className="flex flex-col justify-between ">
               <div className="">
-                <p className="font-bold"> Matric number</p>
+                <p className="font-bold"> Matric No.</p>
               </div>
               <div className="w-full flex justify-start">
                 <p className="font-mono">349982992AB</p>
@@ -91,7 +91,7 @@ const Profile = () => {
               <FontAwesomeIcon icon={faPenAlt} />
             </LinkBtn>
           </div>
-          <h3 className="font-bold text-green-800">Courses</h3>
+          <h3 className="font-bold text-green-800">Registered Courses</h3>
           <div className="flex flex-wrap gap-2 text-xs  text-gray-600">
             <LinkBtn
               link={'/profile'}

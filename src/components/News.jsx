@@ -1,12 +1,9 @@
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useLoaderData } from 'react-router-dom';
 import LinkBtn from './Link';
 // import { api } from '../app/api';
 
-const News = () => {
-  const newsData = useLoaderData();
-
+const News = ({ newsData }) => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -61,64 +58,9 @@ const News = () => {
               'flex py-7 text-center bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
             }
           >
-            <p className="text-sm text-gray-900">Reload to get News</p>
-          </div>
-        )}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {newsData.length > 0 ? (
-          newsData
-            .sort(function (a, b) {
-              if (a.publishedOn > b.publishedOn) {
-                return -1;
-              }
-
-              if (a.publishedOn < b.publishedOn) {
-                return 1;
-              }
-
-              return 0;
-            })
-            .map((item, index) => (
-              <div
-                key={index}
-                className={
-                  'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-                }
-              >
-                <small className="text-green-800 font-bold">
-                  {item.publishedOn}
-                </small>
-
-                <div className="flex items-center justify-between gap-2">
-                  <p className="">{item.title}</p>
-
-                  <div className="img-container">
-                    <img
-                      src={item.illustration}
-                      alt=""
-                      height={80}
-                      width={80}
-                    />
-                  </div>
-                </div>
-
-                <LinkBtn
-                  link={item.link}
-                  className="text-red-800 text-xs font-bold"
-                >
-                  Read more
-                </LinkBtn>
-              </div>
-            ))
-        ) : (
-          <div
-            className={
-              'flex py-7 text-center bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-            }
-          >
-            <p className="text-sm text-gray-900">Reload to get News</p>
+            <p className="text-sm text-gray-900">
+              your news is loading, please wait...
+            </p>
           </div>
         )}
       </div>

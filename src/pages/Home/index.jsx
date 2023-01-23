@@ -1,15 +1,22 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { api } from '../../app/api';
 import { CarouselCards } from '../../components';
-import News from '../../components/News';
 import { servicesData } from '../../data';
-
-export const newsDataLoader = () =>
-  api.get(`/news`).then((response) => {
-    return response.data;
-  });
+import { api } from '../../app/api';
+import News from '../../components/News';
 
 const Dashboard = () => {
+  const [newsData, setNewsData] = useState([]);
+
+  const fetchNewsData = () =>
+    api.get(`/news`).then((response) => {
+      setNewsData(response.data);
+    });
+
+  useEffect(() => {
+    fetchNewsData(), [];
+  });
+
   return (
     <main>
       <div className="flex flex-col md:flex-row md:gap-3 items-start">
@@ -32,7 +39,7 @@ const Dashboard = () => {
           Latest Information
         </h3>
 
-        <News />
+        <News newsData={newsData} />
       </section>
 
       <section className="section bg-gray-50 p-3 rounded-lg">
