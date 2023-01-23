@@ -1,8 +1,38 @@
+import { useAuth } from '../../app/hooks/useAuth';
 import { LinkBtn } from '../../components';
 import LoginForm from '../../components/forms/LoginForm';
 import Logo from '../../components/Logo';
+import { usersData } from '../../data';
 
 const Login = () => {
+  const { login } = useAuth();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const data = new FormData(e.currentTarget);
+
+    let username = data.get('username');
+    let password = data.get('password');
+
+    if (!username || !password) {
+      alert('Error signing in!');
+      return false;
+    }
+
+    const checkUser = usersData.find(
+      (user) =>
+        user.userName == username.toLowerCase() && user.password === password
+    );
+
+    if (!checkUser) {
+      alert('Invalid credentials');
+      return false;
+    }
+
+    login({ username, password });
+  };
+
   return (
     <main
       id="LoginPage"
@@ -11,7 +41,7 @@ const Login = () => {
       <div className="w-full max-w-sm px-4 py-[5%] space-y-5 bg-white rounded-md dark:bg-darker">
         <Logo />
 
-        <LoginForm />
+        <LoginForm handleSubmit={handleSubmit} />
 
         {/* <!-- Or --> */}
         <div className="flex items-center justify-center space-x-2 flex-nowrap">

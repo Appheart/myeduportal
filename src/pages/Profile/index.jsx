@@ -35,24 +35,31 @@ const Profile = () => {
       <section className="bg-gradient-to-r from-sky-100 to-indigo-200 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 p-3 rounded-lg">
         {/*  */}
 
-        <fieldset className="fieldset flex flex-col justify-between gap-5 relative bg-white ">
+        <fieldset className="fieldset flex flex-col justify-between gap-3 relative bg-white ">
           <div className="school_logo absolute top-3 right-3 shadow-sm rounded-lg">
             <LinkBtn
               link={'/'}
-              className="bg-green-300 text-gray-900 max-w-max ml-auto flex px-2 py-2 text-sm text-center rounded-md gap-3 items-center justify-center"
+              className="bg-green-300 text-gray-900 max-w-max ml-auto flex px-2 py-2 text-xs text-center rounded-md gap-3 items-center justify-center"
             >
               <FontAwesomeIcon icon={faPenAlt} />
-              Edit
             </LinkBtn>
           </div>
-          <h3 className="font-bold text-green-800">Bio Data:</h3>
-          <div className="grid grid-cols-2 gap-2 text-sm">
+          <h3 className="font-bold text-green-800">Edu Data</h3>
+          <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
             <div className="flex flex-col justify-between ">
               <div className="">
-                <p className="font-bold"> Matric:</p>
+                <p className="font-bold"> Institution:</p>
               </div>
               <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
+                <p className="font-mono">UNN</p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-between ">
+              <div className="">
+                <p className="font-bold"> Course of Study:</p>
+              </div>
+              <div className="w-full flex justify-start">
+                <p className="font-mono">Robotics Engineering</p>
               </div>
             </div>
             <div className="flex flex-col justify-between ">
@@ -60,73 +67,56 @@ const Profile = () => {
                 <p className="font-bold"> JAMB:</p>
               </div>
               <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
+                <p className="font-mono">202033921000AB</p>
               </div>
             </div>
             <div className="flex flex-col justify-between ">
               <div className="">
-                <p className="font-bold"> O'Level:</p>
+                <p className="font-bold"> Matric number</p>
               </div>
               <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between ">
-              <div className="">
-                <p className="font-bold"> NIN:</p>
-              </div>
-              <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
+                <p className="font-mono">349982992AB</p>
               </div>
             </div>
           </div>
         </fieldset>
 
         {/*  */}
-        <fieldset className="fieldset flex flex-col justify-between gap-5 relative  bg-white">
+        <fieldset className="fieldset flex flex-col gap-3 relative bg-white ">
           <div className="school_logo absolute top-3 right-3 shadow-sm rounded-lg">
             <LinkBtn
               link={'/'}
-              className="bg-green-300 text-gray-900 max-w-max ml-auto flex px-2 py-2 text-sm text-center rounded-md gap-3 items-center justify-center"
+              className="bg-green-300 text-gray-900 max-w-max ml-auto flex px-2 py-2 text-xs text-center rounded-md gap-3 items-center justify-center"
             >
               <FontAwesomeIcon icon={faPenAlt} />
-              Edit
             </LinkBtn>
           </div>
-          <h3 className="font-bold text-green-8">Contact:</h3>
-          <div className="grid grid-cols-2 gap-2 text-sm ">
-            <div className="flex flex-col justify-between ">
-              <div className="">
-                <p className="font-bold"> Phone:</p>
-              </div>
-              <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between ">
-              <div className="">
-                <p className="font-bold"> Whatsapp:</p>
-              </div>
-              <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between ">
-              <div className="">
-                <p className="font-bold"> Email:</p>
-              </div>
-              <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between ">
-              <div className="">
-                <p className="font-bold"> Facebook:</p>
-              </div>
-              <div className="w-full flex justify-start">
-                <p className="font-mono">Nil</p>
-              </div>
-            </div>
+          <h3 className="font-bold text-green-800">Courses</h3>
+          <div className="flex flex-wrap gap-2 text-xs  text-gray-600">
+            <LinkBtn
+              link={'/profile'}
+              className={'p-2 bg-yellow-50 rounded-md font-bold'}
+            >
+              COS 101
+            </LinkBtn>
+            <LinkBtn
+              link={'/profile'}
+              className={'p-2 bg-yellow-50 rounded-md font-bold'}
+            >
+              COS 101
+            </LinkBtn>
+            <LinkBtn
+              link={'/profile'}
+              className={'p-2 bg-yellow-50 rounded-md font-bold'}
+            >
+              COS 101
+            </LinkBtn>
+            <LinkBtn
+              link={'/profile'}
+              className={'p-2 bg-yellow-50 rounded-md font-bold'}
+            >
+              COS 101
+            </LinkBtn>
           </div>
         </fieldset>
 

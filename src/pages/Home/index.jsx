@@ -1,9 +1,8 @@
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, useLoaderData } from 'react-router-dom';
-import { CarouselCards, LinkBtn } from '../../components';
-import { servicesData } from '../../data';
+import { Link } from 'react-router-dom';
 import { api } from '../../app/api';
+import { CarouselCards } from '../../components';
+import News from '../../components/News';
+import { servicesData } from '../../data';
 
 export const newsDataLoader = () =>
   api.get(`/news`).then((response) => {
@@ -11,7 +10,6 @@ export const newsDataLoader = () =>
   });
 
 const Dashboard = () => {
-  const newsData = useLoaderData();
   return (
     <main>
       <div className="flex flex-col md:flex-row md:gap-3 items-start">
@@ -34,73 +32,7 @@ const Dashboard = () => {
           Latest Information
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {newsData.length > 0 ? (
-            newsData
-              .sort(function (a, b) {
-                if (a.publishedOn > b.publishedOn) {
-                  return -1;
-                }
-
-                if (a.publishedOn < b.publishedOn) {
-                  return 1;
-                }
-
-                return 0;
-              })
-              .map((item, index) => (
-                <div
-                  key={index}
-                  className={
-                    'flex bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-                  }
-                >
-                  <small className="text-green-800 font-bold">
-                    {item.publishedOn}
-                  </small>
-
-                  <div className="flex items-center justify-between gap-2">
-                    <p className="">{item.title}</p>
-
-                    <div className="img-container">
-                      <img
-                        src={item.illustration}
-                        alt=""
-                        height={80}
-                        width={80}
-                      />
-                    </div>
-                  </div>
-
-                  <LinkBtn
-                    link={item.link}
-                    className="text-red-800 text-xs font-bold"
-                  >
-                    Read more
-                  </LinkBtn>
-                </div>
-              ))
-          ) : (
-            <div
-              className={
-                'flex py-7 text-center bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-              }
-            >
-              <p className="text-sm text-gray-900">Reload to get News</p>
-            </div>
-          )}
-        </div>
-
-        <div className="mt-5 flex justify-center items-center  gap-4">
-          <FontAwesomeIcon icon={faArrowLeft} />
-          <Link
-            to={'/'}
-            className=" text-sm flex  justify-center text-center text-red-400 font-bold underline"
-          >
-            1
-          </Link>
-          <FontAwesomeIcon icon={faArrowRight} />
-        </div>
+        <News />
       </section>
 
       <section className="section bg-gray-50 p-3 rounded-lg">

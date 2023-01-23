@@ -1,35 +1,7 @@
 import { useAuth } from '../../app/hooks/useAuth';
 import { usersData } from '../../data';
 
-const LoginForm = () => {
-  const { login } = useAuth();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const data = new FormData(e.currentTarget);
-
-    let username = data.get('username');
-    let password = data.get('password');
-
-    if (!username || !password) {
-      alert('Error signing in!');
-      return false;
-    }
-
-    const checkUser = usersData.find(
-      (user) =>
-        user.userName == username.toLowerCase() && user.password === password
-    );
-
-    if (!checkUser) {
-      alert('Invalid credentials');
-      return false;
-    }
-
-    login({ username, password });
-  };
-
+const LoginForm = ({ handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <input

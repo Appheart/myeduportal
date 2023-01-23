@@ -2,7 +2,6 @@ import { RouterProvider, ScrollRestoration } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import router from './router';
-import UseScrollTo from './app/hooks/useScrollTo';
 
 const tele = window.Telegram.WebApp;
 
