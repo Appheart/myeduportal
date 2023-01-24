@@ -1,14 +1,13 @@
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LinkBtn from './Link';
-// import { api } from '../app/api';
 
 const News = ({ newsData }) => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {newsData.length > 0 ? (
-          newsData
+      {newsData.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {newsData
             .sort(function (a, b) {
               if (a.publishedOn > b.publishedOn) {
                 return -1;
@@ -51,29 +50,39 @@ const News = ({ newsData }) => {
                   Read more
                 </LinkBtn>
               </div>
-            ))
-        ) : (
-          <div
-            className={
-              'flex py-7 text-center bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700'
-            }
-          >
-            <p className="text-sm text-gray-900">
-              your news is loading, please wait...
-            </p>
-          </div>
-        )}
-      </div>
+            ))}
+        </div>
+      ) : (
+        <div
+          className={
+            'flex py-7 text-center bg-white shadow-sm update flex-col border  p-3 rounded gap-1 text-gray-700 h-[10rem]'
+          }
+        >
+          <img
+            src="/images/gif/loading.gif"
+            alt="news_loading_state"
+            height={60}
+            className="object-contain w-full h-full"
+            loading="lazy"
+          />
+        </div>
+      )}
 
       <div className="mt-5 flex justify-center items-center  gap-4">
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <FontAwesomeIcon icon={faAnglesLeft} />
         <LinkBtn
           link={'/'}
-          className=" text-sm flex  justify-center text-center text-red-400 font-bold underline"
+          className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
         >
           1
         </LinkBtn>
-        <FontAwesomeIcon icon={faArrowRight} />
+        <LinkBtn
+          link={'/'}
+          className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
+        >
+          2
+        </LinkBtn>
+        <FontAwesomeIcon icon={faAnglesRight} />
       </div>
     </>
   );

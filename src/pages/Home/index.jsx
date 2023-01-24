@@ -42,24 +42,25 @@ const Dashboard = () => {
         <News newsData={newsData} />
       </section>
 
+      {/* Services */}
       <section className="section bg-gray-50 p-3 rounded-lg">
         <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Services</h3>
 
-        {/* Services */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4">
+        <div className="flex flex-wrap gap-4">
           {servicesData.map((item, index) => (
             <Link
               key={index}
               to={item.link}
-              className="flex update flex-col items-center bg-white justify-between text-center border  p-3 rounded-md gap-1 text-gray-700"
+              className="flex update h-[118px] w-[118px] flex-shrink-0 flex-grow flex-col items-center bg-white justify-between text-center border  p-3 rounded-md gap-1 text-gray-700"
             >
               <div className=" h-[3rem] w-[3rem] overflow-hidden">
                 <img
                   src={item.img}
-                  alt=""
+                  alt={`${item.name} service`}
                   height={40}
                   width={40}
                   className="h-full w-full object-contain"
+                  loading="lazy"
                 />
               </div>
 
