@@ -2,20 +2,23 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CarouselCards, LinkBtn } from '../../components';
 import { servicesData } from '../../data';
-import { api } from '../../app/api';
 import News from '../../components/News';
+import { getAllNews } from '../../app/api/newsApi';
 
 const Dashboard = () => {
   const [newsData, setNewsData] = useState([]);
+  const [page, setPage] = useState(1);
 
-  const fetchNewsData = () =>
-    api.get(`/news`).then((response) => {
-      setNewsData(response.data);
-    });
+  const fetchNewsData = () => {
+    getAllNews().then((result) => setNewsData(result));
+  };
 
   useEffect(() => {
     fetchNewsData(), [];
   });
+
+  const nextPage = () => setPage((prev) => prev + 1);
+  const prevPage = () => setPage((prev) => prev - 1);
 
   return (
     <main>
@@ -39,7 +42,12 @@ const Dashboard = () => {
           Latest Information
         </h3>
 
-        <News newsData={newsData} />
+        <News
+          newsData={newsData}
+          prevPage={prevPage}
+          nextPage={nextPage}
+          page={page}
+        />
       </section>
 
       {/* Services */}

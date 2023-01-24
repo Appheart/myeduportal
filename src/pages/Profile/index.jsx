@@ -56,7 +56,7 @@ const Profile = () => {
             </div>
             <div className="flex flex-col justify-between ">
               <div className="">
-                <p className="font-bold"> Department / Course of Study:</p>
+                <p className="font-bold"> Department:</p>
               </div>
               <div className="w-full flex justify-start">
                 <p className="font-mono">Robotics Engineering</p>
@@ -91,10 +91,10 @@ const Profile = () => {
               <FontAwesomeIcon icon={faPenAlt} />
             </LinkBtn>
           </div>
-          <h3 className="font-bold text-green-800">Registered Courses</h3>
+          <h3 className="font-bold text-green-800">My Courses</h3>
           <div className="flex flex-wrap gap-2 text-xs  text-gray-600">
             <LinkBtn
-              link={'/profile'}
+              link={`/courses/BIO101`}
               className={'p-2 bg-yellow-50 rounded-md font-bold'}
             >
               COS 101

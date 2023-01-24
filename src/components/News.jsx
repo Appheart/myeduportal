@@ -2,7 +2,7 @@ import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LinkBtn from './Link';
 
-const News = ({ newsData }) => {
+const News = ({ newsData, prevPage, nextPage, page }) => {
   return (
     <>
       {newsData.length > 0 ? (
@@ -69,7 +69,14 @@ const News = ({ newsData }) => {
       )}
 
       <div className="mt-5 flex justify-center items-center  gap-4">
-        <FontAwesomeIcon icon={faAnglesLeft} />
+        <button
+          onClick={prevPage}
+          disabled={page === 1}
+          link={'/'}
+          className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
+        >
+          <FontAwesomeIcon icon={faAnglesLeft} />
+        </button>
         <LinkBtn
           link={'/'}
           className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
@@ -77,12 +84,21 @@ const News = ({ newsData }) => {
           1
         </LinkBtn>
         <LinkBtn
+          onClick={nextPage}
+          disabled={!newsData.length}
           link={'/'}
           className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
         >
           2
         </LinkBtn>
-        <FontAwesomeIcon icon={faAnglesRight} />
+        <button
+          onClick={nextPage}
+          disabled={!newsData.length}
+          link={'/'}
+          className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
+        >
+          <FontAwesomeIcon icon={faAnglesRight} />
+        </button>
       </div>
     </>
   );
