@@ -72,18 +72,16 @@ const Dashboard = () => {
       <div className="flex flex-col md:flex-row gap-3 md:gap-4 ">
         {/* Announcement */}
         <section className="section bg-yellow-50 p-3 rounded-lg w-full md:w-[50%]">
-          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
-            Announcements
-          </h3>
+          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Upcomings</h3>
 
           <div className="flex flex-col gap-3 ">
             {/* Carousels */}
             <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 px-4 gap-5 w-full flex-nowrap overflow-x-auto h-[8rem]">
-              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-yellow-700 text-gray-100 h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
+              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-white text-yellow-700 shadow-md h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
                 🎉 UNN Matriculation is now holding on the 18th of February this
                 year, 2023
               </p>
-              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-yellow-700 text-gray-100 h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
+              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg  bg-white text-yellow-700 shadow-md h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
                 🎉 UNN Convocation is scheduled to hold in March 21st, 2023
               </p>
             </div>
@@ -91,41 +89,30 @@ const Dashboard = () => {
         </section>
 
         {/* Todos */}
-        <section className="mb-3  w-full md:w-[50%]">
-          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">Todos</h3>
-          <div className="grid md:flex grid-cols-2 gap-4">
-            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-              <h3 className="text-lg md:text-md">Tuition Fees</h3>
+        <section className="mb-3 bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-md w-full md:w-[50%]">
+          <h3 className="text-lg font-bold text-yellow-100 pb-2 ">Todos</h3>
+          <div className="grid md:flex grid-cols-2 gap-4 flex-wrap justify-between">
+            <div className="flex px-4 py-2 flex-shrink-0 flex-col gap-3 bg-green-100 text-gray-700 shadow-sm rounded-lg">
+              <h3 className="text-md md:text-sm">Fees payment</h3>
             </div>
-            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-              <h3 className="text-lg md:text-md">Course Reg</h3>
+            <div className="flex px-4 py-2 flex-shrink-0 flex-col gap-3 bg-green-100 text-gray-700 shadow-sm rounded-lg">
+              <h3 className="text-md md:text-sm">Clearance</h3>
             </div>
-            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-              <h3 className="text-lg md:text-md">Course Materials</h3>
+            <div className="flex px-4 py-2 flex-shrink-0 flex-col gap-3 bg-green-100 text-gray-700 shadow-sm rounded-lg">
+              <h3 className="text-md md:text-sm">Course Registration</h3>
             </div>
-            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-              <h3 className="text-lg md:text-md">Time-table</h3>
+            <div className="flex px-4 py-2 flex-shrink-0 flex-col gap-3 bg-green-100 text-gray-700 shadow-sm rounded-lg">
+              <h3 className="text-md md:text-sm">Term paper</h3>
+            </div>
+            <div className="flex px-4 py-2 flex-shrink-0 flex-col gap-3 bg-green-100 text-gray-700 shadow-sm rounded-lg">
+              <h3 className="text-md md:text-sm">Assignments</h3>
+            </div>
+            <div className="flex px-4 py-2 flex-shrink-0 flex-col gap-3 bg-green-100 text-gray-700 shadow-sm rounded-lg">
+              <h3 className="text-md md:text-sm">Seminars</h3>
             </div>
           </div>
         </section>
       </div>
-
-      {/* Subscribed Apps */}
-      <section className="mb-3  w-full md:w-[50%]">
-        <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
-          Subscribed Apps
-        </h3>
-        <div className="grid md:flex grid-cols-2 gap-4">
-          <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-            <h3 className="text-lg md:text-md">CampusCTZN</h3>
-            <LinkBtn link={'https://campus.ctzn.ng'}>Access</LinkBtn>
-          </div>
-          <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-            <h3 className="text-lg md:text-md">KMO Telecoms</h3>
-            <LinkBtn link={'https://kmo.ng/telecoms'}>Access</LinkBtn>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };

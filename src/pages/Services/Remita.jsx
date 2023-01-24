@@ -21,7 +21,7 @@ const Remita = () => {
             >
               <div className="p-4 bg-white shadow-md rounded-md">
                 Retrieve RRR Receipt
-              </div>{' '}
+              </div>
             </LinkBtn>
           </div>
         </div>
