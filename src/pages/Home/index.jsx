@@ -80,7 +80,7 @@ const Dashboard = () => {
             {/* Carousels */}
             <div className=" snap-mandatory snap-x scrollbar-none scroll-smooth flex pb-4 px-4 gap-5 w-full flex-nowrap overflow-x-auto h-[8rem]">
               <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-yellow-700 text-gray-100 h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
-                🎉 UNN Matriculation is now holding on the 14th of February this
+                🎉 UNN Matriculation is now holding on the 18th of February this
                 year, 2023
               </p>
               <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-yellow-700 text-gray-100 h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
@@ -105,6 +105,21 @@ const Dashboard = () => {
             </div>
             <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
               <h3 className="text-lg md:text-md">Time-table</h3>
+            </div>
+          </div>
+        </section>
+
+        {/* Subscribed Apps */}
+        <section className="mb-3  w-full md:w-[50%]">
+          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
+            Subscribed Apps
+          </h3>
+          <div className="grid md:flex grid-cols-2 gap-4">
+            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+              <h3 className="text-lg md:text-md">CampusCTZN</h3>
+            </div>
+            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+              <h3 className="text-lg md:text-md">KMO Telecoms</h3>
             </div>
           </div>
         </section>
