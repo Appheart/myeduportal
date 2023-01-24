@@ -10,3 +10,4 @@ export { default as NYSC } from './Services/NYSC.jsx';
 export { default as Forum } from './Forum/';
 export { default as Error404 } from './404.jsx';
 export { default as Payment } from './Cart/index.jsx';
+export { default as Remita } from './Services/Remita.jsx';

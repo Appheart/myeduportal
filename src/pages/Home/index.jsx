@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CarouselCards } from '../../components';
+import { CarouselCards, LinkBtn } from '../../components';
 import { servicesData } from '../../data';
 import { api } from '../../app/api';
 import News from '../../components/News';
@@ -23,7 +23,7 @@ const Dashboard = () => {
         <section className="bg-yellow-100 p-5 shadow-md mb-5 mt-3 rounded-md flex flex-col gap-1 flex-shrink-0 w-full md:w-[50%] max-h-min">
           <div className="flex justify-between gap-2 items-center">
             <p className="text-gray-800">
-              Welcome back, <span className=" font-semibold">Paul</span>
+              Welcome back, <span className=" font-semibold">User</span>
             </p>
             <img src="/images/gif/waving-hi.gif" alt="" className="h-10 w-10" />
           </div>
@@ -108,22 +108,24 @@ const Dashboard = () => {
             </div>
           </div>
         </section>
-
-        {/* Subscribed Apps */}
-        <section className="mb-3  w-full md:w-[50%]">
-          <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
-            Subscribed Apps
-          </h3>
-          <div className="grid md:flex grid-cols-2 gap-4">
-            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-              <h3 className="text-lg md:text-md">CampusCTZN</h3>
-            </div>
-            <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
-              <h3 className="text-lg md:text-md">KMO Telecoms</h3>
-            </div>
-          </div>
-        </section>
       </div>
+
+      {/* Subscribed Apps */}
+      <section className="mb-3  w-full md:w-[50%]">
+        <h3 className="text-lg font-bold text-yellow-600 pb-2 ">
+          Subscribed Apps
+        </h3>
+        <div className="grid md:flex grid-cols-2 gap-4">
+          <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+            <h3 className="text-lg md:text-md">CampusCTZN</h3>
+            <LinkBtn link={'https://campus.ctzn.ng'}>Access</LinkBtn>
+          </div>
+          <div className="h-[150px] md:w-[150px] flex py-3  flex-col gap-3 bg-gradient-to-r from-purple-500 to-pink-500 px-5 text-white shadow-sm rounded-lg">
+            <h3 className="text-lg md:text-md">KMO Telecoms</h3>
+            <LinkBtn link={'https://kmo.ng/telecoms'}>Access</LinkBtn>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

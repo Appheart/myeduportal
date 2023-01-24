@@ -26,6 +26,7 @@ import {
   Profile,
   RandomCourse,
   Register,
+  Remita,
   TimeTable,
 } from '../pages';
 
@@ -48,7 +49,8 @@ const router = createBrowserRouter(
         <Route path="examinations" element={<Examinations />} />
         <Route path="profile" element={<Profile />} />
         <Route path="/NYSC" element={<NYSC />} />
-        <Route path="/Forum" element={<Forum />} />
+        <Route path="/NYSC" element={<NYSC />} />
+        <Route path="/Remita" element={<Remita />} />
         <Route path="/payment" element={<Payment />} />
       </Route>
       <Route path="/*" element={<Error404 />} />

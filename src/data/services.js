@@ -72,6 +72,7 @@ const services = [
   {
     name: 'Remita',
     img: 'https://remita.net/assets/minimal/images/remita_orange_new_logo.svg',
+    link: '/Remita',
   },
 ];
 

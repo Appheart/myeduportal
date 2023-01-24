@@ -24,7 +24,7 @@ const Header = () => {
   };
   return (
     <header>
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full px-2">
         <div className="flex gap-5 items-center">
           <Logo />
         </div>
