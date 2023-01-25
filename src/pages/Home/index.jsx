@@ -10,11 +10,11 @@ const Dashboard = () => {
   const [page, setPage] = useState(1);
 
   const fetchNewsData = () => {
-    getAllNews().then((result) => setNewsData(result));
+    getAllNews(page).then((result) => setNewsData(result));
   };
 
   useEffect(() => {
-    fetchNewsData(), [];
+    fetchNewsData(), [page];
   });
 
   const nextPage = () => setPage((prev) => prev + 1);
