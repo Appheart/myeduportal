@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { institutionsData } from '../../data';
 
 const RandomInstitution = () => {
@@ -7,9 +8,11 @@ const RandomInstitution = () => {
   const institution = institutionsData.find((i) => i.short_name == instituteId);
 
   return (
-    <div>
-      <h3>{institution.name}</h3>
-    </div>
+    <main>
+      <section>
+        <h3>{institution.name}</h3>
+      </section>
+    </main>
   );
 };
 
