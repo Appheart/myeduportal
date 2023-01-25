@@ -51,7 +51,9 @@ const Profile = () => {
                 <p className="font-bold"> Institution:</p>
               </div>
               <div className="w-full flex justify-start">
-                <p className="font-mono">University of Nigeria, Nsukka</p>
+                <LinkBtn link={'/institutions/UNN'} className="font-mono">
+                  University of Nigeria, Nsukka
+                </LinkBtn>
               </div>
             </div>
             <div className="flex flex-col justify-between ">

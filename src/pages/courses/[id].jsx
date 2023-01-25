@@ -5,8 +5,6 @@ import { coursesData } from '../../data';
 const RandomCourse = () => {
   let { courseId } = useParams();
 
-  const [openTab, setOpenTab] = useState(1);
-
   const course = coursesData.find((c) => c.short == courseId);
 
   return (

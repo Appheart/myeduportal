@@ -29,6 +29,7 @@ import {
   Remita,
   TimeTable,
 } from '../pages';
+import RandomInstitution from '../pages/Instutions/[id]';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +45,10 @@ const router = createBrowserRouter(
         <Route path="courses">
           <Route index element={<Courses />} />
           <Route path=":courseId" element={<RandomCourse />} />
+        </Route>
+        <Route path="institutions">
+          <Route index />
+          <Route path=":instituteId" element={<RandomInstitution />} />
         </Route>
         <Route path="timetable" element={<TimeTable />} />
         <Route path="examinations" element={<Examinations />} />
