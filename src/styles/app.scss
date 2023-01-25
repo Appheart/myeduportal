@@ -70,34 +70,6 @@
   font-weight: 400;
 }
 
-.update {
-  h3 {
-    font-weight: bold;
-    padding-bottom: 0.5rem;
-    color: var(--kappel);
-  }
-
-  .img-container {
-    height: 3rem;
-    width: 3rem;
-    border: 1px solid var(--black_50);
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-
-    img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  p {
-    font-size: 0.9rem;
-    line-height: 1.2;
-  }
-}
-
 a {
   font-weight: 500;
   color: #646cff;

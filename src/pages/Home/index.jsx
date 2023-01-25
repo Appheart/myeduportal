@@ -90,7 +90,7 @@ const Dashboard = () => {
                 🎉 UNN Matriculation is now holding on the 18th of February this
                 year, 2023
               </p>
-              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg  bg-white text-yellow-700 shadow-md h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
+              <p className="snap-start relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0  rounded-lg bg-white text-yellow-700 shadow-md h-full w-full font-bold font-serif p-3 text-center  leading-normal ">
                 🎉 UNN Convocation is scheduled to hold in March 21st, 2023
               </p>
             </div>
