@@ -173,7 +173,7 @@ const Profile = () => {
               {weekDays.map((day, index) => (
                 <details className="rounded-lg shadow-sm" key={index}>
                   <summary
-                    className={`text-md py-2   px-3 font-bold rounded-tl-md rounded-tr-md cursor-pointer flex justify-between items-center ${active(
+                    className={`text-sm py-2   px-3 font-bold rounded-tl-md rounded-tr-md cursor-pointer flex justify-between items-center ${active(
                       day
                     )}`}
                   >
