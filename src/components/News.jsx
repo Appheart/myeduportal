@@ -1,4 +1,8 @@
-import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAnglesLeft,
+  faAnglesRight,
+  faArrowUpRightFromSquare,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import LinkBtn from './Link';
 
@@ -45,9 +49,16 @@ const News = ({ newsData, prevPage, nextPage, page }) => {
 
                 <LinkBtn
                   link={item.link}
-                  className="text-red-800 text-xs font-bold"
+                  className="max-w-max text-red-800 text-xs font-bold flex items-center gap-2"
                 >
                   Read more
+                  {item.link.includes('http') ? (
+                    <div className="icon">
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    </div>
+                  ) : (
+                    ''
+                  )}
                 </LinkBtn>
               </div>
             ))}
@@ -73,7 +84,7 @@ const News = ({ newsData, prevPage, nextPage, page }) => {
           onClick={prevPage}
           disabled={page === 1}
           link={'/'}
-          className=" text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
+          className="text-sm flex px-4 py-3 bg-white border  justify-center text-center text-red-400 font-bold"
         >
           <FontAwesomeIcon icon={faAnglesLeft} />
         </button>
