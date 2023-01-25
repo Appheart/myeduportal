@@ -1,5 +1,6 @@
 import { faCalendarDays } from '@fortawesome/free-regular-svg-icons';
 import {
+  faCalculator,
   faGraduationCap,
   faPenAlt,
   faTableCells,
@@ -20,17 +21,22 @@ const Profile = () => {
     'Saturday',
     'Sunday',
   ];
-
   const d = new Date();
-
   const dd = new Date().toLocaleDateString('en-us', {
     weekday: 'long',
     year: 'numeric',
     month: 'short',
     day: 'numeric',
   });
-
   let today = weekDays[d.getDay() - 1];
+
+  const sessions = [
+    '2021 - 2022',
+    '2022 - 2023',
+    '2023 - 2024',
+    '2024 - 2025',
+    '2025 - 2026',
+  ];
 
   const active = (day) => {
     if (day === today)
@@ -116,7 +122,7 @@ const Profile = () => {
           </fieldset>
 
           {/* My Courses */}
-          <fieldset className="fieldset bg-gradient-to-r from-sky-100 to-indigo-200 c flex flex-col gap-3 relative bg-white ">
+          <fieldset className="fieldset bg-gradient-to-r from-sky-100 to-indigo-200 flex flex-col gap-3 relative">
             <div className="school_logo absolute top-3 right-3 shadow-sm rounded-lg">
               <LinkBtn
                 link={'/'}
@@ -153,7 +159,6 @@ const Profile = () => {
           </fieldset>
 
           {/* Time table */}
-
           <fieldset className="fieldset flex flex-col gap-3 relative bg-yellow-50 ">
             <div className="school_logo absolute top-3 right-3 shadow-sm rounded-lg">
               <LinkBtn
@@ -193,6 +198,40 @@ const Profile = () => {
                   </div>
                 </details>
               ))}
+            </div>
+          </fieldset>
+
+          <fieldset className="bg-gradient-to-r from-sky-100 to-indigo-200 flex flex-col gap-3 relative p-3 rounded-md">
+            <div className="school_logo absolute top-3 right-3 shadow-sm rounded-lg">
+              <LinkBtn
+                link={'/'}
+                className="bg-green-300 text-gray-900 max-w-max ml-auto flex px-2 py-2 text-xs text-center rounded-md gap-3 items-center justify-center"
+              >
+                <FontAwesomeIcon icon={faPenAlt} />
+              </LinkBtn>
+            </div>
+            <h3 className="font-bold text-green-800 flex items-center gap-3">
+              <div className="icon">
+                <FontAwesomeIcon icon={faCalculator} />
+              </div>
+              <p>GP Calculator</p>
+            </h3>
+
+            <div className="flex flex-col gap-3 border-b-2 border-cyan-700">
+              <div className="flex border-b-2 border-cyan-700">
+                <div className="w-[80%]"></div>
+                <div className="w-[20%]">cGPA</div>
+              </div>
+              {sessions.map((session, index) => (
+                <div className="flex" key={index}>
+                  <div className="w-[80%]">{session}</div>
+                  <div className="w-[20%]">0.00</div>
+                </div>
+              ))}
+              <div className="flex mt-5 border-t-2 border-cyan-700 py-2">
+                <div className="w-[80%]">Overall cGPA</div>
+                <div className="w-[20%]">0.00</div>
+              </div>
             </div>
           </fieldset>
         </div>
