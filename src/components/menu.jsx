@@ -15,12 +15,12 @@ const Menu = () => {
         </li>
         <li className="nav-item ">
           <NavLink to={'/forum'}>
-            <FontAwesomeIcon icon={faStar} /> <span> Forum</span>
+            <FontAwesomeIcon icon={faStar} /> <span> Chat</span>
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to={'/profile'}>
-            <FontAwesomeIcon icon={faUser} /> <span>Profile</span>{' '}
+          <NavLink to={'/explore'}>
+            <FontAwesomeIcon icon={faUser} /> <span>Explore</span>
           </NavLink>
         </li>
       </ul>

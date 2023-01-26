@@ -11,3 +11,6 @@ export { default as Forum } from './Forum/';
 export { default as Error404 } from './404.jsx';
 export { default as Payment } from './Cart/index.jsx';
 export { default as Remita } from './Services/Remita.jsx';
+export { default as Explore } from './Explore/';
+export { default as Notes } from './Explore/Notes';
+export { default as TakeATour } from './Explore/TakeATour';

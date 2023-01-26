@@ -29,10 +29,6 @@ const services = [
         link: 'https://portal.nysc.org.ng/nysc1/ResumePayment',
         desc: 'To login, simply enter www.portal.nysc.org.ng and the sign in page will appear on your device, then enter your ID and password',
       },
-      {
-        name: 'Related News & Updates',
-        link: '/',
-      },
     ],
   },
 

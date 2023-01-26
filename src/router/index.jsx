@@ -19,14 +19,17 @@ import {
   Dashboard,
   Error404,
   Examinations,
+  Explore,
   Forum,
   Login,
+  Notes,
   NYSC,
   Payment,
   Profile,
   RandomCourse,
   Register,
   Remita,
+  TakeATour,
   TimeTable,
 } from '../pages';
 import RandomInstitution from '../pages/Instutions/[id]';
@@ -54,9 +57,13 @@ const router = createBrowserRouter(
         <Route path="examinations" element={<Examinations />} />
         <Route path="profile" element={<Profile />} />
         <Route path="/NYSC" element={<NYSC />} />
-        <Route path="/NYSC" element={<NYSC />} />
         <Route path="/Remita" element={<Remita />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/take-a-tour" element={<TakeATour />} />
+        <Route path="/explore">
+          <Route index element={<Explore />} />
+          <Route path="notes" element={<Notes />} />
+        </Route>
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>
