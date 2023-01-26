@@ -21,6 +21,7 @@ import {
   Examinations,
   Explore,
   Forum,
+  JAMB,
   Login,
   Notes,
   NYSC,
@@ -62,6 +63,10 @@ const router = createBrowserRouter(
         <Route path="/take-a-tour" element={<TakeATour />} />
         <Route path="/explore">
           <Route index element={<Explore />} />
+          <Route path="notes" element={<Notes />} />
+        </Route>
+        <Route path="/jamb">
+          <Route index element={<JAMB />} />
           <Route path="notes" element={<Notes />} />
         </Route>
       </Route>
