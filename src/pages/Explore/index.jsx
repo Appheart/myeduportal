@@ -75,7 +75,10 @@ const Explore = () => {
             </div>
             My Notes
           </LinkBtn>
-          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <LinkBtn
+            link={'/explore/lecture-materials'}
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+          >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/lecture.png"
@@ -84,7 +87,7 @@ const Explore = () => {
               />
             </div>
             Lecture Materials
-          </div>
+          </LinkBtn>
           <LinkBtn
             link={'/explore/cgpa'}
             className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
@@ -139,9 +142,12 @@ const Explore = () => {
                 className="h-full w-full object-contain"
               />
             </div>
-            Market Merch
+            Online Shopping Merch
           </div>
-          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <LinkBtn
+            link={'/explore/timetable'}
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+          >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/timetable.png"
@@ -150,7 +156,7 @@ const Explore = () => {
               />
             </div>
             My Timetable
-          </div>
+          </LinkBtn>
         </div>
       </section>
     </main>

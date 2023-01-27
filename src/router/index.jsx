@@ -24,6 +24,7 @@ import {
   Explore,
   Forum,
   JAMB,
+  LectureMaterials,
   Login,
   Notes,
   NYSC,
@@ -73,6 +74,8 @@ const router = createBrowserRouter(
           <Route index element={<Explore />} />
           <Route path="notes" element={<Notes />} />
           <Route path="cgpa" element={<CGPA />} />
+          <Route path="timetable" element={<TimeTable />} />
+          <Route path="lecture-materials" element={<LectureMaterials />} />
         </Route>
         <Route path="/jamb">
           <Route index element={<JAMB />} />
