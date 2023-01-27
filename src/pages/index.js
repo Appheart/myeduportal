@@ -18,3 +18,4 @@ export { default as TakeATour } from './Explore/TakeATour';
 export { default as JAMB } from './Services/JAMB/';
 export { default as TasksTracker } from './TasksTracker/';
 export { default as Registrations } from './Services/Registrations';
+export { default as CGPA } from './Explore/cGPAManager';

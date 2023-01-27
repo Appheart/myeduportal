@@ -15,6 +15,7 @@ const getUserData = () =>
   );
 
 import {
+  CGPA,
   Courses,
   Dashboard,
   Error404,
@@ -71,6 +72,7 @@ const router = createBrowserRouter(
         <Route path="/explore">
           <Route index element={<Explore />} />
           <Route path="notes" element={<Notes />} />
+          <Route path="cgpa" element={<CGPA />} />
         </Route>
         <Route path="/jamb">
           <Route index element={<JAMB />} />

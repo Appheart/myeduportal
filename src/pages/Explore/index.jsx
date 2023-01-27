@@ -13,7 +13,7 @@ const Explore = () => {
         <div className="explore-cards grid gap-3 py-3 px-3 bg-white shadow-md">
           <LinkBtn
             link={'/tasks-tracker'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <div className="icon">
               <div className="icon h-6 w-6 overflow-hidden">
@@ -28,7 +28,7 @@ const Explore = () => {
           </LinkBtn>
           <LinkBtn
             link={'/registrations'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
@@ -37,9 +37,9 @@ const Explore = () => {
                 className="h-full w-full object-contain"
               />
             </div>
-            Application and Registrations
+            Online Services and Registration
           </LinkBtn>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/study.png"
@@ -51,7 +51,7 @@ const Explore = () => {
           </div>
           <LinkBtn
             link={'/take-a-tour'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
@@ -64,7 +64,7 @@ const Explore = () => {
           </LinkBtn>
           <LinkBtn
             link={'/explore/notes'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
@@ -75,7 +75,7 @@ const Explore = () => {
             </div>
             My Notes
           </LinkBtn>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/lecture.png"
@@ -85,7 +85,10 @@ const Explore = () => {
             </div>
             Lecture Materials
           </div>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <LinkBtn
+            link={'/explore/cgpa'}
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+          >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/gpa.png"
@@ -94,8 +97,8 @@ const Explore = () => {
               />
             </div>
             cGPA Manager
-          </div>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          </LinkBtn>
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/stats.png"
@@ -105,7 +108,7 @@ const Explore = () => {
             </div>
             Finance Tracker
           </div>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/diet.png"
@@ -117,7 +120,7 @@ const Explore = () => {
           </div>
           <LinkBtn
             link={'/events'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
@@ -128,7 +131,7 @@ const Explore = () => {
             </div>
             Social Events
           </LinkBtn>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/market.png"
@@ -138,7 +141,7 @@ const Explore = () => {
             </div>
             Market Merch
           </div>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/timetable.png"

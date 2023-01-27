@@ -13,27 +13,27 @@ const JAMB = () => {
         <div className="explore-cards grid gap-3 py-3 px-3 bg-white shadow-md">
           <LinkBtn
             link={'/'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <div className="icon">
               <FontAwesomeIcon icon={faBraille} />
             </div>
             2022 - 2023 Registration
           </LinkBtn>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <FontAwesomeIcon icon={faBraille} />
-            Subject Combinations
+            JAMB Subject Combinations
           </div>
           <LinkBtn
             link={'https://eligibility.jamb.gov.ng/checker/'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <FontAwesomeIcon icon={faBraille} />
             Eligibility Checker
           </LinkBtn>
           <LinkBtn
             link={'/explore/notes'}
-            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <FontAwesomeIcon icon={faBraille} />
             My Notes
