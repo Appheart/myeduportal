@@ -13,5 +13,8 @@ export { default as Payment } from './Cart/index.jsx';
 export { default as Remita } from './Services/Remita.jsx';
 export { default as Explore } from './Explore/';
 export { default as Notes } from './Explore/Notes';
+export { default as Events } from './Events/';
 export { default as TakeATour } from './Explore/TakeATour';
 export { default as JAMB } from './Services/JAMB/';
+export { default as TasksTracker } from './TasksTracker/';
+export { default as Registrations } from './Services/Registrations';

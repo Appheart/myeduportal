@@ -11,7 +11,10 @@ const Explore = () => {
           Explore on EDUPORA
         </div>
         <div className="explore-cards grid gap-3 py-3 px-3 bg-white shadow-md">
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <LinkBtn
+            link={'/tasks-tracker'}
+            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+          >
             <div className="icon">
               <div className="icon h-6 w-6 overflow-hidden">
                 <img
@@ -22,8 +25,11 @@ const Explore = () => {
               </div>
             </div>
             Tasks tracker
-          </div>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          </LinkBtn>
+          <LinkBtn
+            link={'/registrations'}
+            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+          >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/registration.png"
@@ -32,7 +38,7 @@ const Explore = () => {
               />
             </div>
             Application and Registrations
-          </div>
+          </LinkBtn>
           <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
@@ -109,7 +115,10 @@ const Explore = () => {
             </div>
             rFudict
           </div>
-          <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
+          <LinkBtn
+            link={'/events'}
+            className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
+          >
             <div className="icon h-6 w-6 overflow-hidden">
               <img
                 src="/images/illustrations/party.png"
@@ -118,7 +127,7 @@ const Explore = () => {
               />
             </div>
             Social Events
-          </div>
+          </LinkBtn>
           <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <div className="icon h-6 w-6 overflow-hidden">
               <img
