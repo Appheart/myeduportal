@@ -1,6 +1,11 @@
 import { NavLink } from 'react-router-dom';
 
-import { faStar, faUser } from '@fortawesome/free-regular-svg-icons';
+import {
+  faMessage,
+  faStar,
+  faSun,
+  faUser,
+} from '@fortawesome/free-regular-svg-icons';
 import { faBook, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -15,12 +20,12 @@ const Menu = () => {
         </li>
         <li className="nav-item ">
           <NavLink to={'/forum'}>
-            <FontAwesomeIcon icon={faStar} /> <span> Chat</span>
+            <FontAwesomeIcon icon={faMessage} /> <span> Chat</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to={'/explore'}>
-            <FontAwesomeIcon icon={faUser} /> <span>Explore</span>
+            <FontAwesomeIcon icon={faSun} /> <span>Explore</span>
           </NavLink>
         </li>
       </ul>

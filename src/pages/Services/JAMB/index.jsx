@@ -22,6 +22,7 @@ const JAMB = () => {
           </LinkBtn>
           <div className="explore-card border-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
             <FontAwesomeIcon icon={faBraille} />
+            Subject Combinations
           </div>
           <LinkBtn
             link={'https://eligibility.jamb.gov.ng/checker/'}
