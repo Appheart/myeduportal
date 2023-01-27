@@ -1,3 +1,5 @@
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import LinkBtn from '../../components/Link';
 
@@ -68,8 +70,16 @@ const Explore = () => {
   return (
     <main>
       <section className="max-w-3xl mx-auto">
-        <div className="section-title p-3 shadow-md text-xl text-center text-green-700 mb-5 rounded-md">
-          Explore on EDUPORA
+        <div className="breadcrumb bg-gray-100 p-3 flex justify-center gap-5 items-center h-20 mb-5">
+          <LinkBtn link={'/'}>
+            <FontAwesomeIcon
+              icon={faArrowLeft}
+              className="justify-self-start text-xl"
+            />
+          </LinkBtn>
+          <div className="mx-auto text-green-500 font-bold flex gap-2 items-center ">
+            <span>EXPLORE</span>
+          </div>
         </div>
         <div className="explore-cards flex-wrap flex py-3 px-3 gap-5 bg-white shadow-md">
           {toExplore.map((ex, index) => (
