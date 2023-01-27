@@ -1,7 +1,68 @@
-import { faBraille } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import LinkBtn from '../../components/Link';
+
+const toExplore = [
+  {
+    name: 'Tasks tracker',
+    link: '/tasks-tracker',
+    illustration: '/images/illustrations/task.png',
+  },
+  {
+    name: 'Online Services and Registration',
+    link: '/registrations',
+    illustration: '/images/illustrations/registration.png',
+  },
+  {
+    name: 'My Study Manager',
+    link: '/explore',
+    illustration: '/images/illustrations/study.png',
+  },
+  {
+    name: 'Take a Tour',
+    link: '/take-a-tour',
+    illustration: '/images/illustrations/tour.png',
+  },
+  {
+    name: 'Notes',
+    link: '/explore/notes',
+    illustration: '/images/illustrations/note.png',
+  },
+  {
+    name: 'Lecture Materials',
+    link: '/lecture-materials',
+    illustration: '/images/illustrations/lecture.png',
+  },
+  {
+    name: 'cGPA',
+    link: '/explore/cgpa',
+    illustration: '/images/illustrations/gpa.png',
+  },
+  {
+    name: 'My Finance',
+    link: '/explore',
+    illustration: '/images/illustrations/stats.png',
+  },
+  {
+    name: 'rFudict',
+    link: '/explore',
+    illustration: '/images/illustrations/diet.png',
+  },
+  {
+    name: 'Social Events',
+    link: '/events',
+    illustration: '/images/illustrations/party.png',
+  },
+  {
+    name: 'Online Shopping Merch',
+    link: '/explore',
+    illustration: '/images/illustrations/market.png',
+  },
+  {
+    name: 'My Time Table',
+    link: '/explore/timetable',
+    illustration: '/images/illustrations/timetable.png',
+  },
+];
 
 const Explore = () => {
   return (
@@ -10,153 +71,26 @@ const Explore = () => {
         <div className="section-title p-3 shadow-md text-xl text-center text-green-700 mb-5 rounded-md">
           Explore on EDUPORA
         </div>
-        <div className="explore-cards grid gap-3 py-3 px-3 bg-white shadow-md">
-          <LinkBtn
-            link={'/tasks-tracker'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon">
-              <div className="icon h-6 w-6 overflow-hidden">
-                <img
-                  src="/images/illustrations/task.png"
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
+        <div className="explore-cards flex-wrap flex py-3 px-3 gap-5 bg-white shadow-md">
+          {toExplore.map((ex, index) => (
+            <LinkBtn
+              key={index}
+              link={ex.link}
+              className="explore-card  border-b-2 border-blue-600 bg-blue-400  py-3 px-3 rounded-md shadow-md flex flex-col h-37 w-37 flex-grow gap-5  hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+            >
+              <div className="icon">
+                <div className="icon h-6 w-6 overflow-hidden">
+                  <img
+                    src={ex.illustration}
+                    alt={`Edupora ${ex.name}`}
+                    loading="eager"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
               </div>
-            </div>
-            Tasks tracker
-          </LinkBtn>
-          <LinkBtn
-            link={'/registrations'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/registration.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Online Services and Registration
-          </LinkBtn>
-          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/study.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Study Time Manager
-          </div>
-          <LinkBtn
-            link={'/take-a-tour'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/tour.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Take a Tour
-          </LinkBtn>
-          <LinkBtn
-            link={'/explore/notes'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/note.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            My Notes
-          </LinkBtn>
-          <LinkBtn
-            link={'/explore/lecture-materials'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/lecture.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Lecture Materials
-          </LinkBtn>
-          <LinkBtn
-            link={'/explore/cgpa'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/gpa.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            cGPA Manager
-          </LinkBtn>
-          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/stats.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Finance Tracker
-          </div>
-          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/diet.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            rFudict
-          </div>
-          <LinkBtn
-            link={'/events'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/party.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Social Events
-          </LinkBtn>
-          <div className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white ">
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/market.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            Online Shopping Merch
-          </div>
-          <LinkBtn
-            link={'/explore/timetable'}
-            className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
-          >
-            <div className="icon h-6 w-6 overflow-hidden">
-              <img
-                src="/images/illustrations/timetable.png"
-                alt=""
-                className="h-full w-full object-contain"
-              />
-            </div>
-            My Timetable
-          </LinkBtn>
+              <p className="text-sm">{ex.name}</p>
+            </LinkBtn>
+          ))}
         </div>
       </section>
     </main>
