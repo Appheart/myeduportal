@@ -16,7 +16,7 @@ const AccreditedCenters = () => {
 
   return (
     <main>
-      <section>
+      <section className="w-full max-w-3xl mx-auto">
         <h3>AccreditedCenters</h3>
         <div className="flex gap-2 flex-col text-sm text-gray-600">
           <div className="flex gap-2 items-start border-b-2">
