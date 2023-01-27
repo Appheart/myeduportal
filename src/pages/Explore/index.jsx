@@ -86,7 +86,7 @@ const Explore = () => {
             <LinkBtn
               key={index}
               link={ex.link}
-              className="explore-card  border-b-2 border-blue-600 bg-blue-400  py-3 px-3 rounded-md shadow-md flex flex-col h-37 w-37 flex-grow gap-5  hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+              className="explore-card  border-b-2 border-blue-600 bg-white  py-3 px-3 rounded-md shadow-md flex flex-col h-37 w-37 flex-grow gap-5  hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
             >
               <div className="icon">
                 <div className="icon h-6 w-6 overflow-hidden">
