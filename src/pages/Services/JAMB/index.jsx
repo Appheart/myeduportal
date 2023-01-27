@@ -25,11 +25,11 @@ const JAMB = () => {
             JAMB Subject Combinations
           </div>
           <LinkBtn
-            link={'https://eligibility.jamb.gov.ng/checker/'}
+            link={'/jamb/accreditted_centres'}
             className="explore-card border-b-2 border-blue-700 p-3 px-5 rounded-md flex items-center gap-3 hover:cursor-pointer hover:bg-blue-600 hover:text-white "
           >
             <FontAwesomeIcon icon={faBraille} />
-            Eligibility Checker
+            Accredited Centers
           </LinkBtn>
           <LinkBtn
             link={'/explore/notes'}

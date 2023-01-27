@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { CarouselCards, LinkBtn } from '../../components';
-import { servicesData } from '../../data';
+import { CarouselCards } from '../../components';
 import News from '../../components/News';
 import { getAllNews } from '../../app/api/newsApi';
 

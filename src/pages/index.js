@@ -20,3 +20,4 @@ export { default as Registrations } from './Services/Registrations';
 export { default as CGPA } from './Explore/cGPAManager';
 export { default as TimeTable } from './Explore/TimeTable';
 export { default as LectureMaterials } from './Explore/LectureMaterials';
+export { default as AccreditedCenters } from './Services/JAMB/AccreditedCenters';

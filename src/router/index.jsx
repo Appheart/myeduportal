@@ -15,6 +15,7 @@ const getUserData = () =>
   );
 
 import {
+  AccreditedCenters,
   CGPA,
   Courses,
   Dashboard,
@@ -79,6 +80,7 @@ const router = createBrowserRouter(
         </Route>
         <Route path="/jamb">
           <Route index element={<JAMB />} />
+          <Route path="accreditted_centres" element={<AccreditedCenters />} />
           <Route path="notes" element={<Notes />} />
         </Route>
       </Route>
