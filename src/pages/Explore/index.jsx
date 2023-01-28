@@ -10,7 +10,7 @@ const toExplore = [
     illustration: '/images/illustrations/task.png',
   },
   {
-    name: 'Online Services and Registration',
+    name: 'Online Services',
     link: '/registrations',
     illustration: '/images/illustrations/registration.png',
   },
