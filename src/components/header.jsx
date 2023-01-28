@@ -31,8 +31,8 @@ const Header = () => {
           <Logo />
         </div>
 
-        <div className="flex gap-4 items-center mr-4  ">
-          <div className="icon search-icon border border-green-200 p-1 rounded-full h-9 w-9 flex items-center justify-center hover:bg-green-600 cursor-pointer hover:text-white">
+        <div className="flex gap-4 items-center">
+          <div className="icon search-icon border border-green-200 p-1 rounded-full h-9 w-9 flex items-center justify-center hover:bg-green-600 cursor-pointer mr-4 hover:text-white">
             <FontAwesomeIcon
               icon={faSearch}
               size="lg"

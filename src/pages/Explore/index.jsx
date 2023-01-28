@@ -70,23 +70,12 @@ const Explore = () => {
   return (
     <main>
       <section className="max-w-3xl mx-auto">
-        <div className="breadcrumb bg-gray-100 p-3 flex justify-center gap-5 items-center h-20 mb-5">
-          <LinkBtn link={'/'}>
-            <FontAwesomeIcon
-              icon={faArrowLeft}
-              className="justify-self-start text-xl"
-            />
-          </LinkBtn>
-          <div className="mx-auto text-green-500 font-bold flex gap-2 items-center ">
-            <span>EXPLORE</span>
-          </div>
-        </div>
-        <div className="explore-cards flex-wrap flex py-3 md:px-3 gap-3 md:gap-5 md:bg-white md:shadow-md">
+        <div className="explore-cards flex-wrap flex py-3 md:px-3 gap-2 md:gap-5 md:bg-white md:shadow-md">
           {toExplore.map((ex, index) => (
             <LinkBtn
               key={index}
               link={ex.link}
-              className="explore-card  border-b-2 border-blue-600 bg-white  py-3 px-3 rounded-md shadow-md flex flex-col h-38 w-35 flex-grow gap-4  hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+              className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-40 w-34 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
             >
               <div className="icon">
                 <div className="icon h-6 w-6 overflow-hidden">
