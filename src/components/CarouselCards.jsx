@@ -17,7 +17,7 @@ const CarouselCards = () => {
               loading="lazy"
               src={ad.adImg}
               alt={ad.title}
-              className="h-full rounded-lg w-full object-cover"
+              className="h-full rounded-lg w-full object-contain"
             />
           </LinkBtn>
         ))}

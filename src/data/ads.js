@@ -2,7 +2,7 @@ const ads = [
   {
     id: '1',
     title: 'Mayflair confectioneries',
-    adImg: '/images/ads/IMG_20230119_184425.jpg',
+    adImg: '/images/ads/may-flair.jpg',
     BusinessID: 109900,
     link: 'https://wa.me/2347045816525',
   },
@@ -17,14 +17,14 @@ const ads = [
   {
     id: '3',
     title: 'KMO Telecoms',
-    adImg: '/images/ads/KMO_ad.jpg',
+    adImg: '/images/ads/kmotelecoms_logo.png',
     BusinessID: 109902,
     link: 'https://wa.link/klac3k',
   },
   {
     id: '4',
     title: 'Classique Grills',
-    adImg: '/images/ads/classique_grills.jpeg',
+    adImg: '/images/ads/classique_grills.jpg',
     BusinessID: 109902,
     link: 'https://wa.link/klac3k',
   },
