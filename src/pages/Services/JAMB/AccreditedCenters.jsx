@@ -10,7 +10,7 @@ import { getAllAccreditedCenters } from '../../../app/api/JAMB/accreditedCenters
 
 const AccreditedCenters = () => {
   const [AccreditedCentresData, setAccreditedCentresData] = useState([]);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const fetchAccreditedCentresData = () => {
