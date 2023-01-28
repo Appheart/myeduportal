@@ -21,6 +21,13 @@ const ads = [
     BusinessID: 109902,
     link: 'https://wa.link/klac3k',
   },
+  {
+    id: '4',
+    title: 'Classique Grills',
+    adImg: '/images/ads/classique_grills.jpeg',
+    BusinessID: 109902,
+    link: 'https://wa.link/klac3k',
+  },
 ];
 
 export default ads;

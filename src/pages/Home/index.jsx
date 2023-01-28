@@ -21,7 +21,7 @@ const Dashboard = () => {
   return (
     <main>
       <div className="flex flex-col md:flex-row md:gap-3 items-start">
-        <section className="bg-yellow-100 p-5 shadow-md mb-5 mt-3 rounded-md flex flex-col gap-1 flex-shrink-0 w-full md:w-[50%] max-h-min">
+        <section className="bg-yellow-100 p-4 shadow-md mb-4 mt-1 rounded-md flex flex-col gap-1 flex-shrink-0 w-full md:w-[50%] max-h-min">
           <div className="flex justify-between gap-2 items-center">
             <p className="text-gray-800">
               Welcome back, <span className=" font-semibold">User</span>
