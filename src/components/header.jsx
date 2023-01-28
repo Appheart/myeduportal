@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBell,
   faEnvelopeOpenText,
+  faSearch,
   faShop,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +11,7 @@ import NotificationDrawer from './notificationDrawer';
 import { useState } from 'react';
 import Logo from './Logo';
 import LinkBtn from './Link';
+import { icon } from '@fortawesome/fontawesome-svg-core';
 
 const Header = () => {
   const [notifyOpen, setNotifyOpen] = useState(false);
@@ -29,21 +31,12 @@ const Header = () => {
           <Logo />
         </div>
 
-        <div className="flex gap-4 items-center ">
-          <div
-            className={
-              notifyOpen
-                ? 'notification open rounded-full w-3 h-3'
-                : 'notification rounded-full w-3 h-3'
-            }
-            onClick={toggleNotification}
-          >
-            <FontAwesomeIcon icon={faEnvelopeOpenText} className="" />
-            <span>3</span>
-
-            <NotificationDrawer
-              toggleNotification={toggleNotification}
-              notifyOpen={notifyOpen}
+        <div className="flex gap-4 items-center mr-4  ">
+          <div className="icon search-icon border border-green-200 p-1 rounded-full h-9 w-9 flex items-center justify-center hover:bg-green-600 cursor-pointer hover:text-white">
+            <FontAwesomeIcon
+              icon={faSearch}
+              size="lg"
+              className="text-green-600"
             />
           </div>
 

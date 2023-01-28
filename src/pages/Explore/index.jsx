@@ -81,12 +81,12 @@ const Explore = () => {
             <span>EXPLORE</span>
           </div>
         </div>
-        <div className="explore-cards flex-wrap flex py-3 md:px-3 gap-5 md:bg-white md:shadow-md">
+        <div className="explore-cards flex-wrap flex py-3 md:px-3 gap-3 md:gap-5 md:bg-white md:shadow-md">
           {toExplore.map((ex, index) => (
             <LinkBtn
               key={index}
               link={ex.link}
-              className="explore-card  border-b-2 border-blue-600 bg-white  py-3 px-3 rounded-md shadow-md flex flex-col h-38 w-36 flex-grow gap-4  hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+              className="explore-card  border-b-2 border-blue-600 bg-white  py-3 px-3 rounded-md shadow-md flex flex-col h-38 w-35 flex-grow gap-4  hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
             >
               <div className="icon">
                 <div className="icon h-6 w-6 overflow-hidden">
