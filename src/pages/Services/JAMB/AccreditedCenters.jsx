@@ -14,7 +14,9 @@ const AccreditedCenters = () => {
 
   const fetchAccreditedCentresData = () => {
     getAllAccreditedCenters(page).then((result) =>
-      setAccreditedCentresData(result)
+      setTimeout(() => {
+        setAccreditedCentresData(result);
+      }, 2500)
     );
   };
 
