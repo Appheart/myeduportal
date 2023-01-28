@@ -11,7 +11,7 @@ const CarouselCards = () => {
           <LinkBtn
             key={index}
             link={ad.link}
-            className="snap-start rounded-md relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0 bg-white shadow-md overflow-hidden w-[5rem] h-[8rem] "
+            className="snap-start rounded-md relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0 bg-white shadow-md overflow-hidden w-[6rem] h-[8rem] p-0.5 "
           >
             <img
               loading="lazy"
