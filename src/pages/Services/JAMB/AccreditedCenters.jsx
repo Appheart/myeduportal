@@ -11,13 +11,13 @@ import { getAllAccreditedCenters } from '../../../app/api/JAMB/accreditedCenters
 const AccreditedCenters = () => {
   const [AccreditedCentresData, setAccreditedCentresData] = useState([]);
   const [page, setPage] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const fetchAccreditedCentresData = () => {
-    getAllAccreditedCenters(page).then((result) =>
-      setTimeout(() => {
-        setAccreditedCentresData(result);
-      }, 2500)
-    );
+    getAllAccreditedCenters(page).then((result) => {
+      setAccreditedCentresData(result);
+      setIsLoaded(true);
+    });
   };
 
   useEffect(() => {
@@ -46,34 +46,39 @@ const AccreditedCenters = () => {
             className="px-2 py-2 rounded-md text-sm placeholder:text-sm"
           />
         </div>
-        <div className="flex gap-2 flex-col text-sm text-gray-700">
-          <div className="flex gap-2 items-center shadow-md p-2">
-            <h3 className="w-2/6 md:w-1/6 font-bold">State</h3>
-            <h3 className="w-4/6 md:w-5/6 font-bold">Center</h3>
-          </div>
-          {AccreditedCentresData.map((a) => (
-            <div className="flex gap-2 items-center shadow-md p-2">
-              <h3 className="w-2/6 md:w-1/6 font-bold">{a.state}</h3>
-              <h3 className="w-4/6 md:w-5/6 text-green-800">{a.ctrName}</h3>
-            </div>
-          ))}
 
-          <div className="flex gap-3 text-lg items-center justify-center">
-            <div className="icon first_page-icon">
-              <FontAwesomeIcon icon={faBackward} />
+        {!isLoaded ? (
+          'loading'
+        ) : (
+          <div className="flex gap-2 flex-col text-sm text-gray-700">
+            <div className="flex gap-2 items-center shadow-md p-2">
+              <h3 className="w-2/6 md:w-1/6 font-bold">State</h3>
+              <h3 className="w-4/6 md:w-5/6 font-bold">Center</h3>
             </div>
-            <div className="icon prev_page-icon" onClick={prevPage}>
-              <FontAwesomeIcon icon={faCaretLeft} />
-            </div>
-            <p>{page}</p>
-            <div className="icon next_page-icon">
-              <FontAwesomeIcon icon={faCaretRight} onClick={nextPage} />
-            </div>
-            <div className="icon last_page-icon">
-              <FontAwesomeIcon icon={faForward} />
+            {AccreditedCentresData.map((a) => (
+              <div className="flex gap-2 items-center shadow-md p-2">
+                <h3 className="w-2/6 md:w-1/6 font-bold">{a.state}</h3>
+                <h3 className="w-4/6 md:w-5/6 text-green-800">{a.ctrName}</h3>
+              </div>
+            ))}
+
+            <div className="flex gap-3 text-lg items-center justify-center">
+              <div className="icon first_page-icon">
+                <FontAwesomeIcon icon={faBackward} />
+              </div>
+              <div className="icon prev_page-icon" onClick={prevPage}>
+                <FontAwesomeIcon icon={faCaretLeft} />
+              </div>
+              <p>{page}</p>
+              <div className="icon next_page-icon">
+                <FontAwesomeIcon icon={faCaretRight} onClick={nextPage} />
+              </div>
+              <div className="icon last_page-icon">
+                <FontAwesomeIcon icon={faForward} />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </section>
     </main>
   );
