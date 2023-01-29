@@ -55,12 +55,12 @@ const toExplore = [
     illustration: '/images/illustrations/party.png',
   },
   {
-    name: 'Online Shopping Merch',
+    name: 'Online Shopping',
     link: '/explore',
     illustration: '/images/illustrations/market.png',
   },
   {
-    name: 'My Time Table',
+    name: 'My Timetable',
     link: '/explore/timetable',
     illustration: '/images/illustrations/timetable.png',
   },
