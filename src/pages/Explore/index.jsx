@@ -5,64 +5,89 @@ import LinkBtn from '../../components/Link';
 
 const toExplore = [
   {
-    name: 'Tasks tracker',
-    link: '/tasks-tracker',
-    illustration: '/images/illustrations/task.png',
+    name: 'management',
+    options: [
+      {
+        name: 'Tasks tracker',
+        link: '/tasks-tracker',
+        illustration: '/images/illustrations/task.png',
+      },
+      {
+        name: 'Online Services',
+        link: '/registrations',
+        illustration: '/images/illustrations/registration.png',
+      },
+      {
+        name: 'My Study Manager',
+        link: '/explore',
+        illustration: '/images/illustrations/study.png',
+      },
+      {
+        name: 'Take a Tour',
+        link: '/take-a-tour',
+        illustration: '/images/illustrations/tour.png',
+      },
+      {
+        name: 'Notes',
+        link: '/explore/notes',
+        illustration: '/images/illustrations/note.png',
+      },
+      {
+        name: 'Lecture Materials',
+        link: '/lecture-materials',
+        illustration: '/images/illustrations/lecture.png',
+      },
+      {
+        name: 'cGPA',
+        link: '/explore/cgpa',
+        illustration: '/images/illustrations/gpa.png',
+      },
+      {
+        name: 'My Finance',
+        link: '/explore',
+        illustration: '/images/illustrations/stats.png',
+      },
+      {
+        name: 'rFudict',
+        link: '/explore',
+        illustration: '/images/illustrations/diet.png',
+      },
+      {
+        name: 'Social Events',
+        link: '/events',
+        illustration: '/images/illustrations/party.png',
+      },
+      {
+        name: 'Online Shopping',
+        link: '/explore',
+        illustration: '/images/illustrations/market.png',
+      },
+      {
+        name: 'My Timetable',
+        link: '/explore/timetable',
+        illustration: '/images/illustrations/timetable.png',
+      },
+    ],
   },
+
   {
-    name: 'Online Services',
-    link: '/registrations',
-    illustration: '/images/illustrations/registration.png',
+    name: 'online registration',
+    options: [{}],
   },
+
   {
-    name: 'My Study Manager',
-    link: '/explore',
-    illustration: '/images/illustrations/study.png',
-  },
-  {
-    name: 'Take a Tour',
-    link: '/take-a-tour',
-    illustration: '/images/illustrations/tour.png',
-  },
-  {
-    name: 'Notes',
-    link: '/explore/notes',
-    illustration: '/images/illustrations/note.png',
-  },
-  {
-    name: 'Lecture Materials',
-    link: '/lecture-materials',
-    illustration: '/images/illustrations/lecture.png',
-  },
-  {
-    name: 'cGPA',
-    link: '/explore/cgpa',
-    illustration: '/images/illustrations/gpa.png',
-  },
-  {
-    name: 'My Finance',
-    link: '/explore',
-    illustration: '/images/illustrations/stats.png',
-  },
-  {
-    name: 'rFudict',
-    link: '/explore',
-    illustration: '/images/illustrations/diet.png',
-  },
-  {
-    name: 'Social Events',
-    link: '/events',
-    illustration: '/images/illustrations/party.png',
-  },
-  {
-    name: 'Online Shopping',
-    link: '/explore',
-    illustration: '/images/illustrations/market.png',
-  },
-  {
-    name: 'My Timetable',
-    link: '/explore/timetable',
-    illustration: '/images/illustrations/timetable.png',
+    name: 'educational bodies',
+    options: [
+      {
+        name: 'NECO',
+      },
+      {
+        name: 'WAEC',
+      },
+      {
+        name: 'JAMB',
+      },
+    ],
   },
 ];
 

@@ -23,7 +23,6 @@ import {
   Events,
   Examinations,
   Explore,
-  Forum,
   JAMB,
   LectureMaterials,
   Login,
@@ -40,6 +39,7 @@ import {
   TimeTable,
 } from '../pages';
 import RandomInstitution from '../pages/Instutions/[id]';
+import UploadFiles from '../pages/UploadFiles';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -83,6 +83,7 @@ const router = createBrowserRouter(
           <Route path="accreditted_centres" element={<AccreditedCenters />} />
           <Route path="notes" element={<Notes />} />
         </Route>
+        <Route path="/upload" element={<UploadFiles />} />
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>
