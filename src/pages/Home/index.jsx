@@ -1,18 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { CarouselCards } from '../../components';
 import News from '../../components/News';
 import { getAllNews } from '../../app/api/newsApi';
 import { useQuery } from '@tanstack/react-query';
 
 const Dashboard = () => {
-  // const [newsData, setNewsData] = useState([]);
   const [page, setPage] = useState(1);
 
   const {
     status,
     error,
     data: newsData,
-  } = useQuery({ queryKey: ['newsData'], queryFn: getAllNews });
+    fetchStatus,
+  } = useQuery({
+    queryKey: ['newsData', [page]],
+    keepPreviousData: true,
+    queryFn: () => getAllNews(page),
+  });
 
   const nextPage = () => setPage((prev) => prev + 1);
   const prevPage = () => setPage((prev) => prev - 1);
