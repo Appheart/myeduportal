@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const LinkBtn = ({ link, children, className }) => {
+const LinkBtn = ({ link = '/', children, className }) => {
   return (
     <>
       {!link.includes('https') ? (

@@ -13,11 +13,6 @@ const toExplore = [
         illustration: '/images/illustrations/task.png',
       },
       {
-        name: 'Online Services',
-        link: '/registrations',
-        illustration: '/images/illustrations/registration.png',
-      },
-      {
         name: 'My Study Manager',
         link: '/explore',
         illustration: '/images/illustrations/study.png',
@@ -58,11 +53,6 @@ const toExplore = [
         illustration: '/images/illustrations/party.png',
       },
       {
-        name: 'Online Shopping',
-        link: '/explore',
-        illustration: '/images/illustrations/market.png',
-      },
-      {
         name: 'My Timetable',
         link: '/explore/timetable',
         illustration: '/images/illustrations/timetable.png',
@@ -71,8 +61,19 @@ const toExplore = [
   },
 
   {
-    name: 'online registration',
-    options: [{}],
+    name: 'online registraion',
+    options: [
+      {
+        name: 'Job Application',
+        link: '/registrations',
+        illustration: '/images/illustrations/registration.png',
+      },
+      {
+        name: 'Scholarships',
+        link: '/registrations',
+        illustration: '/images/illustrations/registration.png',
+      },
+    ],
   },
 
   {
@@ -85,7 +86,13 @@ const toExplore = [
         name: 'WAEC',
       },
       {
+        name: 'JUPEB',
+      },
+      {
         name: 'JAMB',
+      },
+      {
+        name: 'NABTEB',
       },
     ],
   },
@@ -95,26 +102,42 @@ const Explore = () => {
   return (
     <main>
       <section className="max-w-3xl mx-auto">
-        <div className="explore-cards flex-wrap flex py-3 md:px-3 gap-2 md:gap-5 md:bg-white md:shadow-md">
-          {toExplore.map((ex, index) => (
-            <LinkBtn
-              key={index}
-              link={ex.link}
-              className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-40 w-34 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
-            >
-              <div className="icon">
-                <div className="icon h-6 w-6 overflow-hidden">
-                  <img
-                    src={ex.illustration}
-                    alt={`Edupora ${ex.name}`}
-                    loading="eager"
-                    className="h-full w-full object-contain"
-                  />
+        <div className="flex flex-col gap-3">
+          {toExplore
+            .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
+            .map((n, index) => (
+              <div className="flex flex-col gap-3">
+                <h3>{n.name}</h3>
+                <div
+                  key={index}
+                  className="explore-cards flex-wrap flex py-3 md:px-3 gap-2 md:gap-5 md:bg-white md:shadow-md"
+                >
+                  {n.options
+                    .sort((c, d) =>
+                      c.name > d.name ? 1 : c.name < d.name ? -1 : 0
+                    )
+                    .map((e, index) => (
+                      <LinkBtn
+                        key={index}
+                        link={e.link}
+                        className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-40 w-34 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+                      >
+                        <div className="icon">
+                          <div className="icon h-6 w-6 overflow-hidden">
+                            <img
+                              src={e.illustration}
+                              alt={`Edupora ${e.name}`}
+                              loading="eager"
+                              className="h-full w-full object-contain"
+                            />
+                          </div>
+                        </div>
+                        <p className="text-sm">{e.name}</p>
+                      </LinkBtn>
+                    ))}
                 </div>
               </div>
-              <p className="text-sm">{ex.name}</p>
-            </LinkBtn>
-          ))}
+            ))}
         </div>
       </section>
     </main>
