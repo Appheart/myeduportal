@@ -5,7 +5,7 @@ import LinkBtn from '../../components/Link';
 
 const toExplore = [
   {
-    name: 'management',
+    name: 'Management',
     options: [
       {
         name: 'Tasks tracker',
@@ -61,7 +61,22 @@ const toExplore = [
   },
 
   {
-    name: 'online registraion',
+    name: 'Jobs',
+    options: [
+      {
+        name: 'Job Application',
+        link: '/registrations',
+        illustration: '/images/illustrations/registration.png',
+      },
+      {
+        name: 'Scholarships',
+        link: '/registrations',
+        illustration: '/images/illustrations/registration.png',
+      },
+    ],
+  },
+  {
+    name: 'Scholarships',
     options: [
       {
         name: 'Job Application',
@@ -77,7 +92,7 @@ const toExplore = [
   },
 
   {
-    name: 'educational bodies',
+    name: 'Education',
     options: [
       {
         name: 'NECO',
@@ -90,6 +105,7 @@ const toExplore = [
       },
       {
         name: 'JAMB',
+        link: '/jamb',
       },
       {
         name: 'NABTEB',
@@ -102,12 +118,14 @@ const Explore = () => {
   return (
     <main>
       <section className="max-w-3xl mx-auto">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           {toExplore
             .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
             .map((n, index) => (
-              <div className="flex flex-col gap-3">
-                <h3>{n.name}</h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="py-1 mb-1 text-green-700 text-sm font-bold border-b-2 border-orange-500">
+                  {n.name}
+                </h3>
                 <div
                   key={index}
                   className="explore-cards flex-wrap flex py-3 md:px-3 gap-2 md:gap-5 md:bg-white md:shadow-md"
@@ -120,7 +138,7 @@ const Explore = () => {
                       <LinkBtn
                         key={index}
                         link={e.link}
-                        className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-40 w-34 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+                        className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-36 w-32 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
                       >
                         <div className="icon">
                           <div className="icon h-6 w-6 overflow-hidden">
