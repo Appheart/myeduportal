@@ -11,14 +11,24 @@ const CarouselCards = () => {
           <LinkBtn
             key={index}
             link={ad.link}
-            className="snap-start rounded-md relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0 bg-white shadow-md overflow-hidden w-[6rem] h-[8rem] p-0.5 "
+            className="snap-start rounded-md relative justify-center items-center gap-4 text-sm flex flex-col flex-shrink-0 bg-white shadow-md overflow-hidden w-[8rem] h-[8rem] "
           >
             <img
               loading="lazy"
-              src={ad.adImg}
+              src={ad.adImg[0]}
               alt={ad.title}
               className="h-full rounded-lg w-full object-contain"
             />
+
+            <div className="story-count absolute top-1 right-1 h-5 w-5 font-bold flex justify-center items-center bg-red-800 text-gray-50 rounded-full text-xs shadow-md">
+              {ad.adImg.length}
+            </div>
+
+            <div className=" absolute bottom-0 left-0 bg-black bg-opacity-60 p-1 w-full">
+              <p className="text-xs font-bold text-gray-200 ">
+                {ad.title.split(/\s/)[0]}
+              </p>
+            </div>
           </LinkBtn>
         ))}
       </div>
