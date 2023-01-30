@@ -96,19 +96,24 @@ const toExplore = [
     options: [
       {
         name: 'NECO',
+        illustration: '/images/illustrations/NECO-logo.jpg',
       },
       {
         name: 'WAEC',
+        illustration: '/images/illustrations/WAEC-logo.jpg',
       },
       {
         name: 'JUPEB',
+        illustration: '/images/illustrations/JUPEB-Logo.png',
       },
       {
         name: 'JAMB',
         link: '/jamb',
+        illustration: '/images/illustrations/jamb-logo.jpg',
       },
       {
         name: 'NABTEB',
+        illustration: '/images/illustrations/NABTEB-logo.png',
       },
     ],
   },
@@ -150,7 +155,9 @@ const Explore = () => {
                             />
                           </div>
                         </div>
-                        <p className="text-sm">{e.name}</p>
+                        <p className="text-sm font-bold text-green-700">
+                          {e.name}
+                        </p>
                       </LinkBtn>
                     ))}
                 </div>
