@@ -64,14 +64,32 @@ const toExplore = [
     name: 'Jobs',
     options: [
       {
-        name: 'Job Application',
-        link: '/registrations',
-        illustration: '/images/illustrations/registration.png',
+        name: 'Delon Jobs',
+        link: 'https://jobs.delon.ng/',
+        illustration:
+          'https://jobs.delon.ng/wp-content/uploads/2018/09/Delon_Jobs.jpg',
       },
       {
-        name: 'Scholarships',
-        link: '/registrations',
-        illustration: '/images/illustrations/registration.png',
+        name: 'Glassdoor',
+        link: 'https://www.glassdoor.com/Job',
+        illustration:
+          'https://www.glassdoor.com/about-us//app/uploads/sites/2/2018/06/Group-7.png',
+      },
+      {
+        name: 'Jobberman',
+        link: 'https://www.jobberman.com/jobs',
+        illustration:
+          'https://www.jobberman.com/static-assets/img/ng/landscape.svg',
+      },
+      {
+        name: 'Indeed',
+        link: 'https://ng.indeed.com/',
+        illustration: '/images/illustrations/indeed-logo.svg',
+      },
+      {
+        name: 'TotalJobs',
+        link: 'https://www.totaljobs.com/browse-jobs',
+        illustration: '/images/illustrations/TotalJobs.svg',
       },
     ],
   },
