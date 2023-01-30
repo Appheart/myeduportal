@@ -6,12 +6,12 @@ import {
   faSun,
   faUser,
 } from '@fortawesome/free-regular-svg-icons';
-import { faBook, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faHome, faWallet } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Menu = () => {
   return (
-    <nav className="container mx-auto menu-navigation">
+    <nav className="container mx-auto menu-navigation border-t-4">
       <ul className="nav-list">
         <li className="nav-item">
           <NavLink to={'/'}>
@@ -19,13 +19,18 @@ const Menu = () => {
           </NavLink>
         </li>
         <li className="nav-item ">
-          <NavLink to={'/forum'}>
+          <NavLink to={'/chat'}>
             <FontAwesomeIcon icon={faMessage} /> <span> Chat</span>
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to={'/explore'}>
             <FontAwesomeIcon icon={faSun} /> <span>Explore</span>
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to={'/walleti'}>
+            <FontAwesomeIcon icon={faWallet} /> <span>Walleti</span>
           </NavLink>
         </li>
       </ul>

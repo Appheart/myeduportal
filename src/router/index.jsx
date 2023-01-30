@@ -38,8 +38,10 @@ import {
   TasksTracker,
   TimeTable,
 } from '../pages';
+import Chat from '../pages/Chat';
 import RandomInstitution from '../pages/Instutions/[id]';
 import UploadFiles from '../pages/UploadFiles';
+import Walleti from '../pages/Walleti';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -68,7 +70,8 @@ const router = createBrowserRouter(
         <Route path="registrations" element={<Registrations />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/take-a-tour" element={<TakeATour />} />
-        <Route path="/take-a-tour" element={<TakeATour />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/walleti" element={<Walleti />} />
         <Route path="/events" element={<Events />} />
         <Route path="/tasks-tracker" element={<TasksTracker />} />
         <Route path="/explore">
