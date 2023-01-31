@@ -14,9 +14,7 @@ export const AuthProvider = ({ children, userData }) => {
 
     if (location.state?.from) {
       navigate(location.state.from);
-    }
-
-    navigate('/');
+    } else navigate('/');
     return true;
   };
 
