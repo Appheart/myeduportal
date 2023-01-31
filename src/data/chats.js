@@ -1,0 +1,6 @@
+const chats = [
+  {
+    name: '',
+    imgSrc: '',
+  },
+];

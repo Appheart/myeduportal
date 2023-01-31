@@ -70,7 +70,6 @@ const router = createBrowserRouter(
         <Route path="registrations" element={<Registrations />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/take-a-tour" element={<TakeATour />} />
-        <Route path="/chat" element={<Chat />} />
         <Route path="/walleti" element={<Walleti />} />
         <Route path="/events" element={<Events />} />
         <Route path="/tasks-tracker" element={<TasksTracker />} />
@@ -88,6 +87,7 @@ const router = createBrowserRouter(
         </Route>
         <Route path="/upload" element={<UploadFiles />} />
       </Route>
+      <Route path="/chat" element={<Chat />} />
       <Route path="/*" element={<Error404 />} />
     </Route>
   )
