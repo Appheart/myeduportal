@@ -1,7 +1,8 @@
+import useSWR from 'swr';
 import { useState } from 'react';
 import { CarouselCards } from '../../components';
 import News from '../../components/News';
-import { getAllNews } from '../../app/api/newsApi';
+import { getAllNews, newsUrlEndPoint as cacheKey } from '../../app/api/newsApi';
 import { useQuery } from '@tanstack/react-query';
 
 const Dashboard = () => {
@@ -17,6 +18,13 @@ const Dashboard = () => {
     keepPreviousData: true,
     queryFn: () => getAllNews(page),
   });
+
+  // const {
+  //   isLoading,
+  //   error,
+  //   data: newsData,
+  //   mutate,
+  // } = useSWR(cacheKey, getAllNews(page), {});
 
   const nextPage = () => setPage((prev) => prev + 1);
   const prevPage = () => setPage((prev) => prev - 1);

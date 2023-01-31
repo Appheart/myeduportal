@@ -1,7 +1,11 @@
 import { api } from '.';
 
-export const getAllNews = async (pageParam = 1) => {
-  const response = await api.get(`/news?page=${pageParam}`);
+export const newsUrlEndPoint = (pageParam = 1) => {
+  return `/news?page=${pageParam}`;
+};
+
+export const getAllNews = async () => {
+  const response = await api.get(newsUrlEndPoint());
 
   return response.data;
 };
