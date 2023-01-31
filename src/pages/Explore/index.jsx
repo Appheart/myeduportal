@@ -164,7 +164,7 @@ const Explore = () => {
                         className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-36 w-32 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
                       >
                         <div className="icon">
-                          <div className="icon h-6 w-6 overflow-hidden">
+                          <div className="icon h-9 w-9 overflow-hidden">
                             <img
                               src={e.illustration}
                               alt={`Edupora ${e.name}`}
