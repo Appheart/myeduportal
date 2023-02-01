@@ -6,7 +6,13 @@ import {
   faSun,
   faUser,
 } from '@fortawesome/free-regular-svg-icons';
-import { faBook, faHome, faWallet } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBook,
+  faBraille,
+  faHandDots,
+  faHome,
+  faWallet,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Menu = () => {
@@ -30,7 +36,7 @@ const Menu = () => {
         </li>
         <li className="nav-item">
           <NavLink to={'/walleti'}>
-            <FontAwesomeIcon icon={faWallet} /> <span>Walleti</span>
+            <FontAwesomeIcon icon={faBraille} /> <span>More</span>
           </NavLink>
         </li>
       </ul>

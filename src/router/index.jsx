@@ -83,7 +83,7 @@ const router = createBrowserRouter(
         </Route>
         <Route path="/jamb">
           <Route index element={<JAMB />} />
-          <Route path="accreditted_centres" element={<AccreditedCenters />} />
+          <Route path="accredited-centres" element={<AccreditedCenters />} />
           <Route path="notes" element={<Notes />} />
         </Route>
         <Route path="/upload" element={<UploadFiles />} />
