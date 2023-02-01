@@ -14,6 +14,7 @@ const News = ({ status, error, newsData, prevPage, nextPage, page }) => {
   };
 
   let content;
+
   if (status == 'loading') {
     content = <Loading />;
   } else if (status == 'error') {
@@ -137,7 +138,7 @@ const News = ({ status, error, newsData, prevPage, nextPage, page }) => {
                 </div>
               </div>
             ))}
-        </div>{' '}
+        </div>
         <div className="mt-5 flex justify-center items-center  gap-4">
           <button
             onClick={prevPage}

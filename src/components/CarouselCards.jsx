@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import LinkBtn from './Link';
-import { adsData } from '../data';
+import axios from 'axios';
 
 const CarouselCards = () => {
+  const [adsData, setAdsData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('/data/ads.json')
+      .then((res) => setAdsData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(adsData);
   return (
     <div className="flex flex-col gap-5">
       {/* Carousels */}
