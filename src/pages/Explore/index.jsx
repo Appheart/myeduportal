@@ -161,7 +161,7 @@ const Explore = () => {
                       <LinkBtn
                         key={index}
                         link={e.link}
-                        className="explore-card items-center text-center bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-36 w-34 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-200 hover:text-white text-gray-800"
+                        className="explore-card items-center text-center bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-36 w-36 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-200 flex-shrink-0 hover:text-white text-gray-800"
                       >
                         <div className="icon">
                           <div className="icon h-10 w-10 overflow-hidden">
