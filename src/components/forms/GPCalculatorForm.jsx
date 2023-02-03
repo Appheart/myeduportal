@@ -76,7 +76,9 @@ function GPAcalculator() {
           {/* <button>Save GP</button> */}
         </div>
       </div>
-      <p>GPA: {gpa}</p>
+      <p className="w-full mt-4 text-xl items-center justify-center text-center">
+        GPA: {gpa}
+      </p>
     </div>
   );
 }
