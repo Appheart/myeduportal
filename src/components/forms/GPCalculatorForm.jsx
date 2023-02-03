@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import GPInputField from './GPInputField';
 
 function calculateGPA(classes) {
@@ -6,8 +7,8 @@ function calculateGPA(classes) {
   let totalGradePoints = 0;
 
   classes.forEach(({ creditHours, grade }) => {
-    totalCreditHours += creditHours;
-    totalGradePoints += creditHours * grade;
+    totalCreditHours += Number(creditHours);
+    totalGradePoints += Number(creditHours * grade);
   });
 
   return totalGradePoints / totalCreditHours;
@@ -20,16 +21,19 @@ function GPAcalculator() {
 
   const [gpa, setGPA] = useState(calculateGPA(classes));
 
+  useEffect(() => {
+    setGPA(calculateGPA(classes));
+  }, [classes]);
+
   const handleClassChange = (index) => (event) => {
     const updatedClasses = [...classes];
-    updatedClasses[index][event.target.name] = Number(event.target.value);
+    updatedClasses[index][event.target.name] = event.target.value;
     setClasses(updatedClasses);
     setGPA(calculateGPA(updatedClasses));
   };
 
   const handleAddClass = () => {
     setClasses([...classes, { course: '', creditHours: 1, grade: 1.0 }]);
-    setGPA(calculateGPA(updatedClasses));
   };
 
   const handleRemoveClass = (index) => () => {
