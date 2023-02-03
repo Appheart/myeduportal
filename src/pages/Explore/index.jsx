@@ -146,7 +146,7 @@ const Explore = () => {
             .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
             .map((n, index) => (
               <div className="flex flex-col gap-1">
-                <h3 className="py-1 mb-1 text-green-700 text-sm font-bold border-b-2 border-orange-500">
+                <h3 className="py-1 mb-1 text-orange-500 font-bold border-b-2 ">
                   {n.name}
                 </h3>
                 <div
@@ -161,10 +161,10 @@ const Explore = () => {
                       <LinkBtn
                         key={index}
                         link={e.link}
-                        className="explore-card border-b-2 border-blue-600 bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-36 w-32 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-600 hover:text-white text-gray-800"
+                        className="explore-card items-center text-center bg-white py-3 px-3 rounded-md shadow-md flex flex-col h-36 w-34 flex-grow gap-4 hover:cursor-pointer hover:bg-blue-200 hover:text-white text-gray-800"
                       >
                         <div className="icon">
-                          <div className="icon h-9 w-9 overflow-hidden">
+                          <div className="icon h-10 w-10 overflow-hidden">
                             <img
                               src={e.illustration}
                               alt={`Edupora ${e.name}`}
@@ -173,9 +173,7 @@ const Explore = () => {
                             />
                           </div>
                         </div>
-                        <p className="text-sm font-bold text-green-700">
-                          {e.name}
-                        </p>
+                        <p className="text-yellow-700">{e.name}</p>
                       </LinkBtn>
                     ))}
                 </div>
