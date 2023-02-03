@@ -18,24 +18,32 @@ const GPInputField = ({
           value={course.course}
           onChange={handleClassChange(index)}
         />
-        <input
-          type="number"
-          min={1}
-          max={6}
-          maxLength={1}
-          className="px-2 py-1 border rounded-xl w-full max-w-[60px]"
+        <select
           name="creditHours"
           value={course.creditHours}
           onChange={handleClassChange(index)}
-        />
-        <input
-          type="number"
-          maxLength={1}
-          className="px-2 py-1 border rounded-xl w-full max-w-[60px] text-center"
+          className="px-2 py-1 border rounded-xl w-full max-w-[60px]"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="6"></option>
+        </select>
+
+        <select
           name="grade"
           value={course.grade}
           onChange={handleClassChange(index)}
-        />
+          className="px-2 py-1 border rounded-xl w-full max-w-[60px]"
+        >
+          <option value="5">A</option>
+          <option value="4">B</option>
+          <option value="3">C</option>
+          <option value="2">D</option>
+          <option value="1">E</option>
+          <option value="0">F</option>
+        </select>
       </div>
 
       <div
