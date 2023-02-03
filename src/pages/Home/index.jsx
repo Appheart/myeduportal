@@ -38,7 +38,7 @@ const Dashboard = () => {
       </div>
 
       <section className="section  rounded-lg">
-        <div className="newsTags  scrollbar-none scroll-smooth sticky top-[3.98rem] z-50 px-5  py-2 bg-green-100 flex gap-3 mb-4 overflow-x-auto -mx-3 md:-mx-[2%]">
+        <div className="newsTags scrollbar-none scroll-smooth sticky top-[3.98rem] z-50 px-3 py-2 bg-green-100 flex gap-3 mb-4 overflow-x-auto">
           <small className="text-xs py-1 px-3 border rounded-xl bg-yellow-200 border-yellow-200 font-bold">
             All
           </small>
