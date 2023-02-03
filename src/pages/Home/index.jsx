@@ -41,7 +41,7 @@ const Dashboard = () => {
           </div>
         </section> */}
 
-        <section className="mb-3  w-full md:w-[50%]">
+        <section className="mb-3 w-full">
           <CarouselCards />
         </section>
       </div>
