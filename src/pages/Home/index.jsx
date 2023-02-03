@@ -51,7 +51,7 @@ const Dashboard = () => {
           Latest Information
         </h3> */}
 
-        <div className="newsTags flex gap-3 mb-4">
+        <div className="newsTags  scrollbar-none scroll-smooth sticky top-[4rem] z-50 px-5  py-2 bg-gray-50 flex gap-3 mb-4 overflow-x-auto -mx-3 md:-mx-[2%]">
           <small className="text-xs py-1 px-3 border rounded-xl bg-yellow-200 border-yellow-200 font-bold">
             All
           </small>
