@@ -2,44 +2,12 @@ import { faCalculator, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { LinkBtn } from '../../components';
+import GPAcalculator from '../../components/forms/GPCalculatorForm';
 
 const cGPAManager = () => {
-  const sessions = [
-    {
-      name: '2021 - 2022',
-      isProgress: true,
-      isPending: true,
-    },
-    {
-      name: '2022 - 2023',
-      isProgress: false,
-      isPending: true,
-    },
-    {
-      name: '2023 - 2024',
-      isProgress: false,
-      isPending: true,
-    },
-    {
-      name: '2024 - 2025',
-      isProgress: false,
-      isPending: true,
-    },
-    {
-      name: '2025 - 2026',
-      isProgress: false,
-      isPending: true,
-    },
-  ];
-
-  const sessionIsDone = ({ isProgress, isPending }) => {
-    return !isProgress && !isPending;
-  };
-
   return (
     <main>
       <section>
-        {' '}
         <fieldset className="bg-gradient-to-r from-sky-100 to-indigo-200 flex flex-col gap-3 relative p-3 rounded-md">
           <div className="school_logo absolute top-3 right-3 shadow-sm rounded-lg">
             <LinkBtn
@@ -56,7 +24,7 @@ const cGPAManager = () => {
             <p>GP Calculator</p>
           </h3>
 
-          <div className="flex flex-col gap-3 border-b-2 border-cyan-700">
+          {/* <div className="flex flex-col gap-3 border-b-2 border-cyan-700">
             <div className="flex border-b-2 border-cyan-700">
               <div className="w-[80%]"></div>
               <div className="w-[20%] font-bold">cGPA</div>
@@ -83,7 +51,8 @@ const cGPAManager = () => {
               <div className="w-[80%] font-bold pl-3">Overall cGPA</div>
               <div className="w-[20%] font-bold">0.00</div>
             </div>
-          </div>
+          </div>  */}
+          <GPAcalculator />
         </fieldset>
       </section>
     </main>
