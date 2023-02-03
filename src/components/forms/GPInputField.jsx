@@ -13,7 +13,7 @@ const GPInputField = ({
         <input
           type="text"
           className="px-2 py-1 border rounded-xl  w-full"
-          placeholder={`Subject ${index}`}
+          placeholder={`Subject ${index + 1} `}
           name="course"
           value={course.course}
           onChange={handleClassChange(index)}
