@@ -21,6 +21,11 @@ function GPAcalculator() {
 
   const [gpa, setGPA] = useState(calculateGPA(classes));
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  });
+
   useEffect(() => {
     setGPA(calculateGPA(classes));
   }, [classes]);
@@ -81,7 +86,7 @@ function GPAcalculator() {
         </div>
       </div>
       <p className="w-full mt-4 text-xl items-center justify-center text-center">
-        GPA: {gpa}
+        GPA: {formatter.format(gpa)}
       </p>
     </div>
   );
