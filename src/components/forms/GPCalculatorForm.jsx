@@ -52,7 +52,7 @@ function GPAcalculator() {
           <form key={i}>
             <GPInputField
               course={c}
-              index={i + 1}
+              index={i}
               handleRemoveClass={handleRemoveClass}
               handleClassChange={handleClassChange}
             />
