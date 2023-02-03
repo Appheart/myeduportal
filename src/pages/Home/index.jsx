@@ -30,28 +30,15 @@ const Dashboard = () => {
   const prevPage = () => setPage((prev) => prev - 1);
 
   return (
-    <main>
+    <main className="bg-gray-50">
       <div className="flex flex-col md:flex-row md:gap-3 items-start">
-        {/* <section className="bg-yellow-100 p-4 shadow-md mb-4 mt-1 rounded-md flex flex-col gap-1 flex-shrink-0 w-full md:w-[50%] max-h-min">
-          <div className="flex justify-between gap-2 items-center">
-            <p className="text-gray-800">
-              Welcome back, <span className=" font-semibold">User</span>
-            </p>
-            <img src="/images/gif/waving-hi.gif" alt="" className="h-10 w-10" />
-          </div>
-        </section> */}
-
         <section className="mb-3 w-full">
           <CarouselCards />
         </section>
       </div>
 
       <section className="section  rounded-lg">
-        {/* <h3 className="text-lg font-bold text-yellow-600 pb-2 pl-3">
-          Latest Information
-        </h3> */}
-
-        <div className="newsTags  scrollbar-none scroll-smooth sticky top-[3.99rem] z-50 px-5  py-2 bg-gray-50 flex gap-3 mb-4 overflow-x-auto -mx-3 md:-mx-[2%]">
+        <div className="newsTags  scrollbar-none scroll-smooth sticky top-[3.98rem] z-50 px-5  py-2 bg-green-100 flex gap-3 mb-4 overflow-x-auto -mx-3 md:-mx-[2%]">
           <small className="text-xs py-1 px-3 border rounded-xl bg-yellow-200 border-yellow-200 font-bold">
             All
           </small>
