@@ -51,20 +51,20 @@ const Dashboard = () => {
           Latest Information
         </h3> */}
 
-        <div className="newsTags  scrollbar-none scroll-smooth sticky top-[4rem] z-50 px-5  py-2 bg-gray-50 flex gap-3 mb-4 overflow-x-auto -mx-3 md:-mx-[2%]">
+        <div className="newsTags  scrollbar-none scroll-smooth sticky top-[3.99rem] z-50 px-5  py-2 bg-gray-50 flex gap-3 mb-4 overflow-x-auto -mx-3 md:-mx-[2%]">
           <small className="text-xs py-1 px-3 border rounded-xl bg-yellow-200 border-yellow-200 font-bold">
             All
           </small>
-          <small className="text-xs py-1 px-3 border rounded-xl font-bold">
+          <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
             Technology
           </small>
-          <small className="text-xs py-1 px-3 border rounded-xl font-bold">
+          <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
             Business
           </small>
-          <small className="text-xs py-1 px-3 border rounded-xl font-bold">
+          <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
             Finance
           </small>
-          <small className="text-xs py-1 px-3 border rounded-xl font-bold">
+          <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
             Education
           </small>
         </div>
