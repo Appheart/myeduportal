@@ -43,16 +43,19 @@ const Dashboard = () => {
             All
           </small>
           <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
-            Technology
+            Waec
           </small>
           <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
-            Business
+            Jamb
           </small>
           <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
-            Finance
+            Admission
           </small>
           <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
-            Education
+            Scholarhips
+          </small>
+          <small className="text-xs py-1 px-3 border rounded-xl font-bold bg-white">
+            Tech
           </small>
         </div>
 

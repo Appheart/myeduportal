@@ -10,7 +10,7 @@ const JAMB = () => {
         <section className="w-full mx-auto space-y-5">
           {/*  */}
           <details className="rounded-lg shadow-sm px-3 py-2">
-            <summary className="text-lg py-1 text-yellow-500 font-bold cursor-pointer">
+            <summary className="py-1 text-green-500 font-bold cursor-pointer">
               JAMB CAPS
             </summary>
             <div className="mt-3">
@@ -29,7 +29,7 @@ const JAMB = () => {
 
           {/*  */}
           <details className="rounded-lg shadow-sm px-3 py-2">
-            <summary className="text-lg py-1 text-yellow-500 font-bold cursor-pointer">
+            <summary className="py-1 text-green-500 font-bold cursor-pointer">
               JAMB Registration 2023
             </summary>
 
@@ -67,7 +67,7 @@ const JAMB = () => {
 
           {/*  */}
           <details className="rounded-lg shadow-sm px-3 py-2">
-            <summary className="text-lg py-1 text-yellow-500 font-bold cursor-pointer">
+            <summary className="py-1 text-green-500 font-bold cursor-pointer">
               JAMB Related Services
             </summary>
             <div className="mt-3">
@@ -110,7 +110,7 @@ const JAMB = () => {
 
           {/*  */}
           <details className="rounded-lg shadow-sm px-3 py-2">
-            <summary className="text-lg py-1 text-yellow-500 font-bold cursor-pointer">
+            <summary className="py-1 text-green-500 font-bold cursor-pointer">
               JAMB Brochure
             </summary>
             <div className="mt-3">
@@ -120,7 +120,7 @@ const JAMB = () => {
 
           {/*  */}
           <details className="rounded-lg shadow-sm px-3 py-2">
-            <summary className="text-lg py-1 text-yellow-500 font-bold cursor-pointer">
+            <summary className="py-1 text-green-500 font-bold cursor-pointer">
               JAMB Syllabus
             </summary>
             <div className="mt-3">

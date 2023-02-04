@@ -118,6 +118,7 @@ const toExplore = [
       },
       {
         name: 'WAEC',
+        link: '/waec',
         illustration: '/images/illustrations/WAEC-logo.jpg',
       },
       {

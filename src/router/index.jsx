@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import { AuthLayout, ProtectedLayout } from '../layouts';
 
+const WAECPage = React.lazy(() => import('../pages/Services/WAEC'));
+
 const getUserData = () =>
   new Promise((resolve) =>
     setTimeout(() => {
@@ -98,6 +100,7 @@ const router = createBrowserRouter(
           <Route path="accredited-centres" element={<AccreditedCenters />} />
           <Route path="notes" element={<Notes />} />
         </Route>
+        <Route path="/waec" element={<WAECPage />}></Route>
         <Route path="/upload" element={<UploadFiles />} />
       </Route>
       <Route path="/*" element={<Error404 />} />
