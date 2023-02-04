@@ -49,6 +49,7 @@ const Chat = React.lazy(() => import('../pages/Chat'));
 const RandomInstitution = React.lazy(() => import('../pages/Instutions/[id]'));
 const UploadFiles = React.lazy(() => import('../pages/UploadFiles'));
 const Walleti = React.lazy(() => import('../pages/Walleti'));
+const UNNPage = React.lazy(() => import('../pages/Services/UNN'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -102,6 +103,7 @@ const router = createBrowserRouter(
         </Route>
         <Route path="/waec" element={<WAECPage />}></Route>
         <Route path="/upload" element={<UploadFiles />} />
+        <Route path="/unn" element={<UNNPage />} />
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>

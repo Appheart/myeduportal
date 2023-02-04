@@ -131,6 +131,12 @@ const toExplore = [
         illustration: '/images/illustrations/jamb-logo.jpg',
       },
       {
+        name: 'UNN',
+        link: '/unn',
+        illustration:
+          'https://th.bing.com/th/id/R.a4ac95ad66dd2da7047ea9a3638f2f10?rik=V%2bQ8dfoXvbU93A&pid=ImgRaw&r=0',
+      },
+      {
         name: 'IJMB',
         link: 'https://ijmbenigeria.com/',
         illustration:
