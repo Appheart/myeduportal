@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -14,34 +15,38 @@ const getUserData = () =>
     }, 3000)
   );
 
-import {
-  AccreditedCenters,
-  CGPA,
-  Courses,
-  Dashboard,
-  Error404,
-  Events,
-  Examinations,
-  Explore,
-  JAMB,
-  LectureMaterials,
-  Login,
-  Notes,
-  NYSC,
-  Payment,
-  Profile,
-  RandomCourse,
-  Register,
-  Registrations,
-  Remita,
-  TakeATour,
-  TasksTracker,
-  TimeTable,
-} from '../pages';
-import Chat from '../pages/Chat';
-import RandomInstitution from '../pages/Instutions/[id]';
-import UploadFiles from '../pages/UploadFiles';
-import Walleti from '../pages/Walleti';
+const AccreditedCenters = React.lazy(() =>
+  import('../pages/Services/JAMB/AccreditedCenters')
+);
+const CGPA = React.lazy(() => import('../pages/Explore/cGPAManager'));
+const Courses = React.lazy(() => import('../pages/Courses'));
+const Dashboard = React.lazy(() => import('../pages/Home/index.jsx'));
+const Error404 = React.lazy(() => import('../pages/404'));
+const Events = React.lazy(() => import('../pages/Events'));
+const Examinations = React.lazy(() => import('../pages/Examinations'));
+const Explore = React.lazy(() => import('../pages/Explore'));
+const JAMB = React.lazy(() => import('../pages/Services/JAMB'));
+const LectureMaterials = React.lazy(() =>
+  import('../pages/Explore/LectureMaterials')
+);
+const Login = React.lazy(() => import('../pages/Auth/Login'));
+const Notes = React.lazy(() => import('../pages/Explore/Notes'));
+const NYSC = React.lazy(() => import('../pages/Services/NYSC'));
+const Payment = React.lazy(() => import('../pages/Cart/'));
+const Profile = React.lazy(() => import('../pages/Profile'));
+const RandomCourse = React.lazy(() => import('../pages/Courses/[id].jsx'));
+const Register = React.lazy(() => import('../pages/Auth/Register'));
+const Registrations = React.lazy(() =>
+  import('../pages/Services/Registrations')
+);
+const Remita = React.lazy(() => import('../pages/Services/Remita'));
+const TakeATour = React.lazy(() => import('../pages/Explore/TakeATour'));
+const TasksTracker = React.lazy(() => import('../pages/TasksTracker'));
+const TimeTable = React.lazy(() => import('../pages/Explore/TimeTable'));
+const Chat = React.lazy(() => import('../pages/Chat'));
+const RandomInstitution = React.lazy(() => import('../pages/Instutions/[id]'));
+const UploadFiles = React.lazy(() => import('../pages/UploadFiles'));
+const Walleti = React.lazy(() => import('../pages/Walleti'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -75,7 +80,14 @@ const router = createBrowserRouter(
         <Route path="/events" element={<Events />} />
         <Route path="/tasks-tracker" element={<TasksTracker />} />
         <Route path="/explore">
-          <Route index element={<Explore />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<p>...</p>}>
+                <Explore />
+              </Suspense>
+            }
+          />
           <Route path="notes" element={<Notes />} />
           <Route path="cgpa" element={<CGPA />} />
           <Route path="timetable" element={<TimeTable />} />
