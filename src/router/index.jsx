@@ -36,7 +36,7 @@ const Notes = React.lazy(() => import('../pages/Explore/Notes'));
 const NYSC = React.lazy(() => import('../pages/Services/NYSC'));
 const Payment = React.lazy(() => import('../pages/Cart/'));
 const Profile = React.lazy(() => import('../pages/Profile'));
-const RandomCourse = React.lazy(() => import('../pages/Courses/[id].jsx'));
+const RandomCourse = React.lazy(() => import('../pages/courses/[id].jsx'));
 const Register = React.lazy(() => import('../pages/Auth/Register'));
 const Registrations = React.lazy(() =>
   import('../pages/Services/Registrations')
