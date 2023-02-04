@@ -20,7 +20,7 @@ const WAECPage = () => {
             </li>
             <li className="">
               <LinkBtn
-                link="https:/edupora.netlify.app/uploads/Download-WAEC-TIMETABLE-2023-EDUPORA.pdf"
+                link="https://github.com/Appheart/myeduportal/raw/main/public/uploads/Download-WAEC-TIMETABLE-2023-EDUPORA.pdf"
                 className={'text-sm text-gray-800 underline'}
               >
                 Download 2023 Examination Timetable
