@@ -131,6 +131,12 @@ const toExplore = [
         illustration: '/images/illustrations/jamb-logo.jpg',
       },
       {
+        name: 'IJMB',
+        link: 'https://ijmbenigeria.com/',
+        illustration:
+          'https://i0.wp.com/ijmbenigeria.com/wp-content/uploads/2021/03/IJMBE-Nigeria-Logo.png?w=300&ssl=1',
+      },
+      {
         name: 'NABTEB',
         illustration: '/images/illustrations/NABTEB-logo.png',
       },

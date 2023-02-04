@@ -20,10 +20,38 @@ const WAECPage = () => {
             </li>
             <li className="">
               <LinkBtn
+                link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                className={'text-sm text-gray-800 underline'}
+              >
+                Frequently Asked Questions (FAQs)
+              </LinkBtn>
+            </li>
+            <li className="relative">
+              <LinkBtn
                 link="https://github.com/Appheart/myeduportal/raw/main/public/uploads/Download-WAEC-TIMETABLE-2023-EDUPORA.pdf"
                 className={'text-sm text-gray-800 underline'}
               >
                 Download 2023 Examination Timetable
+              </LinkBtn>
+
+              <div className="absolute right-0 top-0 text-xs rounded-xl px-2 py-1 bg-red-700 text-white">
+                New
+              </div>
+            </li>
+            <li className="">
+              <LinkBtn
+                link="https://verify.waeconline.org.ng/"
+                className={'text-sm text-gray-800 underline'}
+              >
+                Verify WAEC Result
+              </LinkBtn>
+            </li>
+            <li className="">
+              <LinkBtn
+                link="https://verify.waeconline.org.ng/BuyPIN"
+                className={'text-sm text-gray-800 underline'}
+              >
+                But WAEC Verification Pin
               </LinkBtn>
             </li>
           </ul>
