@@ -15,7 +15,15 @@ const WAECPage = () => {
                 link="https://www.waecdirect.org/"
                 className={'text-sm text-gray-800 underline'}
               >
-                WAEC Result Cheker
+                Result Cheker
+              </LinkBtn>
+            </li>
+            <li className="">
+              <LinkBtn
+                link="https:/edupora.netlify.app/uploads/Download-WAEC-TIMETABLE-2023-EDUPORA.pdf"
+                className={'text-sm text-gray-800 underline'}
+              >
+                Download 2023 Examination Timetable
               </LinkBtn>
             </li>
           </ul>
