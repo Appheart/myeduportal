@@ -123,6 +123,7 @@ const toExplore = [
       },
       {
         name: 'JUPEB',
+        link: '/unn/jupeb',
         illustration: '/images/illustrations/JUPEB-Logo.png',
       },
       {
