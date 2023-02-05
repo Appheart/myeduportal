@@ -61,7 +61,7 @@ const JupebPage = () => {
 
                   <LinkBtn
                     className={
-                      'bg-transparent border-green-500 border py-1 px-3 justify-center items-center flex font-bold rounded-xl text-green-700 max-w-max mx-auto'
+                      'bg-transparent my-3 border-green-500 border py-1 px-3 justify-center items-center flex font-bold rounded-xl text-green-700 max-w-max mx-auto'
                     }
                     link="https://unnportal.unn.edu.ng/Modules/Applications/GenerateInvoice.aspx?sent=5"
                   >
@@ -136,7 +136,7 @@ const JupebPage = () => {
                   </p>
                   <LinkBtn
                     className={
-                      'bg-transparent border-green-500 border py-1 px-3 justify-center items-center flex font-bold rounded-xl text-green-700 max-w-max mx-auto'
+                      'bg-transparent my-3 border-green-500 border py-1 px-3 justify-center items-center flex font-bold rounded-xl text-green-700 max-w-max mx-auto'
                     }
                     link="https://unnportal.unn.edu.ng/Modules/Applications/JUPEB/JUPEBLogin.aspx"
                   >
