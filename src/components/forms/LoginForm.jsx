@@ -16,7 +16,7 @@ const LoginForm = ({ handleSubmit }) => {
           placeholder="Username"
           required
         />
-        <small className="text-xs px-2 bg-green-300 w-max rounded-xl">
+        <small className="text-xs px-2 bg-green-100 w-max rounded-xl">
           Use <b>unn</b> as username
         </small>
       </div>
@@ -28,7 +28,7 @@ const LoginForm = ({ handleSubmit }) => {
           placeholder="Password"
           required
         />
-        <small className="text-xs px-2 bg-green-300 w-max rounded-xl">
+        <small className="text-xs px-2 bg-green-100 w-max rounded-xl">
           Use <b>unn</b> as password
         </small>
       </div>
