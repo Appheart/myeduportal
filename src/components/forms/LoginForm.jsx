@@ -1,26 +1,37 @@
 const LoginForm = ({ handleSubmit }) => {
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <input
         type="text"
         id=""
         name="hidden"
         className="appearance-none hidden"
       />
-      <input
-        className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
-        type="text"
-        name="username"
-        placeholder="Username"
-        required
-      />
-      <input
-        className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
-        type="password"
-        name="password"
-        placeholder="Password"
-        required
-      />
+
+      <div className="flex flex-col gap-1">
+        <input
+          className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+        />
+        <small className="text-xs px-2 bg-green-300 w-max rounded-xl">
+          Use <b>unn</b> as username
+        </small>
+      </div>
+      <div className="flex flex-col gap-1">
+        <input
+          className="w-full px-3 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker text-sm"
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <small className="text-xs px-2 bg-green-300 w-max rounded-xl">
+          Use <b>unn</b> as password
+        </small>
+      </div>
       <div className="flex items-center justify-between">
         {/* <!-- Remember me toggle --> */}
         <label className="flex items-center">
