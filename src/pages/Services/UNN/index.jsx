@@ -71,13 +71,22 @@ const UNNPage = () => {
                     Retrieve Remita Invoice / Receipt
                   </LinkBtn>
                 </li>
+                <li className="">
+                  <LinkBtn
+                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    className={'text-sm text-gray-800 underline'}
+                  >
+                    Admission List
+                  </LinkBtn>
+                </li>
               </ul>
             </div>
           </details>
+
           {/*  */}
           <details className="rounded-lg shadow-sm px-3 py-2">
             <summary className="py-1 text-green-500 font-bold cursor-pointer">
-              Admission List
+              Applications
             </summary>
             <div className="mt-3">
               <ul className="flex flex-col gap-2 p-3 list-inside list-disc">
@@ -86,7 +95,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    2017 - 2018
+                    Shopping Form
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -94,7 +103,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    2018- 2019
+                    Staff Quota application
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -102,7 +111,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    2019- 2020
+                    PUTME Appication
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -110,7 +119,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    2020- 2021
+                    DE Application
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -118,7 +127,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    2021- 2022
+                    PG Application
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -126,7 +135,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    2022- 2023
+                    JUPEB Application
                   </LinkBtn>
                 </li>
               </ul>
