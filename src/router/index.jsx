@@ -8,6 +8,7 @@ import {
 import { AuthLayout, ProtectedLayout } from '../layouts';
 
 const WAECPage = React.lazy(() => import('../pages/Services/WAEC'));
+const JupebPage = React.lazy(() => import('../pages/Services/UNN/JUPEB'));
 
 const getUserData = () =>
   new Promise((resolve) =>
@@ -103,7 +104,10 @@ const router = createBrowserRouter(
         </Route>
         <Route path="/waec" element={<WAECPage />}></Route>
         <Route path="/upload" element={<UploadFiles />} />
-        <Route path="/unn" element={<UNNPage />} />
+        <Route path="/unn">
+          <Route index element={<UNNPage />} />
+          <Route path="jupeb" element={<JupebPage />} />
+        </Route>
       </Route>
       <Route path="/*" element={<Error404 />} />
     </Route>

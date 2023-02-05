@@ -25,7 +25,7 @@ const UNNPage = () => {
               <ul className="flex flex-col gap-2 md:grid grid-cols-2 p-3 list-inside list-disc">
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecdirect.org/"
+                    link="https://unnportal.unn.edu.ng/StudentVerification.aspx"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Check admission status
@@ -132,7 +132,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="/unn/jupeb"
                     className={'text-sm text-gray-800 underline'}
                   >
                     JUPEB Application
