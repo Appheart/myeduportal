@@ -22,7 +22,7 @@ const UNNPage = () => {
               Quick Help
             </summary>
             <div className="mt-3">
-              <ul className="flex flex-col gap-2 p-3 list-inside list-disc">
+              <ul className="flex flex-col gap-2 md:grid grid-cols-2 p-3 list-inside list-disc">
                 <li className="">
                   <LinkBtn
                     link="https://www.waecdirect.org/"
@@ -36,7 +36,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    Create profile
+                    Recover Password
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -44,7 +44,7 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    Clearance for First years
+                    Get Wifi Credentials
                   </LinkBtn>
                 </li>
                 <li className="">
@@ -52,7 +52,23 @@ const UNNPage = () => {
                     link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
                     className={'text-sm text-gray-800 underline'}
                   >
-                    Clearance for Final years
+                    Clearance processing
+                  </LinkBtn>
+                </li>
+                <li className="">
+                  <LinkBtn
+                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    className={'text-sm text-gray-800 underline'}
+                  >
+                    Multiple admission given
+                  </LinkBtn>
+                </li>
+                <li className="">
+                  <LinkBtn
+                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    className={'text-sm text-gray-800 underline'}
+                  >
+                    Retrieve Remita Invoice / Receipt
                   </LinkBtn>
                 </li>
               </ul>
