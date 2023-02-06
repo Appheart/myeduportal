@@ -44,7 +44,7 @@ const toExplore = [
       },
       {
         name: 'rFudict',
-        link: '/explore',
+        link: 'https://bit.ly/rfudict',
         illustration: '/images/illustrations/diet.png',
       },
       {

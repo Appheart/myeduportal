@@ -12,7 +12,7 @@ const Login = () => {
 
     const data = new FormData(e.currentTarget);
 
-    let username = data.get('username');
+    let username = data.get('username').trim();
     let password = data.get('password');
 
     if (!username || !password) {
