@@ -23,7 +23,7 @@ const Header = () => {
         </div>
 
         <div className="flex gap-5 items-center">
-          <nav className="hidden sm:flex gap-3 font-bold text-gray-700">
+          <nav className="hidden md:flex gap-3 font-bold text-gray-700">
             <LinkBtn link="/" className={'font-bold text-gray-700'}>
               Quizzes
             </LinkBtn>

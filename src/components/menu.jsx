@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-
 import { faMessage, faSun } from '@fortawesome/free-regular-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
