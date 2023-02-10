@@ -33,7 +33,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://unnportal.unn.edu.ng/RecoverPassword.aspx"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Recover Password
@@ -41,7 +41,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="/"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Get Wifi Credentials
@@ -49,7 +49,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://appheartunn.substack.com/p/complete-guide-to-unn-final-year"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Clearance processing
@@ -65,7 +65,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://appheart.pages.dev/solutions/RetrieveRemitaReceipt/"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Retrieve Remita Invoice / Receipt
@@ -73,10 +73,18 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="/"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Admission List
+                  </LinkBtn>
+                </li>
+                <li className="">
+                  <LinkBtn
+                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    className={'text-sm text-gray-800 underline'}
+                  >
+                    School Fees
                   </LinkBtn>
                 </li>
               </ul>
@@ -92,7 +100,7 @@ const UNNPage = () => {
               <ul className="flex flex-col gap-2 p-3 list-inside list-disc">
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://unnportal.unn.edu.ng/AdmissionShopping.aspx"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Shopping Form
@@ -100,7 +108,15 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://unnportal.unn.edu.ng/Modules/Applications/ChangeOfDegree/ChangeOfDegreeLogin.aspx"
+                    className={'text-sm text-gray-800 underline'}
+                  >
+                    Change of Degree Form
+                  </LinkBtn>
+                </li>
+                <li className="">
+                  <LinkBtn
+                    link="https://unnportal.unn.edu.ng/StaffRequestApplication.aspx"
                     className={'text-sm text-gray-800 underline'}
                   >
                     Staff Quota application
@@ -108,7 +124,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://unnportal.unn.edu.ng/ScrenningApplication.aspx"
                     className={'text-sm text-gray-800 underline'}
                   >
                     PUTME Appication
@@ -116,7 +132,7 @@ const UNNPage = () => {
                 </li>
                 <li className="">
                   <LinkBtn
-                    link="https://www.waecnigeria.org/faq#:~:text=School%20candidates%20collect%20their%20certificates,obtain%20theirs%20directly%20from%20WAEC."
+                    link="https://unnportal.unn.edu.ng/DEScrenningApplication.aspx"
                     className={'text-sm text-gray-800 underline'}
                   >
                     DE Application

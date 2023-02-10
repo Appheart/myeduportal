@@ -1,5 +1,3 @@
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import LinkBtn from '../../components/Link';
 
@@ -43,8 +41,8 @@ const toExplore = [
         illustration: '/images/illustrations/stats.png',
       },
       {
-        name: 'rFudict',
-        link: 'https://bit.ly/rfudict',
+        name: 'Fudera',
+        link: 'https://bit.ly/fudera',
         illustration: '/images/illustrations/diet.png',
       },
       {
