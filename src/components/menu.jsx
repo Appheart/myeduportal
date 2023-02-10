@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import { faMessage, faSun } from '@fortawesome/free-regular-svg-icons';
-import { faHome, faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBraille,
+  faHome,
+  faMicrophone,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Menu = () => {
@@ -12,14 +15,14 @@ const Menu = () => {
             <FontAwesomeIcon icon={faHome} /> <span>Home</span>
           </NavLink>
         </li>
-        <li className="nav-item  h-[4rem] max-w-[4rem] flex text-center items-center justify-center rounded-full shadow-md">
+        <li className="nav-item h-[3.11rem] flex-shrink-0 max-w-[3.11rem] flex text-center items-center justify-center rounded-full shadow-md">
           <NavLink to={'/chat'}>
             <FontAwesomeIcon icon={faMicrophone} size="xl" />
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to={'/explore'}>
-            <FontAwesomeIcon icon={faSun} /> <span>Explore</span>
+            <FontAwesomeIcon icon={faBraille} /> <span>Explore</span>
           </NavLink>
         </li>
       </ul>
