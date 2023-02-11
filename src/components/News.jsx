@@ -1,6 +1,3 @@
-import { faAnglesLeft, faAnglesRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import LinkBtn from './Link';
 import Loading from './Loading';
 
 const News = ({ status, error, newsData, prevPage, nextPage, page }) => {
@@ -134,7 +131,7 @@ const News = ({ status, error, newsData, prevPage, nextPage, page }) => {
               <div className="relative flex flex-col h-40 w-full  overflow-hidden justify-center items-center ">
                 <img
                   alt="Post Cover image"
-                  src={item.illustration}
+                  src={item.cover_photo}
                   className="object-cover my-2 rounded-xl h-full max-w-max shadow-md"
                   loading="lazy"
                 />
@@ -142,7 +139,7 @@ const News = ({ status, error, newsData, prevPage, nextPage, page }) => {
             </div>
           ))}
       </div>
-      <div className="mt-5 flex justify-center items-center  gap-4">
+      {/* <div className="mt-5 flex justify-center items-center  gap-4">
         <button
           onClick={prevPage}
           disabled={page === 1}
@@ -166,7 +163,7 @@ const News = ({ status, error, newsData, prevPage, nextPage, page }) => {
         >
           <FontAwesomeIcon icon={faAnglesRight} />
         </button>
-      </div>
+      </div> */}
     </>
   );
 
