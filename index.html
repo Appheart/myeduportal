@@ -61,5 +61,18 @@
   <body class="scroll-smooth">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script
+      src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+      async=""
+    ></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function () {
+        OneSignal.init({
+          appId: 'dbcea6f6-96de-4bc5-9b4c-34a22e421e02',
+        });
+      });
+    </script>
   </body>
 </html>
