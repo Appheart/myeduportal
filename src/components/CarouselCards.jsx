@@ -12,7 +12,6 @@ const CarouselCards = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(adsData);
   return (
     <div className="flex flex-col gap-5">
       {/* Carousels */}
