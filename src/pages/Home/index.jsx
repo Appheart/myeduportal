@@ -4,12 +4,13 @@ import { CarouselCards } from '../../components';
 import News from '../../components/News';
 import { getAllNews, newsUrlEndPoint as cacheKey } from '../../app/api/newsApi';
 import { useQuery } from '@tanstack/react-query';
+import { postcss } from 'autoprefixer';
 
 const Dashboard = () => {
   const [page, setPage] = useState(1);
 
-  const [posts, setPosts] = useState([]);
   const [tag, setTag] = useState('');
+  const [tags, setTags] = useState(['s']);
 
   const {
     status,
@@ -22,24 +23,14 @@ const Dashboard = () => {
     queryFn: () => getAllNews(page),
   });
 
-  useEffect(() => {
-    setPosts(() =>
-      tag ? newsData?.filter((e) => e.tags.includes(tag)) : newsData
-    );
-  }, [tag]);
-
-  const allTags = [];
-
-  posts?.forEach((a) => {
-    allTags.push(...a.tags);
-  });
-
-  let newk = [...new Set(allTags)];
-
   const nextPage = () => setPage((prev) => prev + 1);
   const prevPage = () => setPage((prev) => prev - 1);
 
-  console.log(newsData, posts, allTags, newk);
+  const allTags = [];
+
+  newsData?.forEach((t) => allTags.push(...t.tags));
+
+  const taggs = [...new Set(allTags)];
 
   return (
     <main className="bg-gray-50">
@@ -58,22 +49,23 @@ const Dashboard = () => {
             All
           </small>
 
-          {newk.map((n, index) => (
-            <small
-              key={index}
-              onClick={(e) => setTag(() => n)}
-              className="text-xs py-1 px-3 border rounded-xl font-bold bg-white"
-            >
-              {n}
-            </small>
-          ))}
+          {allTags &&
+            taggs?.map((n, index) => (
+              <small
+                key={index}
+                onClick={(e) => setTag(() => n)}
+                className="text-xs py-1 px-3 border rounded-xl font-bold bg-white"
+              >
+                {n}
+              </small>
+            ))}
         </div>
 
-        {posts && (
+        {newsData && (
           <News
             status={status}
             error={error}
-            newsData={posts}
+            newsData={newsData}
             prevPage={prevPage}
             nextPage={nextPage}
             page={page}
