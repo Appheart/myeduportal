@@ -4,7 +4,6 @@ import { CarouselCards } from '../../components';
 import News from '../../components/News';
 import { getAllNews, newsUrlEndPoint as cacheKey } from '../../app/api/newsApi';
 import { useQuery } from '@tanstack/react-query';
-import { postcss } from 'autoprefixer';
 
 const Dashboard = () => {
   const [page, setPage] = useState(1);
